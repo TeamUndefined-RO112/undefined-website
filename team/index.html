@@ -38,14 +38,14 @@
 <div class="main">
 
     <div class="yearbar">
-        <button class="yearbtn">2018 - 2019</button>
-        <button class="yearbtn">2019 - 2020</button>
-        <button class="yearbtn">2020 - 2021</button>
-        <button class="yearbtn active-btn">2021 - 2022</button>
-        <button class="yearbtn">2022 - 2023</button>
+        <button onclick="changeYear(2018)" class="yearbtn">2018 - 2019</button>
+        <button onclick="changeYear(2020)" class="yearbtn">2020 - 2021</button>
+        <button onclick="changeYear(2021)" class="yearbtn active-btn">2021 - 2022</button>
+        <button onclick="changeYear(2022)" class="yearbtn">2022 - 2023</button>
     </div>
 
-
+    <div id="2018" style="opacity:0;" class="member-flex"></div>
+    <div id="2022" style="opacity:0;" class="member-flex"></div>
     <div id="2020" style="opacity:0;" class="member-flex"></div>
     <div id="2021" class="member-flex"></div>
     

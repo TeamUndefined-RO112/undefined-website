@@ -412,6 +412,10 @@ hr {
   font-size: 16px;
 }
 
+.desc-small {
+  font-size: 10px;
+}
+
 .name {
   margin: 0;
 }
