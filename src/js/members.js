@@ -25,7 +25,7 @@ setInterval(()=> { // MEGA ROMANEASCA -> TREBUIE FCT MAI BN
     let space = transform.height + transform.top + transform.y;
     console.log(transform.height + " " + transform.top + " " + transform.y);
     document.getElementById("footer").style.top = `${transform.height+43}px`;
-},10)
+},7)
 
 let generateMember = function (year, img, name, department, desc) {
     let block = document.createElement("div");
