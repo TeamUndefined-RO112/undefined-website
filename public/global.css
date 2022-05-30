@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400&family=Roboto:wght@300&display=swap');
+
+body, html {
+	margin: 0;
+	font-family: 'Segoe UI', sans-serif;
+	background-color: rgb(226, 226, 226);
+	color: rgb(95, 95, 95);
+	overflow-x: hidden;
+}
