@@ -1,18 +1,12 @@
-
-
 <script lang="ts">
-	import { Router, Route } from "svelte-routing";
+import { Router, Route } from "svelte-routing";
+import Footer from "./components/Footer.svelte";
 import Navbar from "./components/Navbar.svelte";
-	import Home from "./routes/Home.svelte";
+import Home from "./routes/Home.svelte";
 
-	export let url = "";
-	let path;
-	const test = () => {
-		console.log(path);
-	}
 </script>
 
-<Router url="{url}">
+<Router url="">
 	<Navbar/>
 	
 	<main>
@@ -21,9 +15,8 @@ import Navbar from "./components/Navbar.svelte";
 		<Route path="championship" component="{Home}" />
 		<Route path="contact" component="{Home}" />
 	</main>
+	<Footer/>
 </Router>
-<button on:click|preventDefault="{test}">ye</button>
-
 
 <style lang="scss">
 main {

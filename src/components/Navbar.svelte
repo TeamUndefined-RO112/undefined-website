@@ -12,7 +12,7 @@ function getProps({ location }) {
 </script>
 
 <nav>
-    <Link to="/" getProps="{getProps}"><img src="/logo-small.png" alt="team logo"></Link>
+    <Link to="/" getProps="{getProps}"><img src="/img/logo-small.png" alt="team logo"></Link>
     <div class="divider"></div>
     <Link to="/"><p class={page == "/" ? "active" : ""}>Home</p></Link>
     <Link to="team"><p class={page == "/team" ? "active" : ""}>About Us</p></Link>
