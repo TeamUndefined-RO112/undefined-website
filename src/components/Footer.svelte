@@ -11,6 +11,7 @@
 </footer>
 
 <style lang="scss">
+@use '../main';
 
 footer {
     width: 100%;
@@ -37,6 +38,10 @@ footer {
                 a {
                     text-decoration: none;
                     color: rgb(77, 77, 77);
+                    transition: all 0.2s;
+                    &:hover {
+                        color: main.$orange;
+                    }
                 }
             }
         }
