@@ -5,6 +5,18 @@
             "name": "Manta Mihnea Vasile",
             "department": "Team Leader",
             "desc": "I like hiking and organising my co-workers."
+        },
+        {
+            "src": "img/members/manta-stefan.png",
+            "name": "Manta Mădălin Ștefan",
+            "department": "Pilot/Hardware",
+            "desc": "I am in this team beacuse of my passion for the new technology."
+        },
+        {
+            "src": "img/members/meserus.png",
+            "name": "Meseruș Mihai Adrian",
+            "department": "Hardware",
+            "desc": "I joined this team beacuse I want to develop my skills."
         }
     ]
 }
