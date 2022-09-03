@@ -1,4 +1,6 @@
 <script lang="ts">
+import { Link } from 'svelte-routing';
+
 import Button from '../components/Button.svelte';
 import ColumnContent from '../components/ColumnContent.svelte';
 import Content from '../components/Content.svelte';
@@ -36,7 +38,7 @@ const scrollPage = () => {
     <Title>Our Team</Title>
     <Title secondary>What is Team UNDEFINED?</Title>
     <TextBox><p>UNDEFINED is a community FIRST Tech Challenge robotics team from Câmpina, Prahova. Our team was founded in October 2018. Our team consists of 15 members, a co-mentor, a mentor and 3 volunteers who try their best to help the team. We were happy to find out that many people were interested. So many that we had to choose carefully the main 15 members while creating a large community of volunteers. </p></TextBox>
-    <Content><a href="./team"><Button>Our Team »</Button></a></Content>
+    <Content><Link to="team"><Button noclick>Our Team »</Button></Link></Content>
 
 </Content>
 
@@ -45,7 +47,7 @@ const scrollPage = () => {
         <Title>The First Tech Challenge</Title>
         <Title secondary>What is FTC?</Title>
         <TextBox><p>FIRST (For Inspiration Recognition of Science and Technology) is an international youth organization, founded in 1989 by Dean Kamen, to inspire young people’s interest and participation in science and technology. <br><br> Guided by adult coaches and mentors, students develop STEM skills and practice engineering principles, while realizing the value of hard work, innovation, and working as a team. </p></TextBox>
-        <Content><a href="https://www.firstinspires.org/robotics/ftc" target="_blank"><Button>FTC Website »</Button></a></Content>
+        <Content><a href="https://www.firstinspires.org/robotics/ftc" target="_blank"><Button noclick>FTC Website »</Button></a></Content>
     </Content>
 
     <HomeImage src="/img/ftc-logo.png" alt="team logo"/>
@@ -59,10 +61,13 @@ const scrollPage = () => {
         <TextBox centered>
             <p>Team UNDEFINED is looking to not only participate in the FIRST TECH CHALLENGE, but to also teach others and give insights into the industry, as well as connect people.<br><br>If you want to take part in our adventure, you can apply below! It takes 2 minutes to complete our form.</p>
         </TextBox>
-        <a href="./team/apply"><Button>Apply Today! »</Button></a>
+        <a href="./team/apply"><Button noclick>Apply Today! »</Button></a>
     </Content>
 </Content>
 
+<svelte:head>
+    <title>Team Undefined</title>
+</svelte:head>
 
 <style lang="scss">
 @use '../main';

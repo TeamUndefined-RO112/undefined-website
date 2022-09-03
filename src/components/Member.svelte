@@ -52,11 +52,10 @@ p {
     border-radius: 5px;
     padding: 16px;
     color: #ffffff;
-    max-width: 500px;
-
+    width: 500px;
 
     display: flex;
-    justify-content: center;
+    justify-content: start;
     gap: 20px;
     .content {
         align-items: baseline;
@@ -65,6 +64,7 @@ p {
 
         .desc {
             font-weight: 300;
+            font-size: 0.85em;
         }
     }
 

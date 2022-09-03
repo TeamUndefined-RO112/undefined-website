@@ -19,7 +19,7 @@ function getProps({ location }) {
     <Link to="team"><p class:active={page == "/team"}>About Us</p></Link>
     <Link to="team/apply"><p class:active={page == "/team/apply"}>Apply</p></Link>
     <Link to="team/sponsors"><p class:active={page == "/team/sponsors"}>Sponsors</p></Link>
-    <Link to="championship"><p class:active={page == "/championship"}>Championship</p></Link>
+    <!--<Link to="championship"><p class:active={page == "/championship"}>Championship</p></Link>-->
     <div class="divider"></div>
     <Link to="contact"><p class:active={page == "/contact"}>Contact</p></Link>
 </nav>
@@ -77,4 +77,17 @@ function getProps({ location }) {
             color: main.$active;
         }
     }
+
+    @media screen and (max-width: 720px) {
+  nav {
+    p {
+        margin: 0 0.4em;
+        font-size: small;
+    }
+
+    .divider {
+        margin: 0;
+    }
+}
+}
 </style>

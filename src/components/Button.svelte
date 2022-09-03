@@ -1,8 +1,12 @@
 <script lang="ts">
     export let small:boolean = false;
+    export let noclick:boolean = false;
 </script>
-
+{#if noclick}
+<button class:small={small}><slot/></button>
+{:else}
 <button class:small={small} on:click|preventDefault><slot/></button>
+{/if}
 
 <style lang="scss">
 @use '../main';
