@@ -21,14 +21,19 @@ const scrollPage = () => {
 </script>
 
 <HomeCarousel>
-    <img src="/img/support_labs06.jpg" class="slide-content" alt="bg">
-    <img src="/img/support_labs06.jpg" class="slide-content" alt="bg">
-    <img src="/img/support_labs06.jpg" class="slide-content" alt="bg">
+    <img src="/img/home/grup.jpg" class="slide-content" alt="bg">
+    <img src="/img/home/masa.jpg" class="slide-content" alt="bg">
+    <img src="/img/home/piulitza.jpg" class="slide-content" alt="bg">
+    <img src="/img/home/piulitza2.jpg" class="slide-content" alt="bg">
+    <img src="/img/home/masa2.jpg" class="slide-content" alt="bg">
+    <img src="/img/home/robot.jpg" class="slide-content" alt="bg">
+    
+
 </HomeCarousel>
 
 <div class="hero">
     <img src="/img/long-logo.png" class="image" alt="bg">
-    <div class="description">Cea mai jmek echipa de robo evăr!!</div>
+    <div class="description">WE CAN BE ANYTHING</div>
 </div>
 
 <p class="down-arrow" on:click|preventDefault="{scrollPage}">⮟</p>
@@ -56,7 +61,7 @@ const scrollPage = () => {
 
 
 <Content big>
-    <HomeImage src="/img/support_labs06.jpg" alt="team logo"/>
+    <HomeImage src="/img/home/robot.jpg" alt="team logo"/>
     <Content column>
         <TextBox centered>
             <p>Team UNDEFINED is looking to not only participate in the FIRST TECH CHALLENGE, but to also teach others and give insights into the industry, as well as connect people.<br><br>If you want to take part in our adventure, you can apply below! It takes 2 minutes to complete our form.</p>
@@ -89,12 +94,14 @@ const scrollPage = () => {
     display: flex;
     align-items: center;
     flex-direction: column;
+    user-select: none;
     .image {
         width: 40vmax;
     }
     .description {
         color: white;
         font-size: 1.5em;
+        font-weight: 300;
     }
 }
 

@@ -5,11 +5,6 @@ import Member from "../components/Member.svelte";
 import Title from "../components/Title.svelte";
 import members from '../members.json';
 let year: number = 2021;
-
-/*
-PHOTOS
-APP FORM
-*/
 </script>
 
 
