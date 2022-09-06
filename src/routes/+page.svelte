@@ -7,7 +7,7 @@
     import Title from '../components/Title.svelte';
     import Carousel from '../components/Carousel.svelte'
     import { ChevronLeftIcon, ChevronRightIcon, ChevronsDownIcon } from 'svelte-feather-icons'
-    
+    import { base } from '$app/paths';
     const scrollPage = () => {
         window.scroll({
             top: window.innerHeight-57,
@@ -22,17 +22,17 @@
     perPage={1}
     duration={1000}>
         <span class="control" slot="left-control"><ChevronLeftIcon /></span>
-        <img src="/img/home/grup.jpg" class="slide-content" alt="bg">
-        <img src="/img/home/masa.jpg" class="slide-content" alt="bg">
-        <img src="/img/home/piulitza.jpg" class="slide-content" alt="bg">
-        <img src="/img/home/piulitza2.jpg" class="slide-content" alt="bg">
-        <img src="/img/home/masa2.jpg" class="slide-content" alt="bg">
-        <img src="/img/home/robot.jpg" class="slide-content" alt="bg">
+        <img src="{base}/img/home/grup.jpg" class="slide-content" alt="bg">
+        <img src="{base}/img/home/masa.jpg" class="slide-content" alt="bg">
+        <img src="{base}/img/home/piulitza.jpg" class="slide-content" alt="bg">
+        <img src="{base}/img/home/piulitza2.jpg" class="slide-content" alt="bg">
+        <img src="{base}/img/home/masa2.jpg" class="slide-content" alt="bg">
+        <img src="{base}/img/home/robot.jpg" class="slide-content" alt="bg">
         <span class="control" slot="right-control"><ChevronRightIcon /></span>
     </Carousel>
     
     <div class="hero">
-        <img src="/img/long-logo.png" class="image" alt="bg">
+        <img src="{base}/img/long-logo.png" class="image" alt="bg">
         <div class="description">WE CAN BE ANYTHING</div>
     </div>
     
@@ -43,7 +43,7 @@
         <Title>Our Team</Title>
         <Title secondary>What is Team UNDEFINED?</Title>
         <TextBox><p>UNDEFINED is a community FIRST Tech Challenge robotics team from Câmpina, Prahova. Our team was founded in October 2018. Our team consists of 15 members, a co-mentor, a mentor and 3 volunteers who try their best to help the team. We were happy to find out that many people were interested. So many that we had to choose carefully the main 15 members while creating a large community of volunteers. </p></TextBox>
-        <Content><a href="/team"><Button noclick>Our Team »</Button></a></Content>
+        <Content><a href="{base}/team"><Button noclick>Our Team »</Button></a></Content>
     
     </Content>
     
@@ -55,18 +55,18 @@
             <Content><a href="https://www.firstinspires.org/robotics/ftc" target="_blank"><Button noclick>FTC Website »</Button></a></Content>
         </Content>
     
-        <HomeImage src="/img/ftc-logo.png" alt="team logo"/>
+        <HomeImage src="{base}/img/ftc-logo.png" alt="team logo"/>
     
     </Content>
     
     
     <Content big>
-        <HomeImage src="/img/home/robot.jpg" alt="team logo"/>
+        <HomeImage src="{base}/img/home/robot.jpg" alt="team logo"/>
         <Content column>
             <TextBox centered>
                 <p>Team UNDEFINED is looking to not only participate in the FIRST TECH CHALLENGE, but to also teach others and give insights into the industry, as well as connect people.<br><br>If you want to take part in our adventure, you can apply below! It takes 2 minutes to complete our form.</p>
             </TextBox>
-            <a href="./team/apply"><Button noclick>Apply Today! »</Button></a>
+            <a href="{base}/team/apply"><Button noclick>Apply Today! »</Button></a>
         </Content>
     </Content>
     

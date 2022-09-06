@@ -1,7 +1,5 @@
 <script lang="ts">
     import Content from "../components/Content.svelte";
-    import TextBox from "../components/TextBox.svelte";
-    import Title from "../components/Title.svelte";
 
 export let image: string;
 export let text: string;

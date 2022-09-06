@@ -4,17 +4,18 @@ import '../main.scss'
 type pageType = "/" | "/team" | "/team/apply" | "/team/sponsors" | "/championship" | "/contact";
 export let path: pageType = '/';
 $: path = $page.url.pathname as pageType;
+import { base } from '$app/paths';
 </script>
 
 <nav>
-    <a href="/"><img src="/img/logo-small.png" alt="team logo"></a>
+    <a href="{base}/"><img src="{base}/img/logo-small.png" alt="team logo"></a>
     <div class="divider"></div>
-    <a href="/"><p class:active={path == "/"}>Home</p></a>
-    <a href="/team"><p class:active={path == "/team"}>About Us</p></a>
-    <a href="/team/apply"><p class:active={path == "/team/apply"}>Apply</p></a>
-    <a href="/team/sponsors"><p class:active={path == "/team/sponsors"}>Sponsors</p></a>
+    <a href="{base}/"><p class:active={path == `${base}/`}>Home</p></a>
+    <a href="{base}/team"><p class:active={path == `${base}/team`}>About Us</p></a>
+    <a href="{base}/team/apply"><p class:active={path == `${base}/team/apply`}>Apply</p></a>
+    <a href="{base}/team/sponsors"><p class:active={path == `${base}/team/sponsors`}>Sponsors</p></a>
     <div class="divider"></div>
-    <a href="/contact"><p class:active={path == "/contact"}>Contact</p></a>
+    <a href="{base}/contact"><p class:active={path == `${base}/contact`}>Contact</p></a>
 </nav>
 
 <style lang="scss">
