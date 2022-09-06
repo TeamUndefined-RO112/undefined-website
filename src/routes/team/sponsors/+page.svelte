@@ -1,9 +1,9 @@
 <script lang="ts">
-    import Content from "../components/Content.svelte";
-import Sponsor from "../components/Sponsor.svelte";
-    import TextBox from "../components/TextBox.svelte";
-    import Title from "../components/Title.svelte";
-    import sponsors from '../sponsors.json';
+    import Content from "../../../components/Content.svelte";
+import Sponsor from "../../../components/Sponsor.svelte";
+    import TextBox from "../../../components/TextBox.svelte";
+    import Title from "../../../components/Title.svelte";
+    import sponsors from './sponsors.json';
 </script>
 
 <Content column uncentered big>

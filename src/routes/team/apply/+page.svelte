@@ -1,7 +1,7 @@
 <script lang="ts">
-    import Content from "../components/Content.svelte";
-    import TextBox from "../components/TextBox.svelte";
-    import Title from "../components/Title.svelte";
+    import Content from "../../../components/Content.svelte";
+    import TextBox from "../../../components/TextBox.svelte";
+    import Title from "../../../components/Title.svelte";
 </script>
 
 <Content column uncentered big>
@@ -27,10 +27,10 @@
         display: flex;
         justify-content: center;
         width: 80vw;
-        height: 1640px;
+        height: 2000px;
     }
     iframe {
         width: 100%;
-    height: 100%;
+        height: 100%;
     }
 </style>

@@ -114,4 +114,10 @@ p {
   background-color: rgb(57, 45, 160);
 }
 
+@media screen and (max-width: 532px) {
+    .wrapper {
+        width: 90%;
+    }
+}
+
 </style>

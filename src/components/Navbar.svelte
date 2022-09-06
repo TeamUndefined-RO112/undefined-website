@@ -1,32 +1,24 @@
 <script lang="ts">
-import { Link } from "svelte-routing";
-
+import { page } from '$app/stores';
+import '../main.scss'
 type pageType = "/" | "/team" | "/team/apply" | "/team/sponsors" | "/championship" | "/contact";
-export let page: pageType = '/';
-
-function getProps({ location }) {
-    console.log(location)
-    page=location.pathname
-    return {}
-}
-
+export let path: pageType = '/';
+$: path = $page.url.pathname as pageType;
 </script>
 
 <nav>
-    <Link to="/" getProps="{getProps}"><img src="/img/logo-small.png" alt="team logo"></Link>
+    <a href="/"><img src="/img/logo-small.png" alt="team logo"></a>
     <div class="divider"></div>
-    <Link to="/"><p class:active={page == "/"}>Home</p></Link>
-    <Link to="team"><p class:active={page == "/team"}>About Us</p></Link>
-    <Link to="team/apply"><p class:active={page == "/team/apply"}>Apply</p></Link>
-    <Link to="team/sponsors"><p class:active={page == "/team/sponsors"}>Sponsors</p></Link>
-    <!--<Link to="championship"><p class:active={page == "/championship"}>Championship</p></Link>-->
+    <a href="/"><p class:active={path == "/"}>Home</p></a>
+    <a href="/team"><p class:active={path == "/team"}>About Us</p></a>
+    <a href="/team/apply"><p class:active={path == "/team/apply"}>Apply</p></a>
+    <a href="/team/sponsors"><p class:active={path == "/team/sponsors"}>Sponsors</p></a>
     <div class="divider"></div>
-    <Link to="contact"><p class:active={page == "/contact"}>Contact</p></Link>
+    <a href="/contact"><p class:active={path == "/contact"}>Contact</p></a>
 </nav>
 
 <style lang="scss">
-    @use "../main.scss";
-
+    @use '../main';
     nav {
         position: fixed;
         top: 0;
