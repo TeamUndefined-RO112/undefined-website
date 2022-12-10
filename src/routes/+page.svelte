@@ -17,19 +17,21 @@
     }
     
     </script>
+    <span>
     <Carousel
     autoplay={5000}
     perPage={1}
     duration={1000}>
         <span class="control" slot="left-control"><ChevronLeftIcon /></span>
         <img src="{base}/img/home/grup.jpg" class="slide-content" alt="bg">
-        <img src="{base}/img/home/masa.jpg" class="slide-content" alt="bg">
+        <img src="{base}/img/home/2.jpeg" class="slide-content" alt="bg">
         <img src="{base}/img/home/piulitza.jpg" class="slide-content" alt="bg">
         <img src="{base}/img/home/piulitza2.jpg" class="slide-content" alt="bg">
-        <img src="{base}/img/home/masa2.jpg" class="slide-content" alt="bg">
+        <img src="{base}/img/home/3.jpeg" class="slide-content" alt="bg">
         <img src="{base}/img/home/robot.jpg" class="slide-content" alt="bg">
         <span class="control" slot="right-control"><ChevronRightIcon /></span>
     </Carousel>
+    </span>
     
     <div class="hero">
         <img src="{base}/img/long-logo.png" class="image" alt="bg">

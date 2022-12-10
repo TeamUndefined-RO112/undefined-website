@@ -4,7 +4,6 @@ import Sponsor from "../../../components/Sponsor.svelte";
     import TextBox from "../../../components/TextBox.svelte";
     import Title from "../../../components/Title.svelte";
     import sponsors from './sponsors.json';
-    import { base } from '$app/paths';
 </script>
 
 <Content column uncentered big>
@@ -16,7 +15,7 @@ import Sponsor from "../../../components/Sponsor.svelte";
 <Content wrap>
     {#if sponsors.length>0} 
     {#each sponsors as sponsor }
-        <Sponsor image={base+sponsor.src} text={sponsor.name}></Sponsor>
+        <Sponsor image={sponsor.src} text={sponsor.name}></Sponsor>
     {/each}
     {:else}
     <Title secondary>No sponsors... :(</Title>
