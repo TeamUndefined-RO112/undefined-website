@@ -1,86 +1,16 @@
 <script lang="ts">
-import { page } from '$app/stores';
-import '../main.scss'
-type pageType = "/" | "/team" | "/team/apply" | "/team/sponsors" | "/championship" | "/contact";
-export let path: pageType = '/';
-$: path = $page.url.pathname as pageType;
-import { base } from '$app/paths';
+import NavbarButton from "./NavbarButton.svelte";
+
+export let url: URL;
 </script>
 
-<nav>
-    <a href="{base}/"><img src="{base}/img/logo-small.png" alt="team logo"></a>
-    <div class="divider"></div>
-    <a href="{base}/"><p class:active={path == `${base}/`}>Home</p></a>
-    <a href="{base}/team"><p class:active={path == `${base}/team`}>About Us</p></a>
-    <a href="{base}/team/apply"><p class:active={path == `${base}/team/apply`}>Apply</p></a>
-    <a href="{base}/team/sponsors"><p class:active={path == `${base}/team/sponsors`}>Sponsors</p></a>
-    <div class="divider"></div>
-    <a href="{base}/contact"><p class:active={path == `${base}/contact`}>Contact</p></a>
+<nav class="fixed top-0 w-full h-14 flex justify-center items-center shadow-xl font-normal bg-gray-900 z-[500] text-xs md:text-base">
+    <a href="/" class="h-10 w-10 mx-2 flex justify-center"><img src="/logo_undefined_white.svg" alt="team logo"></a>
+    <div class="w-px h-1/2 mx-0 md:mx-6 bg-gray-300"></div>
+    <NavbarButton href="/" path={url.pathname}>Home</NavbarButton>
+    <NavbarButton href="/team" path={url.pathname}>About Us</NavbarButton>
+    <NavbarButton href="/team/apply" path={url.pathname}>Apply</NavbarButton>
+    <NavbarButton href="/team/sponsors" path={url.pathname}>Sponsors</NavbarButton>
+    <div class="w-px h-1/2 mx-0 md:mx-6 bg-gray-300"></div>
+    <NavbarButton href="/contact" path={url.pathname}>Contact</NavbarButton>
 </nav>
-
-<style lang="scss">
-    @use '../main';
-    nav {
-        position: fixed;
-        top: 0;
-
-        width: 100%;
-        height: 3.5rem;
-
-        background-color: main.$default;
-        box-shadow: 0px 0px 10px black;
-        font-family: 'Noto Sans';
-        font-weight: 400;
-        
-        z-index: 500;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        .divider {
-            width: 1px;
-            height: 60%;
-            margin: 0 24px;
-            flex: 0 0 auto;
-            background-color: rgba($color: #a5a5a5, $alpha: 0.6);
-        }
-
-        img {
-            width: 3rem;
-            height: 3rem;
-            float: left;
-            margin-right: 8px;
-        }
-
-        p {
-            float: left;
-            margin: 0 1.5em;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            font-size: 1em;
-
-            &:hover:not(.active) {
-                color: main.$secondary;
-                transition: color 0.4s;
-            }
-        }
-        .active {
-            color: main.$active;
-        }
-    }
-
-    @media screen and (max-width: 720px) {
-  nav {
-    p {
-        margin: 0 0.4em;
-        font-size: small;
-    }
-
-    .divider {
-        margin: 0;
-    }
-}
-}
-</style>
