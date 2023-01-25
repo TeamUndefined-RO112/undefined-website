@@ -8,7 +8,11 @@ module.exports = {
 		fontFamily: {
 			'noto': ['Noto Sans']
 		},
-		extend: {},
+		extend: {
+			spacing: {
+				'carousel': 'calc(100vh - 3.5rem)',
+			}
+		},
 		colors: {
 			white: colors.white,
 			gray: colors.gray,

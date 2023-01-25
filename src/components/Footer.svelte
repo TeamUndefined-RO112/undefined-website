@@ -1,6 +1,6 @@
 <footer class="w-full bg-gray-200 h-36 flex flex-col items-center gap-2" >
     <br>
-    <hr class="w-11/12 border-gray-500">
+    <hr class="w-11/12 border-gray-500 mt-4">
     <div class="w-11/12 text-gray-600">
         <p class="inline text-xs">© 2022 Team Undefined</p>
         <ul class="float-right m-0 flex items-center">

@@ -1,53 +1,50 @@
 ---
+import Carousel from '../components/Carousel.svelte';
+import Content from '../components/Content.svelte';
+import HomeImage from '../components/HomeImage.svelte';
+import TextBox from '../components/TextBox.svelte';
+import Title from '../components/Title.svelte';
+import Button from '../components/Button.svelte';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Team Undefined">
-	<main>
-	</main>
+	<Carousel autoplay={5000} perPage={1} duration={1000} client:load/>
+
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center select-none">
+        <img src="logo_undefined_white_long.svg" class="w-40vmax mb-5 drop-shadow-md" alt="bg">
+        <div class="text-white text-2xl font-normal">WE CAN BE ANYTHING</div>
+    </div>
+
+    <Content big column uncentered>
+        <Title>Our Team</Title>
+        <Title secondary>What is Team UNDEFINED?</Title>
+        <TextBox><p>UNDEFINED is a community FIRST Tech Challenge robotics team from Câmpina, Prahova. Our team was founded in October 2018. Our team consists of 15 members, a co-mentor, a mentor and 3 volunteers who try their best to help the team. We were happy to find out that many people were interested. So many that we had to choose carefully the main 15 members while creating a large community of volunteers. </p></TextBox>
+        <Content><a href="/team"><Button noclick>Our Team »</Button></a></Content>
+    
+    </Content>
+    
+    <Content big>
+        <Content column uncentered>
+            <Title>The First Tech Challenge</Title>
+            <Title secondary>What is FTC?</Title>
+            <TextBox><p>FIRST (For Inspiration Recognition of Science and Technology) is an international youth organization, founded in 1989 by Dean Kamen, to inspire young people’s interest and participation in science and technology. <br><br> Guided by adult coaches and mentors, students develop STEM skills and practice engineering principles, while realizing the value of hard work, innovation, and working as a team. </p></TextBox>
+            <Content><a href="https://www.firstinspires.org/robotics/ftc" target="_blank"><Button noclick>FTC Website »</Button></a></Content>
+        </Content>
+    
+        <HomeImage src="/img/ftc-logo.png" alt="team logo"/>
+    
+    </Content>
+    
+    
+    <Content big>
+        <HomeImage src="/img/home/robot.jpg" alt="team logo"/>
+        <Content column>
+            <TextBox centered>
+                <p>Team UNDEFINED is looking to not only participate in the FIRST TECH CHALLENGE, but to also teach others and give insights into the industry, as well as connect people.<br><br>If you want to take part in our adventure, you can apply below! It takes 2 minutes to complete our form.</p>
+            </TextBox>
+            <a href="/team/apply"><Button noclick>Apply Today! »</Button></a>
+        </Content>
+    </Content>
 </Layout>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
