@@ -6,7 +6,7 @@
 
 <style>
     h1 {
-        color: --default;
+        color: var(--default);
         margin: 0;
     }
 
