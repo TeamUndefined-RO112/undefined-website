@@ -5,7 +5,7 @@
 
 <img src={src} alt={alt}>
 
-<style lang="scss">
+<style>
 img {
     height: 20em;
     width: 30em;

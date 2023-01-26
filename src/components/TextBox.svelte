@@ -4,7 +4,7 @@
 
 <div class:center={centered}><slot/></div>
 
-<style lang="scss">
+<style>
 div {
     font-size: 20px;
     line-height: 2em;

@@ -7,7 +7,7 @@
 
 <content class:center={!uncentered} class:column={column} class:big={big} class:wrap={wrap}><slot/></content>
 
-<style lang="scss">
+<style>
 content {
     display: flex;
     justify-content: center;

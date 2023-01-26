@@ -11,7 +11,7 @@ export let text: string;
 </Content>
 
 
-<style lang="scss">
+<style>
     img {
         width: 400px;
         height: 200px;

@@ -8,13 +8,12 @@
 <button class:small={small} on:click|preventDefault><slot/></button>
 {/if}
 
-<style lang="scss">
-@use '../main';
+<style>
 
 button {
     padding: 15px 30px;
 
-    border-color: main.$default;
+    border-color: var(--default);
     border-style: solid;
     border-radius: 8px;
     border-width: 1px;
@@ -30,11 +29,12 @@ button {
 
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transition: all 0.2s;
-    &:hover {
+}
+
+button:hover {
         background: none;
         color:initial;
     }
-}
 
 .small {
     padding: 5px 15px;

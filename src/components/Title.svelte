@@ -4,10 +4,9 @@
 
 <h1 class:secondary={secondary}><slot/></h1>
 
-<style lang="scss">
-@use '../main';
+<style>
     h1 {
-        color: main.$orange;
+        color: var(--default);
         margin: 0;
     }
 

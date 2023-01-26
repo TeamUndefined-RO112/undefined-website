@@ -1,7 +1,9 @@
 <script lang="ts">
 	import Siema from 'siema'
 	import { onMount, createEventDispatcher } from 'svelte'
-	
+    import CarouselImage from './CarouselImage.svelte';
+	import {ChevronLeftIcon, ChevronRightIcon} from 'svelte-feather-icons'
+
 	export let perPage = 3
 	export let loop = true
 	export let autoplay = 0
@@ -41,7 +43,6 @@
 		if(autoplay) {
 			timer = setInterval(right, autoplay);
 		}
-
 		return () => {
 			if(autoplay > 0) clearInterval(timer)
 		}
@@ -58,7 +59,7 @@
 	
 	export function right () {
 		controller.next()
-		console.log("right")
+		console.log(controller)
 	}
 	
 	export function go (index: number) {
@@ -102,15 +103,22 @@
 </script>
 
 
-<div class="carousel">
+<div class="relative w-full justify-center items-center">
 	<div class="slides" bind:this={siema}>
-		<slot></slot>
+		<CarouselImage src="/img/home/Grup_Demo.jpeg"/>
+		<CarouselImage src="/img/home/Robot_Drop_1.jpeg"/>
+		<CarouselImage src="/img/home/Robot_Drop_2.jpeg"/>
+		<CarouselImage src="/img/home/2.jpeg"/>
+		<CarouselImage src="/img/home/piulitza.jpg"/>
+		<CarouselImage src="/img/home/piulitza2.jpg"/>
+		<CarouselImage src="/img/home/3.jpeg"/>
+		<CarouselImage src="/img/home/robot.jpg"/>
 	</div>
 	<button class="left" on:click={left} use:resetInterval={autoplay} aria-label="left">
-		<slot name="left-control"></slot>
+		<span class="text-white"><ChevronLeftIcon /></span>
 	</button>
 	<button class="right" on:click={right} use:resetInterval={autoplay} aria-label="right">
-		<slot name="right-control"></slot>
+		<span class="text-white"><ChevronRightIcon /></span>
 	</button>
 	<ul>
 		{#each {length: totalDots} as _, i}
@@ -120,12 +128,6 @@
 </div>
 
 <style>
-	.carousel {
-		position: relative;
-		width: 100%;
-		justify-content: center;
-		align-items: center;
-	}
 	
 	button {
 		position: absolute;
@@ -171,4 +173,3 @@
 		background-color: rgba(255,255,255,1);
 	}
 </style>
-

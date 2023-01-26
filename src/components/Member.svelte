@@ -34,7 +34,7 @@
 
 </div>
 
-<style lang="scss">
+<style>
 img {
     width: 160px;
     height: 160px;
@@ -57,35 +57,30 @@ p {
     display: flex;
     justify-content: start;
     gap: 20px;
-    .content {
+}
+
+.wrapper > .content {
         align-items: baseline;
         justify-content: end;
         gap: 0px;
-
-        .desc {
-            font-weight: 300;
-            font-size: 0.85em;
-        }
-    }
-
-    .title-wrap {
-        justify-content: end;
-        gap: 0px;
-        margin-bottom: 10px;
-
-        .dep {
-            font-size: 0.8em;
-            color: rgba(255, 255, 255, 0.8);
-        }
-
-        .title {
-            font-size: 1.2em;
-        }
-
-
-    }
+}
+.desc {
+    font-weight: 300;
+    font-size: 0.85em;
 }
 
+.title-wrap {
+    justify-content: end;
+    gap: 0px;
+    margin-bottom: 10px;
+}
+.dep {
+    font-size: 0.8em;
+    color: rgba(255, 255, 255, 0.8);
+}
+.title {
+    font-size: 1.2em;
+}
 .green {
   background-color: rgb(79, 165, 86);
 }
