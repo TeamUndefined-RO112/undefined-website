@@ -8,5 +8,6 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [svelte(), tailwind({config: { applyBaseStyles: false },})]
+  integrations: [svelte(), tailwind({config: { applyBaseStyles: false },})],
+  site: 'https://team-undefined.ro',
 });
