@@ -1,4 +1,140 @@
 {
+    "2023": [
+        {
+            "src": "/img/members/mihnea-manta2.jpeg",
+            "name": "Manta Mihnea Vasile",
+            "department": "Team Leader",
+            "desc": "It is my fifth season in this team. I like hiking and organizing my co-workers. I also enjoy 3D printing."
+        },
+        {
+            "src": "/img/members/Stahie Andrei.jpeg",
+            "name": "Stahie Andrei",
+            "department": "Hardware",
+            "desc": "I'm passionate about engineering and in my spare time I create a lot of things."
+
+        },
+        {
+            "src": "/img/members/Marina Andrei.jpg",
+            "name": "Marina Andrei",
+            "department": "Hardware",
+            "desc": "I am a creative and friendly person who enjoys working with others . I have always liked to tinker with different things, and I'm glad I'm finally able to do it with robots."
+
+        },
+        {
+            "src": "/img/members/nichifor darius.jpeg",
+            "name": "Nichifor Darius",
+            "department": "Hardware",
+            "desc": "I would describe myself as a friendly,calm and hardworking person."
+        },
+        {
+            "src": "/img/members/stoica alfonso.jpeg",
+            "name": "Stoica Alfonso",
+            "department": "Hardware",
+            "desc": "I‘m part of the hardware,I‘m a curious, receptive, attentive person and I like to learn new things.In my spare time I solve rubik cubes, play with legos and do martial arts."
+        },
+        {
+            "src": "/img/members/dragomir erica2.jpeg",
+            "name": "Dragomir Erica",
+            "department": "Hardware",
+            "desc": "I am a hardworking person who enjoys science, video editing, cinematography, music and travelling"
+        },
+        {
+            "src": "/img/members/nichifor darius.jpeg",
+            "name": "Urleteanu Ana",
+            "department": "Hardware",
+            "desc": "I would describe myself as a friendly,calm and hardworking person."
+        },
+        {
+            "src": "/img/members/stefan2.jpeg",
+            "name": "Birlica Stefan",
+            "department": "Programming",
+            "desc": "I am a friendly person, I enjoy spending time on computers, playing video games."
+        },
+        {
+            "src": "/img/members/radulescu razvan.jpeg",
+            "name": "Radulescu Razvan",
+            "department": "Programming",
+            "desc": "I like doing computer science stuff and many more diverse activities, such as sports, travelling and socializing"
+        },
+        {
+            "src": "/img/members/traian2.jpeg",
+            "name": "Dobrescu Traian",
+            "department": "Programming",
+            "desc": "I enjoy art, design, programming, maths and doing the autonomy"
+        },
+        {
+            "src": "/img/members/caldararu-denisa.png",
+            "name": "Căldăraru Denisa",
+            "department": "Programming",
+            "desc": "I consider myself an ambitious, motivated and organized person. I enjoy challenges and constantly set goals for myself."
+        },
+        {
+            "src": "/img/members/aydin tayga.jpeg",
+            "name": "Aydin Tayga",
+            "department": "Programming",
+            "desc": "I am very friendly and always eager to meet new people.I enjoy reading, playing the guitar and spending time with my friends."
+        },
+        {
+            "src": "/img/members/mirescu maia.jpeg",
+            "name": "Maia Mirescu",
+            "department": "Programming",
+            "desc": "Trying to find the best version of me."
+        },
+        {
+            "src": "/img/members/gilma-alesia.png",
+            "name": "Gîlmă Alesia",
+            "department": "Engineering Notebook",
+            "desc": "I like reading and writing and I consider myself a creative person. I enjoy working in a team and  I also am the shortest one here."
+        },
+        {
+            "src": "/img/members/vulpe-diana.png",
+            "name": "Vulpe Diana",
+            "department": "Engineering Notebook",
+            "desc": "My sister told me about this team and because I like trying new things I decided to join it. I also enjoy singing and dancing."
+        },
+        {
+            "src": "/img/members/plesa-alexia.png",
+            "name": "Pleșa Alexia",
+            "department": "Engineering Notebook",
+            "desc": "I like writing a lot and keeping things organized so that’s the reason I wanted to be in this team."
+        },
+        {
+            "src": "/img/members/anghel-rares.png",
+            "name": "Anghel Rareș",
+            "department": "Marketing",
+            "desc": "I like video games and everything that has to do with social media. I like helping others, even though I don`t know how to help them."
+        },
+        {
+            "src": "/img/members/bunea-maria.png",
+            "name": "Bunea Maria",
+            "department": "Marketing",
+            "desc": "This year I would like to learn as much as possible in the field of leadership to inspire my colleagues."
+        },
+        {
+            "src": "/img/members/badea-irina.png",
+            "name": "Badea Irina",
+            "department": "Marketing",
+            "desc": "Given the fact that I am passionate about everything related to the online environment, I wanted to be part of this team to help promote on social media."
+        },
+        {
+            "src": "/img/members/bogdan-burlan.png",
+            "name": "Burlan Bogdan",
+            "department": "Volunteer - Programming",
+            "desc": "I want to work in this group to improve my teamwork abilities. I also like programming."
+        },
+        {
+            "src": "/img/members/meserus.png",
+            "name": "Meseruș Mihai",
+            "department": "Volunteer - Hardware",
+            "desc": "I like riding the bike and cooking. I want to be on this team to spend more time with my friends and improve my robotics skill."
+        },
+        {
+            "src": "/img/members/tache.png",
+            "name": "Tache Bogdan",
+            "department": "Volunteer - Hardware",
+            "desc": "I like this crew, particularly the robots. It has always been my dream to work in a team that specializes in robotics."
+        }
+    ],
     "2021": [
         {
             "src": "/img/members/mihnea-manta.png",
