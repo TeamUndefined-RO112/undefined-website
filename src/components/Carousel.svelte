@@ -105,14 +105,14 @@
 
 <div class="relative w-full justify-center items-center">
 	<div class="slides" bind:this={siema}>
-		<CarouselImage src="/img/home/Grup_Demo.jpeg"/>
-		<CarouselImage src="/img/home/Robot_Drop_1.jpeg"/>
-		<CarouselImage src="/img/home/Robot_Drop_2.jpeg"/>
-		<CarouselImage src="/img/home/2.jpeg"/>
-		<CarouselImage src="/img/home/piulitza.jpg"/>
-		<CarouselImage src="/img/home/piulitza2.jpg"/>
-		<CarouselImage src="/img/home/3.jpeg"/>
-		<CarouselImage src="/img/home/robot.jpg"/>
+		<CarouselImage src="/img/home/group photo10.jpeg"/>
+		<CarouselImage src="/img/home/robot cool look.jpeg"/>
+		<CarouselImage src="/img/home/festival.jpeg"/>
+		<CarouselImage src="/img/home/competition photo.jpeg"/>
+		<CarouselImage src="/img/home/gang look.jpeg"/>
+		<CarouselImage src="/img/home/piulitza.jpeg"/>
+		<CarouselImage src="/img/home/robot view.jpeg"/>
+		<CarouselImage src="/img/home/gang look2.jpeg"/>
 	</div>
 	<button class="left" on:click={left} use:resetInterval={autoplay} aria-label="left">
 		<span class="text-white"><ChevronLeftIcon /></span>
