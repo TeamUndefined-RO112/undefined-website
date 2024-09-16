@@ -1,0 +1,74 @@
+[
+    {
+        "name": "Motor",
+        "image": "/img/parts/motor 312.jpg",
+        "price_item": "45",
+        "total": "360"
+    },
+    {
+        "name": "Servo",
+        "image": "/img/parts/servo.jpg",
+        "price_item": 30.3,
+        "total": 90.9
+    },
+    {
+        "name": "Battery",
+        "image": "/img/parts/battery.webp",
+        "price_item": 55,
+        "total": 165
+    },
+    {
+        "name": "Belt pulley",
+        "image": "/img/parts/pulley.jpg",
+        "price_item": 13,
+        "total": 78
+    },
+    {
+        "name": "Quad Block",
+        "image": "/img/parts/idk block.jpg",
+        "price_item": 6.99,
+        "total": 69.9
+    },
+    {
+        "name": "Pillow Block",
+        "image": "/img/parts/pillow block.jpg",
+        "price_item": 10.99,
+        "total": 54.95
+    },
+    {
+        "name": "Control Hub",
+        "image": "/img/parts/Control Hub.webp",
+        "price_item": 350,
+        "total": 350
+    },
+    {
+        "name": "Expansion Hub",
+        "image": "/img/parts/Expansion Hub.webp",
+        "price_item": 250,
+        "total": 250
+    },
+    {
+        "name": "Odometry Pod",
+        "image": "/img/parts/Odometry Pod.jpg",
+        "price_item": 99,
+        "total": 297
+    },
+    {
+        "name": "Misumi Slides",
+        "image": "/img/parts/MISUMI slides.webp",
+        "price_item": 32,
+        "total": 256
+    },
+    {
+        "name": "Mecanum Wheel Set",
+        "image": "/img/parts/Mecanum Wheel Set.jpg",
+        "price_item": 184.99,
+        "total": 184.99
+    },
+    {
+        "name": "Battery Charger",
+        "image": "/img/parts/Battery Charger.webp",
+        "price_item": 36.5,
+        "total": 36.5
+    }
+]

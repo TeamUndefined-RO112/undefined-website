@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Full Game Set",
+        "image": "/img/parts/full game.jpg",
+        "price_item": "460",
+        "total": "460"
+    },
+    {
+        "name": "Soft Tiles",
+        "image": "/img/parts/tiles.jpg",
+        "price_item": "259",
+        "total": "259"
+    },
+    {
+        "name": "Perimeter Kit",
+        "image": "/img/parts/perimeter.jpg",
+        "price_item": "659",
+        "total": "659"
+    },
+    {
+        "name": "Basket",
+        "image": "/img/parts/Basket.jpg",
+        "price_item": "10",
+        "total": "40"
+    },
+    {
+        "name": "Tape Set",
+        "image": "/img/parts/Tape Set.jpg",
+        "price_item": "43",
+        "total": "43"
+    }
+]

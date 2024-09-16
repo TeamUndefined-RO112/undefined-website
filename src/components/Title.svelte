@@ -8,10 +8,12 @@
     h1 {
         color: var(--default);
         margin: 0;
+        
     }
 
     .secondary {
-        font-size: 1.4em;
+        font-size: 2.2rem;
         color: inherit;
+        font-weight: 600;
     }
 </style>

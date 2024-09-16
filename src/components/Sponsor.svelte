@@ -1,21 +1,25 @@
 <script lang="ts">
-    import Content from "../components/Content.svelte";
-
-export let image: string;
-export let text: string;
+    export let image: string;
+    export let text: string;
 </script>
 
-<Content column>
+<div class="sponsor">
     <img src={image} alt="sponsor">
     <p>{text}</p>
-</Content>
-
+</div>
 
 <style>
+    .sponsor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
     img {
         width: 400px;
         height: 200px;
-        object-fit:scale-down;
+        object-fit: scale-down;
     }
 
     p {

@@ -7,18 +7,18 @@
 <style>
 div {
     font-size: 20px;
-    line-height: 2em;
+    line-height: 1.5em;
     font-weight: 300;
 }
 
 .center {
     text-align: center;
-    padding: 2em;
+    padding: 4em;
 }
 
 @media screen and (max-width: 600px) {
     div {
-        font-size: 17px;
+        font-size: 10px;
   }
 }
 </style>

@@ -21,34 +21,40 @@
 
         },
         {
-            "src": "/img/members/nichifor darius.jpeg",
-            "name": "Nichifor Darius",
-            "department": "Hardware",
-            "desc": "I would describe myself as a friendly,calm and hardworking person."
-        },
-        {
             "src": "/img/members/stoica alfonso.jpeg",
             "name": "Stoica Alfonso",
             "department": "Hardware",
             "desc": "I‘m part of the hardware,I‘m a curious, receptive, attentive person and I like to learn new things.In my spare time I solve rubik cubes, play with legos and do martial arts."
         },
         {
-            "src": "/img/members/dragomir erica2.jpeg",
-            "name": "Dragomir Erica",
-            "department": "Hardware",
-            "desc": "I am a hardworking person who enjoys science, video editing, cinematography, music and travelling"
-        },
-        {
-            "src": "/img/members/urleteanu ana.jpg",
-            "name": "Urleteanu Ana",
-            "department": "Hardware",
+            "src": "/img/members/nichifor darius.jpeg",
+            "name": "Nichifor Darius",
+            "department": "Volunteer - Hardware",
             "desc": "I would describe myself as a friendly,calm and hardworking person."
         },
         {
-            "src": "/img/members/stefan2.jpeg",
-            "name": "Birlica Stefan",
+            "src": "/img/members/dragomir erica2.jpeg",
+            "name": "Dragomir Erica",
+            "department": "Volunteer - Hardware",
+            "desc": "I am a hardworking person who enjoys science, video editing, cinematography, music and travelling"
+        },
+        {
+            "src": "/img/members/ana maria.jpeg",
+            "name": "Urleteanu Ana",
+            "department": "Volunteer - Hardware",
+            "desc": "I would describe myself as a friendly,calm and hardworking person."
+        },
+        {
+            "src": "/img/members/Lucas.jpeg",
+            "name": "Iordache Lucas",
+            "department": "Volunteer - Hardware",
+            "desc": "Cryptic hardware man. I enjoy engineering, playing guitar and strategy games. Sprinkle in some philosophy reading and voila! That's me!"
+        },
+        {
+            "src": "/img/members/surcelea luca.jpeg",
+            "name": "Surcelea Luca",
             "department": "Programming",
-            "desc": "I am a friendly person, I enjoy spending time on computers, playing video games."
+            "desc": "I am very excited to be in the high school robotics team and I like music."
         },
         {
             "src": "/img/members/radulescu razvan.jpeg",
@@ -59,26 +65,32 @@
         {
             "src": "/img/members/traian2.jpeg",
             "name": "Dobrescu Traian",
-            "department": "Programming",
+            "department": "Volunteer - Programming",
             "desc": "I enjoy art, design, programming, maths and doing the autonomy"
         },
         {
             "src": "/img/members/caldararu denisa.jpg",
             "name": "Căldăraru Denisa",
-            "department": "Programming",
+            "department": "Volunteer - Programming",
             "desc": "I consider myself an ambitious, motivated and organized person. I enjoy challenges and constantly set goals for myself."
         },
         {
             "src": "/img/members/aydin tayga.jpeg",
             "name": "Aydin Tayga",
-            "department": "Programming",
+            "department": "Volunteer - Programming",
             "desc": "I am very friendly and always eager to meet new people.I enjoy reading, playing the guitar and spending time with my friends."
         },
         {
             "src": "/img/members/mirescu maia.jpeg",
             "name": "Maia Mirescu",
-            "department": "Programming",
+            "department": "Volunteer - Programming",
             "desc": "Trying to find the best version of me."
+        },
+        {
+            "src": "/img/members/Ilinca.jpeg",
+            "name": "Alexandru Ilinca",
+            "department": "Volunteer - Programming",
+            "desc": "I enjoy meeting new people,  programming and travelling"
         },
         {
             "src": "/img/members/gilma-alesia.png",
@@ -111,7 +123,7 @@
             "desc": "I’m mastering the art of being silent, even when there’s a lot to be said."
         },
         {
-            "src": "/img/members/craciun sara.jpg",
+            "src": "/img/members/Craciun Sara.jpg",
             "name": "Craciun Sara",
             "department": "Marketing",
             "desc": "I love the magic behind any program or geometric figure...shortly, I like the exact sciences, perfectly combined with teamwork, qualities that define me."

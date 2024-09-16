@@ -1,10 +1,22 @@
 [
     {
-        "name": "Cameron",
-        "src": "/img/sponsor/cameron.png"
+        "name": "Wam Romania",
+        "src": "/img/sponsor/wam romania.jpg"
     },
     {
-        "name": "General Meel Electric",
-        "src": "/img/sponsor/gme.png "
+        "name": "Dulcelle",
+        "src": "/img/sponsor/dulcelle.png"
+    },
+    {
+        "name": "Lemet",
+        "src": "/img/sponsor/logo-lemet.webp"
+    },
+    {
+        "name": "Colegiul National Nicolae Grigorescu",
+        "src": "/img/sponsor/cnng1.jpeg"
+    },
+    {
+        "name": "Cameron",
+        "src": "/img/sponsor/cameron.png"
     }
 ]
