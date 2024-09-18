@@ -1,9 +1,5 @@
 <svg width="1920" height="4000" viewBox="0 0 1920 4000" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<<<<<<< Updated upstream
-<rect width="1920" height="4000" fill="url(#pattern0_243_26)" fill-opacity="0.1"/>
-=======
 <rect width="1920" height="4000" fill="url(#pattern0_243_26)" fill-opacity="0.25"/>
->>>>>>> Stashed changes
 <defs>
 <pattern id="pattern0_243_26" patternContentUnits="objectBoundingBox" width="0.533333" height="0.256">
 <use xlink:href="#image0_243_26" transform="scale(0.000520833 0.00025)"/>
