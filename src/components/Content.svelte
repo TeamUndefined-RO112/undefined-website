@@ -13,7 +13,11 @@ content {
     justify-content: center;
     
     gap: 20px;
-    background: none;
+    background: url("/img/home/perlinbg.svg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 .center {
