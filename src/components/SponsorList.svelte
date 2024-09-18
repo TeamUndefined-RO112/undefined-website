@@ -62,7 +62,7 @@
             <p>- Bank transfer: IBAN: <b>RO11 BRMA 0999 1000 4423 0153 <p/></b> - SWIFTCODE: BRMAROBUXXX, <p>- Beneficiary: ASOCIAŢIA PĂRINȚILOR ELEVILOR DIN COLEGIUL NAȚIONAL NICOLAE
             GRIGORESCU - CÂMPINA </p>
             - Patreon: <b><a class="linkundefined" href="https://www.patreon.com/TeamUndefined" target="_blank" rel="noreferrer">Team-Undefined</a></b>
-            <p>- Revolut: <u>0731813166</u></p>
+            <p>- Revolut: <u>+40731813166</u></p>
             <br/><br/>
             <br/><p> <b style="color:darkgreen; font-weight:800; font-size:2rem">Equipment Donations:</b></p>
             Any gear you can contribute with, matters. From laptops, 3d printers, CNCs, raw materials.
