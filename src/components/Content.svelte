@@ -33,7 +33,7 @@ content {
 }
 
 .big {
-    padding: 3em 10%;
+    padding: 0.5em 10%;
 }
 
 @media screen and (max-width: 1100px) {

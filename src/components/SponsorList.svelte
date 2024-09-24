@@ -13,9 +13,9 @@
 
 <Content column big>
     <Title3>
-        <b>Why Your Sponsorship Matters</b> 
+        <b class="h1-style">Why Your Sponsorship Matters</b> 
     </Title3>    
-    <br/>
+    
     <Title3 secondary>
     <p>We need <b>your help</b> to take <b style="color:darkgreen; font-weight:800">Team Undefined</b> to the next level! 🛠️ <br/>
     <br/> </p> As we prepare for the <b><a class="linkundefined" href="https://www.firstinspires.org/robotics/ftc" target="_blank" rel="noreferrer">FIRST Tech Challenge (FTC)</a></b>, we're looking for <b style="color:tomato; font-weight:800">sponsors</b> to support us in getting the tools and resources we need, like equipment, materials, competition fees, and travel expenses. <br/>
@@ -114,5 +114,24 @@ Most important is the immediate acquisition of these parts so we can build this 
         justify-content: center;
         gap: 40px;
     }
+
+    /* Define the style for both desktop and mobile */
+    .h1-style {
+        font-size: 2rem; /* Default size, will apply to desktop */
+        text-align: center;
+        /* color: darkgreen; */
+        font-weight: 800;
+        /* margin: 20px 0; */
+    }
+
+    /* Mobile specific styles */
+    @media only screen and (max-width: 550px) {
+        .h1-style {
+            font-size: 1.5rem; /* Smaller font for mobile */
+            /* color: red; */
+            /* margin: 10px 0; */
+        }
+    }
+
 </style>
 
