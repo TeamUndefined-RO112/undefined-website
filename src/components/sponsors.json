@@ -1,18 +1,26 @@
 [
     {
         "name": "Dulcelle",
-        "src": "/img/sponsor/dulcelle.png"
+        "src": "/img/sponsor/dulcelle.png",
+        "url": "https://dulcelle.com/contact/",
+        "description": "Artisanal Chocolaterie - Crafting premium handmade chocolates with passion and dedication."
     },
     {
         "name": "Lemet",
-        "src": "/img/sponsor/logo-lemet.webp"
+        "src": "/img/sponsor/logo-lemet.webp",
+        "url": "https://www.lemet.ro/",
+        "description": "Enthusiasm and Passion - Furniture factory LEMET, established in Câmpina since December 1991."
     },
     {
         "name": "Colegiul National Nicolae Grigorescu",
-        "src": "/img/sponsor/cnng1.jpeg"
+        "src": "/img/sponsor/cnng1.jpeg",
+        "url": "https://cngrigorescu.ro/",
+        "description": "Nicolae Grigorescu National College - Câmpina, Romania - Our high school, fostering excellence in education."
     },
     {
-        "name": "Cameron",
-        "src": "/img/sponsor/cameron.png"
+        "name": "Cameron Romania",
+        "src": "/img/sponsor/cameron.png",
+        "url": "https://www.amcham.ro/company/cameron-romania",
+        "description": "Cameron Romania is part of SLB, and is a world leader in drilling oil and gas equipment production. Cameron Romania is part of the Surface division specialized in production of wellhead, valves and trees. Currently, Cameron Romania has two production facilities: the older one in Câmpina (90km from Bucharest) and the new one in Ploiești city (60km from Bucharest)."
     }
 ]

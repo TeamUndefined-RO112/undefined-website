@@ -35,13 +35,55 @@ const { title } = Astro.props;
 			</script>
 		<!-- End Google tag (gtag.js) -->
 	</head>
-	<body>
+	<body class="scanline-effect">
 		<!-- Google Tag Manager (noscript) -->
 		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W5C9V9LJ"
 			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<!-- End Google Tag Manager (noscript) -->
-		<Navbar url={Astro.url}></Navbar>
-		<main class="mt-14">
+
+		<!-- Little Robot Walker -->
+		<div class="robot-walker walking-right" id="robotWalker">
+			<div class="robot-antenna"></div>
+			<div class="robot-body">
+				<div class="robot-eyes">
+					<div class="robot-eye"></div>
+					<div class="robot-eye"></div>
+				</div>
+			</div>
+			<div class="robot-tracks">
+				<div class="robot-track"></div>
+				<div class="robot-track"></div>
+			</div>
+		</div>
+
+		<script>
+			// Random direction changes for the robot
+			const robot = document.getElementById('robotWalker');
+			if (robot) {
+				let currentDirection = 'right';
+
+				function changeDirection() {
+					const directions = ['walking-right', 'walking-left'];
+					const newDirection = directions[Math.floor(Math.random() * directions.length)];
+
+					if (newDirection !== `walking-${currentDirection}`) {
+						robot.classList.remove('walking-right', 'walking-left');
+						robot.classList.add(newDirection);
+						currentDirection = newDirection.replace('walking-', '');
+					}
+
+					// Change direction every 20-40 seconds randomly
+					const nextChange = 20000 + Math.random() * 20000;
+					setTimeout(changeDirection, nextChange);
+				}
+
+				// Start changing directions
+				setTimeout(changeDirection, 20000);
+			}
+		</script>
+
+		<Navbar url={Astro.url} client:load />
+		<main class="mt-16 md:mt-20 relative z-10">
 			<slot/>
 		</main>
 		<Footer></Footer>
