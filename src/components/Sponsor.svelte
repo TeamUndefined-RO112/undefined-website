@@ -52,6 +52,8 @@
     overflow: hidden;
     width: 100%;
     max-width: 420px;
+    pointer-events: auto;
+    touch-action: auto;
 }
 
 .sponsor-card::before {
@@ -143,7 +145,6 @@ img {
     height: auto;
     object-fit: contain;
     transition: transform 0.3s ease;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 .sponsor-card:hover img {

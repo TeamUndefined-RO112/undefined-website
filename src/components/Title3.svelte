@@ -10,11 +10,18 @@
         font-size: 3.5rem;
         color: inherit;
         font-weight: 600;
+        line-height: 1.2;
     }
 
     .secondary {
         font-size: 1.4rem;
         color: inherit;
         font-weight: 300;
+    }
+
+    @media only screen and (max-width: 550px) {
+        h1 {
+            line-height: 1.1;
+        }
     }
 </style>

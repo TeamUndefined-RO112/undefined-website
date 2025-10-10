@@ -1,0 +1,992 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Content from "../../components/Content.svelte";
+import Title from "../../components/Title.svelte";
+import Title3 from "../../components/Title3.svelte";
+import TextBox from "../../components/TextBox.svelte";
+---
+
+<Layout title="Team Undefined - Our Robots">
+    <Content column big>
+        <Title3>
+            <b style="color: rgb(81, 146, 89);">Our <span style="color: white;">Robots</span></b>
+        </Title3>
+        <TextBox>
+            <p style="text-align: center; font-size: 1.2rem; line-height: 1.8; max-width: 800px; margin: 0 auto;">
+                Each season brings a new challenge, and each challenge inspires a new robot. Explore our journey through innovation, engineering, and determination.
+            </p>
+        </TextBox>
+    </Content>
+
+    <br/><br/>
+
+    <!-- 2025 Robot - Hidden Reveal -->
+    <Content column big>
+        <div class="robot-section reveal-section">
+            <Title3>
+                <b style="color: white;">Season 2025: <span style="color: rgb(81, 146, 89);">???</span></b>
+            </Title3>
+            <TextBox>
+                <div class="reveal-container">
+                    <div class="reveal-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="reveal-title">CLASSIFIED</h3>
+                    <p class="reveal-subtitle">Our newest creation is under development...</p>
+                    <p class="reveal-subtitle">Shhhh... geniuses brains are boiling... :)</p>
+
+                    <div class="countdown-container">
+                        <div class="countdown-label">REVEAL DATE</div>
+                        <div class="countdown-display" id="countdown">
+                            <div class="countdown-item">
+                                <span class="countdown-value" id="days">00</span>
+                                <span class="countdown-unit">Days</span>
+                            </div>
+                            <div class="countdown-separator">:</div>
+                            <div class="countdown-item">
+                                <span class="countdown-value" id="hours">00</span>
+                                <span class="countdown-unit">Hours</span>
+                            </div>
+                            <div class="countdown-separator">:</div>
+                            <div class="countdown-item">
+                                <span class="countdown-value" id="minutes">00</span>
+                                <span class="countdown-unit">Minutes</span>
+                            </div>
+                            <div class="countdown-separator">:</div>
+                            <div class="countdown-item">
+                                <span class="countdown-value" id="seconds">00</span>
+                                <span class="countdown-unit">Seconds</span>
+                            </div>
+                        </div>
+                        <div class="countdown-date">December 1st, 2025 • 00:00 EET</div>
+                    </div>
+
+                    <!-- Social Media Follow CTAs -->
+                    <div class="social-cta-container">
+                        <p class="social-cta-heading">FOLLOW US - Get Notified!</p>
+                        <div class="social-buttons">
+                            <a href="https://www.instagram.com/team_undefined/" target="_blank" rel="noopener noreferrer" class="social-button instagram">
+                                <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                                <span class="social-text">
+                                    <span class="social-platform">Instagram</span>
+                                    <span class="social-handle">@team_undefined</span>
+                                </span>
+                            </a>
+                            <a href="https://www.youtube.com/@TeamUndefined19112" target="_blank" rel="noopener noreferrer" class="social-button youtube">
+                                <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                </svg>
+                                <span class="social-text">
+                                    <span class="social-platform">YouTube</span>
+                                    <span class="social-handle">@TeamUndefined19112</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </TextBox>
+        </div>
+    </Content>
+
+    <br/><br/><br/>
+
+    <!-- 2024 Robot - VIK -->
+    <Content column big>
+        <div class="robot-section">
+            <Title3>
+                <b style="color: white;">Season 2024: <span style="color: rgb(81, 146, 89);">VIK</span></b>
+            </Title3>
+            <TextBox>
+                <div class="robot-content">
+                    <div class="robot-description">
+                        <h4 class="robot-subtitle">INTO THE DEEP</h4>
+                        <p>Meet VIK, our champion robot for the 2024-2025 FTC season. Designed for precision, speed, and reliability, VIK represents months of engineering excellence and countless hours of dedication from our team.</p>
+                        <br/>
+                        <p><b style="color: rgb(81, 146, 89);">Key Features:</b></p>
+                        <ul class="features-list">
+                            <li>Advanced autonomous navigation system</li>
+                            <li>Custom-designed manipulation mechanisms</li>
+                            <li>Optimized weight distribution for stability</li>
+                            <li>Robust build quality for competition durability</li>
+                        </ul>
+                    </div>
+
+                    <div class="video-container">
+                        <div class="video-wrapper">
+                            <iframe
+                                src="https://www.youtube.com/embed/wsci-_JKbK0"
+                                title="VIK - Team Undefined Robot 2024"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
+                            ></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Photo Gallery - 10 Photos -->
+                    <!-- Add your photos to: /public/img/robots/vik/ -->
+                    <!-- Then update the src attributes below with your actual filenames -->
+                    <div class="gallery-grid">
+                        <div class="gallery-item" onclick="openLightbox('/img/robots/vik/robot1.png', 'CAD overview')">
+                            <img src="/img/robots/vik/robot1.png" alt="VIK Robot - CAD overview" />
+                            <div class="gallery-overlay">
+                                <p>Photo 1</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('/img/robots/vik/robot2.png', 'CAD rear side')">
+                            <img src="/img/robots/vik/robot2.png" alt="VIK Robot - CAD rear side" />
+                            <div class="gallery-overlay">
+                                <p>Photo 2</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('/img/robots/vik/robot3.png', 'CAD drivetrain')">
+                            <img src="/img/robots/vik/robot3.png" alt="VIK Robot - CAD drivetrain" />
+                            <div class="gallery-overlay">
+                                <p>Photo 3</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('/img/robots/vik/robot4.png', 'CAD topview')">
+                            <img src="/img/robots/vik/robot4.png" alt="VIK Robot - CAD topview" />
+                            <div class="gallery-overlay">
+                                <p>Photo 4</p>
+                            </div>
+                        </div>
+                        <!--
+                        <div class="gallery-item" onclick="openLightbox('/img/robots/vik/photo5.jpg', 'Photo 5')">
+                            <img src="/img/robots/vik/photo5.jpg" alt="VIK Robot - Photo 5" />
+                            <div class="gallery-overlay">
+                                <p>Photo 5</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('/img/robots/vik/photo6.jpg', 'Photo 6')">
+                            <img src="/img/robots/vik/photo6.jpg" alt="VIK Robot - Photo 6" />
+                            <div class="gallery-overlay">
+                                <p>Photo 6</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('/img/robots/vik/photo7.jpg', 'Photo 7')">
+                            <img src="/img/robots/vik/photo7.jpg" alt="VIK Robot - Photo 7" />
+                            <div class="gallery-overlay">
+                                <p>Photo 7</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('/img/robots/vik/photo8.jpg', 'Photo 8')">
+                            <img src="/img/robots/vik/photo8.jpg" alt="VIK Robot - Photo 8" />
+                            <div class="gallery-overlay">
+                                <p>Photo 8</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('/img/robots/vik/photo9.jpg', 'Photo 9')">
+                            <img src="/img/robots/vik/photo9.jpg" alt="VIK Robot - Photo 9" />
+                            <div class="gallery-overlay">
+                                <p>Photo 9</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('/img/robots/vik/photo10.jpg', 'Photo 10')">
+                            <img src="/img/robots/vik/photo10.jpg" alt="VIK Robot - Photo 10" />
+                            <div class="gallery-overlay">
+                                <p>Photo 10</p>
+                            </div>
+                        </div>
+                        -->
+                    </div>
+                </div>
+            </TextBox>
+        </div>
+    </Content>
+
+    <br/><br/><br/>
+
+    <!-- Template for previous years - you can duplicate this for each season -->
+    <Content column big>
+        <div class="robot-section">
+            <Title3>
+                <b style="color: white;">Previous Seasons</b>
+            </Title3>
+            <TextBox>
+                <p style="text-align: center; font-size: 1.1rem; color: rgba(255, 255, 255, 0.7);">
+                    More robots and their stories will be added here. Each represents a chapter in our journey of innovation and growth.
+                </p>
+                <br/>
+                <div class="gallery-placeholder">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                    </svg>
+                    <p>Historical robot archives coming soon!</p>
+                </div>
+            </TextBox>
+        </div>
+    </Content>
+
+    <br/><br/>
+</Layout>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+        <img id="lightbox-img" src="" alt="" />
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+    <button class="lightbox-nav lightbox-prev" onclick="event.stopPropagation(); navigateLightbox(-1)">&lsaquo;</button>
+    <button class="lightbox-nav lightbox-next" onclick="event.stopPropagation(); navigateLightbox(1)">&rsaquo;</button>
+</div>
+
+<script>
+    // Lightbox functionality
+    let currentImageIndex = 0;
+    const images = [
+        { src: '/img/robots/vik/robot1.png', caption: 'CAD overview' },
+        { src: '/img/robots/vik/robot2.png', caption: 'CAD rear view' },
+        { src: '/img/robots/vik/robot3.png', caption: 'CAD drivetrain' },
+        { src: '/img/robots/vik/robot4.png', caption: 'CAD top view' },
+        
+    ];
+
+    function openLightbox(imgSrc: string, caption: string) {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement;
+        const lightboxCaption = document.getElementById('lightbox-caption');
+
+        if (lightbox && lightboxImg && lightboxCaption) {
+            currentImageIndex = images.findIndex(img => img.src === imgSrc);
+            lightboxImg.src = imgSrc;
+            lightboxCaption.textContent = caption;
+            lightbox.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+    }
+
+    function closeLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        if (lightbox) {
+            lightbox.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    }
+
+    function navigateLightbox(direction: number) {
+        currentImageIndex += direction;
+
+        // Wrap around
+        if (currentImageIndex < 0) {
+            currentImageIndex = images.length - 1;
+        } else if (currentImageIndex >= images.length) {
+            currentImageIndex = 0;
+        }
+
+        const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement;
+        const lightboxCaption = document.getElementById('lightbox-caption');
+
+        if (lightboxImg && lightboxCaption) {
+            lightboxImg.src = images[currentImageIndex].src;
+            lightboxCaption.textContent = images[currentImageIndex].caption;
+        }
+    }
+
+    // Close lightbox with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeLightbox();
+        } else if (e.key === 'ArrowLeft') {
+            navigateLightbox(-1);
+        } else if (e.key === 'ArrowRight') {
+            navigateLightbox(1);
+        }
+    });
+
+    // Make functions globally available
+    (window as any).openLightbox = openLightbox;
+    (window as any).closeLightbox = closeLightbox;
+    (window as any).navigateLightbox = navigateLightbox;
+</script>
+
+<script>
+    // Countdown timer for 2025 robot reveal
+    const targetDate = new Date('2025-12-01T00:00:00+02:00').getTime(); // EET timezone
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        if (distance < 0) {
+            document.getElementById('countdown')!.innerHTML = '<div class="countdown-complete">REVEALED!</div>';
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        const daysEl = document.getElementById('days');
+        const hoursEl = document.getElementById('hours');
+        const minutesEl = document.getElementById('minutes');
+        const secondsEl = document.getElementById('seconds');
+
+        if (daysEl) daysEl.textContent = String(days).padStart(2, '0');
+        if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
+        if (minutesEl) minutesEl.textContent = String(minutes).padStart(2, '0');
+        if (secondsEl) secondsEl.textContent = String(seconds).padStart(2, '0');
+    }
+
+    // Update countdown every second
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+</script>
+
+<style>
+    .robot-section {
+        margin: 40px 0;
+    }
+
+    .robot-content {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .robot-description {
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    .robot-subtitle {
+        font-family: 'Orbitron', monospace;
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: rgb(81, 146, 89);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 15px;
+    }
+
+    .features-list {
+        list-style: none;
+        padding: 0;
+        margin: 15px 0;
+    }
+
+    .features-list li {
+        padding: 8px 0 8px 25px;
+        position: relative;
+    }
+
+    .features-list li::before {
+        content: '▸';
+        position: absolute;
+        left: 0;
+        color: rgb(81, 146, 89);
+        font-weight: bold;
+    }
+
+    /* Video Container */
+    .video-container {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .video-wrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+        border: 2px solid rgba(81, 146, 89, 0.4);
+        border-radius: 8px;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Gallery Grid */
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .gallery-item {
+        position: relative;
+        aspect-ratio: 4/3;
+        overflow: hidden;
+        border: 2px solid rgba(81, 146, 89, 0.3);
+        border-radius: 8px;
+        background: rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .gallery-item:hover {
+        border-color: rgba(81, 146, 89, 0.7);
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(81, 146, 89, 0.3);
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+        transform: scale(1.1);
+    }
+
+    .gallery-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+        padding: 20px 15px 15px;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+        transform: translateY(0);
+    }
+
+    .gallery-overlay p {
+        font-family: 'Orbitron', monospace;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: rgb(81, 146, 89);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin: 0;
+    }
+
+    .gallery-placeholder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 300px;
+        background: linear-gradient(135deg, rgba(24, 24, 24, 0.95) 0%, rgba(18, 18, 18, 0.95) 100%);
+        border: 2px dashed rgba(81, 146, 89, 0.3);
+        border-radius: 8px;
+        padding: 40px;
+        text-align: center;
+    }
+
+    .gallery-placeholder svg {
+        width: 60px;
+        height: 60px;
+        color: rgba(81, 146, 89, 0.5);
+        margin-bottom: 15px;
+    }
+
+    .gallery-placeholder p {
+        color: rgba(255, 255, 255, 0.6);
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 1.1rem;
+    }
+
+    .gallery-placeholder code {
+        color: rgb(81, 146, 89);
+        background: rgba(81, 146, 89, 0.1);
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-family: monospace;
+    }
+
+    /* Reveal Section */
+    .reveal-section {
+        position: relative;
+    }
+
+    .reveal-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 60px 20px;
+        background: linear-gradient(135deg, rgba(24, 24, 24, 0.95) 0%, rgba(18, 18, 18, 0.95) 100%);
+        border: 2px solid rgba(81, 146, 89, 0.4);
+        border-radius: 8px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .reveal-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(81, 146, 89, 0.1), transparent);
+        animation: reveal-shimmer 3s infinite;
+    }
+
+    @keyframes reveal-shimmer {
+        0% { left: -100%; }
+        100% { left: 100%; }
+    }
+
+    .reveal-icon {
+        width: 100px;
+        height: 100px;
+        color: rgb(81, 146, 89);
+        margin-bottom: 20px;
+        animation: pulse-icon 2s ease-in-out infinite;
+    }
+
+    .reveal-icon svg {
+        width: 100%;
+        height: 100%;
+        filter: drop-shadow(0 0 20px rgba(81, 146, 89, 0.5));
+    }
+
+    @keyframes pulse-icon {
+        0%, 100% {
+            transform: scale(1);
+            opacity: 0.8;
+        }
+        50% {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+    }
+
+    .reveal-title {
+        font-family: 'Orbitron', monospace;
+        font-size: 3rem;
+        font-weight: 900;
+        color: rgb(81, 146, 89);
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        margin-bottom: 10px;
+        text-shadow: 0 0 30px rgba(81, 146, 89, 0.6);
+    }
+
+    .reveal-subtitle {
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 1.3rem;
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 40px;
+    }
+
+    /* Social Media CTAs */
+    .social-cta-container {
+        width: 100%;
+        max-width: 600px;
+        margin: 30px 0 40px 0;
+        padding: 30px;
+        background: rgba(81, 146, 89, 0.05);
+        border: 1px solid rgba(81, 146, 89, 0.2);
+        border-radius: 8px;
+    }
+
+    .social-cta-heading {
+        font-family: 'Orbitron', monospace;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: rgb(81, 146, 89);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .social-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .social-button {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 15px 20px;
+        background: rgba(0, 0, 0, 0.3);
+        border: 2px solid rgba(81, 146, 89, 0.3);
+        border-radius: 8px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .social-button::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(81, 146, 89, 0.1);
+        transform: translate(-50%, -50%);
+        transition: width 0.4s ease, height 0.4s ease;
+    }
+
+    .social-button:hover::before {
+        width: 300px;
+        height: 300px;
+    }
+
+    .social-button:hover {
+        border-color: rgb(81, 146, 89);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 20px rgba(81, 146, 89, 0.3);
+    }
+
+    .social-icon {
+        width: 30px;
+        height: 30px;
+        flex-shrink: 0;
+        color: rgb(81, 146, 89);
+        transition: transform 0.3s ease;
+        position: relative;
+        z-index: 1;
+    }
+
+    .social-button:hover .social-icon {
+        transform: scale(1.1);
+    }
+
+    .social-text {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .social-platform {
+        font-family: 'Orbitron', monospace;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .social-handle {
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* Countdown */
+    .countdown-container {
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .countdown-label {
+        font-family: 'Orbitron', monospace;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.6);
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .countdown-display {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .countdown-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(81, 146, 89, 0.1);
+        border: 2px solid rgba(81, 146, 89, 0.3);
+        border-radius: 8px;
+        padding: 15px 20px;
+        min-width: 100px;
+    }
+
+    .countdown-value {
+        font-family: 'Orbitron', monospace;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: rgb(81, 146, 89);
+        line-height: 1;
+        text-shadow: 0 0 20px rgba(81, 146, 89, 0.5);
+    }
+
+    .countdown-unit {
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.6);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-top: 5px;
+    }
+
+    .countdown-separator {
+        font-family: 'Orbitron', monospace;
+        font-size: 2rem;
+        color: rgb(81, 146, 89);
+        font-weight: 700;
+    }
+
+    .countdown-date {
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .countdown-complete {
+        font-family: 'Orbitron', monospace;
+        font-size: 3rem;
+        font-weight: 900;
+        color: rgb(81, 146, 89);
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        text-shadow: 0 0 30px rgba(81, 146, 89, 0.8);
+        animation: reveal-pulse 1s ease-in-out infinite;
+    }
+
+    @keyframes reveal-pulse {
+        0%, 100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.05);
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .reveal-title {
+            font-size: 2rem;
+            letter-spacing: 0.15em;
+        }
+
+        .reveal-subtitle {
+            font-size: 1.1rem;
+        }
+
+        .social-cta-container {
+            padding: 20px;
+        }
+
+        .social-cta-heading {
+            font-size: 0.95rem;
+        }
+
+        .social-button {
+            padding: 12px 15px;
+        }
+
+        .social-icon {
+            width: 26px;
+            height: 26px;
+        }
+
+        .social-platform {
+            font-size: 0.85rem;
+        }
+
+        .social-handle {
+            font-size: 0.8rem;
+        }
+
+        .countdown-display {
+            gap: 5px;
+        }
+
+        .countdown-item {
+            padding: 10px 15px;
+            min-width: 70px;
+        }
+
+        .countdown-value {
+            font-size: 1.8rem;
+        }
+
+        .countdown-unit {
+            font-size: 0.7rem;
+        }
+
+        .countdown-separator {
+            font-size: 1.5rem;
+        }
+    }
+
+    @media only screen and (max-width: 480px) {
+        .countdown-display {
+            flex-wrap: wrap;
+        }
+
+        .countdown-separator {
+            display: none;
+        }
+
+        .countdown-item {
+            min-width: calc(50% - 10px);
+        }
+    }
+
+    /* Lightbox Modal */
+    .lightbox {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        z-index: 10000;
+        justify-content: center;
+        align-items: center;
+        animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    .lightbox-close {
+        position: absolute;
+        top: 30px;
+        right: 40px;
+        font-size: 50px;
+        font-weight: 300;
+        color: rgb(81, 146, 89);
+        cursor: pointer;
+        z-index: 10002;
+        transition: all 0.3s ease;
+        line-height: 1;
+        font-family: Arial, sans-serif;
+    }
+
+    .lightbox-close:hover {
+        color: white;
+        transform: scale(1.2);
+    }
+
+    .lightbox-content {
+        position: relative;
+        max-width: 90%;
+        max-height: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        animation: zoomIn 0.3s ease;
+    }
+
+    @keyframes zoomIn {
+        from {
+            transform: scale(0.8);
+            opacity: 0;
+        }
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    #lightbox-img {
+        max-width: 100%;
+        max-height: 85vh;
+        object-fit: contain;
+        border: 3px solid rgba(81, 146, 89, 0.5);
+        box-shadow: 0 0 50px rgba(81, 146, 89, 0.3);
+    }
+
+    .lightbox-caption {
+        margin-top: 20px;
+        font-family: 'Orbitron', monospace;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: rgb(81, 146, 89);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        text-align: center;
+    }
+
+    .lightbox-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(81, 146, 89, 0.2);
+        border: 2px solid rgba(81, 146, 89, 0.5);
+        color: rgb(81, 146, 89);
+        font-size: 50px;
+        font-weight: 300;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 10001;
+        font-family: Arial, sans-serif;
+        line-height: 1;
+    }
+
+    .lightbox-nav:hover {
+        background: rgba(81, 146, 89, 0.8);
+        color: white;
+        transform: translateY(-50%) scale(1.1);
+    }
+
+    .lightbox-prev {
+        left: 40px;
+    }
+
+    .lightbox-next {
+        right: 40px;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .lightbox-close {
+            top: 15px;
+            right: 15px;
+            font-size: 40px;
+        }
+
+        .lightbox-nav {
+            width: 50px;
+            height: 50px;
+            font-size: 40px;
+        }
+
+        .lightbox-prev {
+            left: 10px;
+        }
+
+        .lightbox-next {
+            right: 10px;
+        }
+
+        .lightbox-caption {
+            font-size: 1rem;
+        }
+
+        #lightbox-img {
+            max-height: 70vh;
+        }
+    }
+</style>

@@ -2,36 +2,10 @@
     import sponsors from './sponsors.json';
     import Sponsor from "./Sponsor.svelte";
     import Title from "./Title.svelte";
-    import PartList from "./PartList.svelte";
-    import FieldPartsList from "./FieldPartsList.svelte"; // Import component for field parts
-    import parts from './parts.json'; // Import data for robot parts
-    import fieldParts from './fieldParts.json'; // Import data for field parts
     import Content from "./Content.svelte";
     import Title4 from "./Title4.svelte";
     import Title3 from "./Title3.svelte";
     import TextBox from "./TextBox.svelte";
-
-    let copyIBANSuccess = false;
-    let copyRevolutSuccess = false;
-
-    function copyIBAN() {
-        const iban = "RO11 BRMA 0999 1000 4423 0153";
-        navigator.clipboard.writeText(iban).then(() => {
-            copyIBANSuccess = true;
-            setTimeout(() => {
-                copyIBANSuccess = false;
-            }, 2000);
-        });
-    }
-
-    function copyRevolut() {
-        navigator.clipboard.writeText('+40731813166').then(() => {
-            copyRevolutSuccess = true;
-            setTimeout(() => {
-                copyRevolutSuccess = false;
-            }, 2000);
-        });
-    }
 </script>
 
 <Content column big>
@@ -40,33 +14,255 @@
     </Title3>
 
     <TextBox>
-    <p>We need <b>your help</b> to take <b style="color:darkgreen; font-weight:800">Team Undefined</b> to the next level! 🛠️ <br/>
-    <br/> </p> As we prepare for the <b><a class="linkundefined" href="https://www.firstinspires.org/robotics/ftc" target="_blank" rel="noreferrer">FIRST Tech Challenge (FTC)</a></b>, we're looking for <b style="color:tomato; font-weight:800">sponsors</b> to support us in getting the tools and resources we need, like equipment, materials, competition fees, and travel expenses. <br/>
-    <br/>Right now, we're working hard, but we're up against many teams with <b>advanced gear</b> like multiple 3D printers, CNC machines, and more. We are using 3D printers from friends and order CNC prints where we can.<br/>
-    <br/> <p> With the right support, we can keep pushing boundaries and showing what we're capable of.</p> <br/>
-     By sponsoring us, your brand will gain <b>visibility</b> at competitions, on our website and on our social media but it's <b>more than just that!</b> You'll be investing in the future of <b><a class="linkundefined" href="https://www.snhu.edu/about-us/newsroom/stem/what-does-stem-mean-for-you#:~:text=STEM%20is%20a%20common%20abbreviation,%2C%20technology%2C%20engineering%20and%20mathematics." target="_blank" rel="noreferrer">STEM</a></b>, helping young minds like ours develop critical skills in robotics, software development (C, C++, Java), and teamwork. Your support will directly contribute to shaping the next generation of engineers and innovators.<br/>
-    <br/><b>Together, we can achieve something incredible for us, and for the future of technology!</b>
+    <div class="benefits-grid">
+        <div class="benefit-card">
+            <h4 class="benefit-title">
+                <div class="benefit-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                </div>
+                Take Us to the Next Level
+            </h4>
+            <p class="benefit-description">We're ready to push boundaries and compete at the highest level. Your sponsorship provides the critical resources we need to transform from a passionate team into championship contenders.</p>
+        </div>
+
+        <div class="benefit-card">
+            <h4 class="benefit-title">
+                <div class="benefit-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                    </svg>
+                </div>
+                Competition Success
+            </h4>
+            <p class="benefit-description">Support our journey through FIRST Tech Challenge competitions. Cover equipment, materials, competition fees, and travel expenses that stand between us and victory.</p>
+        </div>
+
+        <div class="benefit-card">
+            <h4 class="benefit-title">
+                <div class="benefit-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+                    </svg>
+                </div>
+                Level the Playing Field
+            </h4>
+            <p class="benefit-description">Right now, we're competing against teams with multiple 3D printers and CNC machines. We borrow equipment from friends with HUGE delays and costs. Help us get our own advanced gear.</p>
+        </div>
+
+        <div class="benefit-card">
+            <h4 class="benefit-title">
+                <div class="benefit-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6"></path>
+                    </svg>
+                </div>
+                Faster Innovation
+            </h4>
+            <p class="benefit-description">With the right equipment, we can iterate faster, test more designs, and build better robots. No more waiting weeks for parts or compromising on quality due to budget constraints.</p>
+        </div>
+
+        <div class="benefit-card">
+            <h4 class="benefit-title">
+                <div class="benefit-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                    </svg>
+                </div>
+                Invest in STEM Future
+            </h4>
+            <p class="benefit-description">You're not just sponsoring a robotics team - you're investing in the next generation of engineers and innovators. Help us develop critical skills in robotics, software development (C, C++, Java), and teamwork.</p>
+        </div>
+
+        <div class="benefit-card">
+            <h4 class="benefit-title">
+                <div class="benefit-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                    </svg>
+                </div>
+                Shape Tomorrow's Leaders
+            </h4>
+            <p class="benefit-description">Together, we can achieve something incredible - for us, and for the future of technology. Your support today shapes the engineers, programmers, and innovators of tomorrow.</p>
+        </div>
+    </div>
+    </TextBox>
     <br/><br/>
+
+    <Title3>
+        <b style="color: rgb(81, 146, 89);">What You Get</b> as Our Sponsor
+    </Title3>
+    <TextBox>
+    <div class="benefits-grid">
+        <div class="benefit-card">
+            <h4 class="benefit-title">
+                <div class="benefit-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                    </svg>
+                </div>
+                Maximum Visibility
+            </h4>
+            <p class="benefit-description">Your logo prominently displayed on our robot, team uniforms, website, and all social media channels. Every competition appearance = brand exposure.</p>
+        </div>
+
+        <div class="benefit-card">
+            <h4 class="benefit-title">
+                <div class="benefit-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"></path>
+                    </svg>
+                </div>
+                Active Promotion
+            </h4>
+            <p class="benefit-description">Dedicated social media posts, mentions at competitions, and recognition in all team communications and presentations.</p>
+        </div>
+
+        <div class="benefit-card">
+            <h4 class="benefit-title">
+                <div class="benefit-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                    </svg>
+                </div>
+                Community Impact
+            </h4>
+            <p class="benefit-description">Association with STEM education and youth development. Show your commitment to building the next generation of engineers and innovators.</p>
+        </div>
+
+        <div class="benefit-card">
+            <h4 class="benefit-title">
+                <div class="benefit-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                    </svg>
+                </div>
+                Recognition & Updates
+            </h4>
+            <p class="benefit-description">Regular updates on team progress, exclusive behind-the-scenes content, and priority recognition at all team events and competitions.</p>
+        </div>
+
+        <div class="benefit-card">
+            <h4 class="benefit-title">
+                <div class="benefit-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path>
+                    </svg>
+                </div>
+                Personal Demos
+            </h4>
+            <p class="benefit-description">We can demo the robots we've built for your employees and teams, on demand, if time allows. Inspire your workforce with cutting-edge robotics!</p>
+        </div>
+
+        <div class="benefit-card">
+            <h4 class="benefit-title">
+                <div class="benefit-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                    </svg>
+                </div>
+                Our Eternal Gratitude
+            </h4>
+            <p class="benefit-description">You'll forever hold a special place in our journey. Your support today shapes our success tomorrow, and we'll never forget those who believed in us.</p>
+        </div>
+    </div>
+    </TextBox>
+
+    <br/><br/>
+
+    <Title3>
+        <b style="color: white;">How <span style="color: rgb(81, 146, 89);">Sponsorship Works</span></b>
+    </Title3>
+    <TextBox>
+        <div class="process-section">
+            <div class="process-content">
+                <div class="process-icon">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                    </svg>
+                </div>
+                <div class="process-text">
+                    <h4 class="process-title">Transparent & Tax-Deductible</h4>
+                    <p>Team Undefined operates through <b>ASOCIAŢIA PĂRINȚILOR ELEVILOR DIN COLEGIUL NAȚIONAL NICOLAE GRIGORESCU - CÂMPINA</b>, a registered non-profit organization affiliated with our high school. All financial operations are managed by our school's certified accountant, ensuring complete transparency and compliance.</p>
+                    <p style="margin-top: 15px;">We provide <b style="color: rgb(81, 146, 89);">official sponsorship contracts</b> and documentation that allow your organization to <b style="color: rgb(81, 146, 89);">deduct sponsorship contributions as business expenses</b>, reducing your taxable income in accordance with Romanian tax legislation.</p>
+                    <p style="margin-top: 15px; font-size: 1.1rem;"><b>Ready to become a sponsor?</b> Let's discuss how we can work together to build the future of technology.</p>
+                </div>
+            </div>
+        </div>
+    </TextBox>
+
     <div class="cta-buttons">
-        <a href="#support" class="btn-robotic-primary">
-            <span>Donate Now</span>
-            <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-        </a>
-        <a href="#support" class="btn-robotic-secondary">
+        <a href="/contact" class="btn-robotic-primary">
             <span>Contact Us</span>
             <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
             </svg>
         </a>
+        <a href="/donate" class="btn-robotic-secondary">
+            <span>Too complicated - Donate instead!</span>
+            <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+        </a>
     </div>
-    </TextBox>
-    <br/><br/>
-    <br/><br/>
-    <Title3> <b style="color:gold; font-weight:800">Our Top Sponsor</b></Title3>
+
     <br/><br/>
 
+    <TextBox>
+        <br/><p> <b style="color: white; font-weight:800; font-size:2.2rem; font-family: 'Orbitron', monospace; letter-spacing: 0.05em;">Equipment Donations <span style="color: rgb(81, 146, 89);">WE NEED</span>:</b></p>
+        Any gear you can contribute with, matters. From laptops, 3d printers, CNCs, raw materials.
+Most important is the immediate acquisition of these parts so we can build this year theme:
+    </TextBox>
+
+    <div class="equipment-grid">
+        <a href="https://www.prusa3d.com/product/prusa-core-one-kit/" target="_blank" rel="noopener noreferrer" class="equipment-card">
+            <div class="equipment-image-container">
+                <img src="/img/prusa-core-one.jpg" alt="PRUSA CORE ONE 3D Printer" />
+            </div>
+            <h4 class="equipment-title">PRUSA CORE ONE 3D Printer</h4>
+            <p class="equipment-description">
+                We would really love to have our own 3d printer: The CORE One is a fully enclosed CoreXY 3D printer with active temperature control designed for top print quality and speed. Easy to set up and made to last, this rugged machine is perfect for beginners and professionals alike. Designed and manufactured in the EU.
+            </p>
+            <div class="equipment-link">
+                <span>View Product</span>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                </svg>
+            </div>
+        </a>
+
+        <a href="https://swyftrobotics.com/products/80w-27-x-20-co2-laser-cutter-recommended-for-ftc-teams" target="_blank" rel="noopener noreferrer" class="equipment-card">
+            <div class="equipment-image-container">
+                <img src="/img/vevor-laser.webp" alt="Laser CO2 engraver" />
+            </div>
+            <h4 class="equipment-title">Laser CO2 Engraver</h4>
+            <p class="equipment-description">
+                Help us prototype faster: CO2 Laser Cutter: The Ultimate Build Season Advantage. Tired of outsourcing parts and waiting for deliveries? Take control of your build season with a CO2 Laser Cutter.
+            </p>
+            <div class="equipment-link">
+                <span>View Product</span>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                </svg>
+            </div>
+        </a>
+    </div>
+
+    <div class="cta-buttons">
+        <a href="/donate" class="btn-robotic-primary">
+            <span>Donate Now</span>
+            <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+        </a>
+    </div>
+
+    <br/><br/>
+    <Title3> <b style="color:gold; font-weight:800">Top Sponsor</b></Title3>
+    
     <!-- WAM Top Sponsor Card -->
     <div class="top-sponsor-card">
         <div class="corner-accent top-left"></div>
@@ -84,9 +280,6 @@
             The multinational WAMGROUP Corporation, a global leader in the development and production of equipment and installations for bulk materials handling, has been present in Romania since 2002. Starting in 2008, WAMGROUP Romania has two production facilities in Prahova County, near Ploiești, an industrial city located 50 kilometers north of Bucharest. The WAMGROUP subsidiary in Romania not only distributes WAMGROUP equipment nationally and in the Republic of Moldova, but represents one of the Group's most important production sites in Europe.
         </p>
     </div>
-    <br/><br/>
-    <br/><br/>
-    <br/><br/>
     <br/><br/>
     <Title3> Important sponsors</Title3>
 </Content>
@@ -108,142 +301,22 @@
         {/if}
     </div>
 
-    <div id="support" class="support-section">
-        <Content column big>
-            <Title3>
-                <b class="support-title">Ways to Support Team Undefined</b>
-                <br/><br/>
-            </Title3>
-            <TextBox>
-            <p>Robotics is not cheap. We need money to purchase parts for our robots, transport ourselves to each of the competitions phases and for the branding of the team.</p><br/>
-            <br/><b style="color:darkgreen; font-weight:800; font-size:2rem">Monetary Donations:</b>
-            <br/><br/>
-            <p>- Bank transfer:</p>
-            <div class="iban-container">
-                <div class="iban-box">
-                    <span class="iban-label">IBAN:</span>
-                    <span class="iban-value">RO11 BRMA 0999 1000 4423 0153</span>
-                </div>
-                <button class="copy-btn" on:click={copyIBAN} class:copied={copyIBANSuccess}>
-                    {#if copyIBANSuccess}
-                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                    {:else}
-                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-                        </svg>
-                    {/if}
-                </button>
-            </div>
-            <p>- Beneficiary: ASOCIAŢIA PĂRINȚILOR ELEVILOR DIN COLEGIUL NAȚIONAL NICOLAE GRIGORESCU - CÂMPINA</p>
-            <br/>
-            <p>- Patreon:</p>
-            <a href="https://www.patreon.com/TeamUndefined" target="_blank" rel="noopener noreferrer" class="payment-container">
-                <div class="payment-box">
-                    <svg class="payment-logo patreon-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 436 476">
-                        <path d="M436 143c-.084-60.778-47.57-110.591-103.285-128.565C263.528-7.884 172.279-4.649 106.214 26.424 26.142 64.089.988 146.596.051 228.883c-.77 67.653 6.004 245.841 106.83 247.11 74.917.948 86.072-95.279 120.737-141.623 24.662-32.972 56.417-42.285 95.507-51.929C390.309 265.865 436.097 213.011 436 143Z"></path>
-                    </svg>
-                    <span class="payment-label">Patreon:</span>
-                    <span class="payment-value">Team-Undefined</span>
-                </div>
-                <svg class="external-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                </svg>
-            </a>
-            <br/>
-            <p>- Revolut:</p>
-            <div class="payment-container">
-                <div class="payment-box">
-                    <img src="/img/revolut-512.png" alt="Revolut" class="payment-logo" />
-                    <span class="payment-label">Revolut:</span>
-                    <span class="payment-value">+40731813166</span>
-                </div>
-                <button class="copy-btn" on:click={copyRevolut} class:copied={copyRevolutSuccess}>
-                    {#if copyRevolutSuccess}
-                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                    {:else}
-                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
-                        </svg>
-                    {/if}
-                </button>
-            </div>
-            <br/><br/>
-            <br/><p> <b style="color: white; font-weight:800; font-size:2.2rem; font-family: 'Orbitron', monospace; letter-spacing: 0.05em;">Equipment Donations <span style="color: rgb(81, 146, 89);">WE NEED</span>:</b></p>
-            Any gear you can contribute with, matters. From laptops, 3d printers, CNCs, raw materials.
-Most important is the immediate acquisition of these parts so we can build this year theme:
-        </TextBox>
-
-        <div class="equipment-grid">
-            <a href="https://www.prusa3d.com/product/prusa-core-one-kit/" target="_blank" rel="noopener noreferrer" class="equipment-card">
-                <div class="equipment-image-container">
-                    <img src="/img/prusa-core-one.jpg" alt="PRUSA CORE ONE 3D Printer" />
-                </div>
-                <h4 class="equipment-title">PRUSA CORE ONE 3D Printer</h4>
-                <p class="equipment-description">
-                    We would really love to have our own 3d printer: The CORE One is a fully enclosed CoreXY 3D printer with active temperature control designed for top print quality and speed. Easy to set up and made to last, this rugged machine is perfect for beginners and professionals alike. Designed and manufactured in the EU.
-                </p>
-                <div class="equipment-link">
-                    <span>View Product</span>
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                    </svg>
-                </div>
-            </a>
-
-            <a href="https://swyftrobotics.com/products/80w-27-x-20-co2-laser-cutter-recommended-for-ftc-teams" target="_blank" rel="noopener noreferrer" class="equipment-card">
-                <div class="equipment-image-container">
-                    <img src="/img/vevor-laser.webp" alt="Laser CO2 engraver" />
-                </div>
-                <h4 class="equipment-title">Laser CO2 Engraver</h4>
-                <p class="equipment-description">
-                    Help us prototype faster: CO2 Laser Cutter: The Ultimate Build Season Advantage. Tired of outsourcing parts and waiting for deliveries? Take control of your build season with a CO2 Laser Cutter.
-                </p>
-                <div class="equipment-link">
-                    <span>View Product</span>
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                    </svg>
-                </div>
-            </a>
-        </div>
-
-
+    <br/><br/><br/>
+    <Content column big>
         <Title3>
-            <br/><br/>
-            <b>Sponsor Benefits and Recognition</b>
+            <b class="thank-you-title">THANK YOU!</b>
         </Title3>
-        <TextBox>
-            <p> <b>Logo placement:</b> We will display your logo on our website, team uniforms, social accounts, competitions and robot.</p>
-            <p> <b>Media Promotion:</b> Social media shout-outs from the team accounts.</p>
-            <p> <b>Mentions:</b>    We will mention you at competitions and events.</p>
-        </TextBox>
-        <Title3>
-            <br/><br/>
-            <b>Get in touch
-            </b>
-        </Title3>
-        <TextBox>
-            We have all the time in the world for our sponsors. Please email us at: <b><a class="linkundefined" href="https://mail.google.com/mail/u/0/#inbox" target="_blank" rel="noreferrer"> teamundefined2021@gmail.com</a></b>  or give us a phone call at: +40729094750 (please call after 3 PM as we have classes too)
-        </TextBox>
-        </Content>
-    </div>
-
-    <!-- Lista de piese necesare pentru robot -->
-    <h2>Robot Parts Needed</h2>
-    <PartList parts={parts}></PartList>
-
-    <!-- Lista de piese de câmpuri necesare -->
-    <h2>Field Parts Needed</h2>
-    <FieldPartsList fieldParts={fieldParts}></FieldPartsList>
+    </Content>
+    <br/><br/><br/>
 </section>
 
 <style>
+    section {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
     h2 {
-        margin-top: 200px;
         font-size: 2.5rem;
         text-align: center;
         font-family: 'Orbitron', monospace;
@@ -259,6 +332,54 @@ Most important is the immediate acquisition of these parts so we can build this 
         flex-wrap: wrap;
         justify-content: center;
         gap: 40px;
+        touch-action: pan-y pan-x;
+    }
+
+    /* Thank You Title Styling */
+    .thank-you-title {
+        font-size: 4rem;
+        font-weight: 900;
+        color: rgb(81, 146, 89);
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        text-shadow:
+            0 0 20px rgba(81, 146, 89, 0.6),
+            0 0 40px rgba(81, 146, 89, 0.4),
+            0 0 60px rgba(81, 146, 89, 0.2);
+        animation: thank-you-glow 2s ease-in-out infinite;
+        text-align: center;
+        font-family: 'Orbitron', monospace;
+    }
+
+    @keyframes thank-you-glow {
+        0%, 100% {
+            text-shadow:
+                0 0 20px rgba(81, 146, 89, 0.6),
+                0 0 40px rgba(81, 146, 89, 0.4),
+                0 0 60px rgba(81, 146, 89, 0.2);
+            transform: scale(1);
+        }
+        50% {
+            text-shadow:
+                0 0 30px rgba(81, 146, 89, 0.8),
+                0 0 60px rgba(81, 146, 89, 0.6),
+                0 0 90px rgba(81, 146, 89, 0.4);
+            transform: scale(1.02);
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .thank-you-title {
+            font-size: 2.5rem;
+            letter-spacing: 0.1em;
+        }
+    }
+
+    @media only screen and (max-width: 480px) {
+        .thank-you-title {
+            font-size: 2rem;
+            letter-spacing: 0.08em;
+        }
     }
 
     /* Define the style for both desktop and mobile */
@@ -267,6 +388,7 @@ Most important is the immediate acquisition of these parts so we can build this 
         text-align: center;
         /* color: darkgreen; */
         font-weight: 800;
+        line-height: 1.2;
         /* margin: 20px 0; */
     }
 
@@ -274,6 +396,7 @@ Most important is the immediate acquisition of these parts so we can build this 
     @media only screen and (max-width: 550px) {
         .h1-style {
             font-size: 1.5rem; /* Smaller font for mobile */
+            line-height: 1.1;
             /* color: red; */
             /* margin: 10px 0; */
         }
@@ -394,7 +517,6 @@ Most important is the immediate acquisition of these parts so we can build this 
         max-height: 250px;
         object-fit: contain;
         transition: transform 0.3s ease;
-        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
     }
 
     .top-sponsor-card:hover .top-sponsor-image-container img {
@@ -606,11 +728,14 @@ Most important is the immediate acquisition of these parts so we can build this 
             flex-direction: column;
             align-items: flex-start;
             padding: 10px 12px;
+            max-width: calc(100vw - 40px);
         }
 
         .iban-value,
         .payment-value {
             font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            word-break: break-all;
         }
 
         .copy-btn,
@@ -696,8 +821,8 @@ Most important is the immediate acquisition of these parts so we can build this 
         border: 2px solid rgba(81, 146, 89, 0.3);
         border-left: 4px solid rgb(81, 146, 89);
         border-right: 4px solid rgb(81, 146, 89);
-        padding: 60px 20px;
-        margin: 80px 0;
+        padding: 20px 20px;
+        margin: 40px 0;
         box-shadow: 0 0 40px rgba(81, 146, 89, 0.15),
                     inset 0 0 60px rgba(81, 146, 89, 0.05);
         scroll-margin-top: 100px;
@@ -752,8 +877,8 @@ Most important is the immediate acquisition of these parts so we can build this 
         }
 
         .support-section {
-            padding: 40px 15px;
-            margin: 40px 0;
+            padding: 10px 15px;
+            margin: 30px 0;
         }
 
         .support-title {
@@ -764,10 +889,17 @@ Most important is the immediate acquisition of these parts so we can build this 
     /* Equipment Grid */
     .equipment-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 30px;
         margin: 40px 0;
         padding: 0 20px;
+    }
+
+    @media only screen and (max-width: 500px) {
+        .equipment-grid {
+            grid-template-columns: 1fr;
+            padding: 0 10px;
+        }
     }
 
     .equipment-card {
@@ -831,7 +963,6 @@ Most important is the immediate acquisition of these parts so we can build this 
         max-height: 100%;
         object-fit: contain;
         transition: transform 0.3s ease;
-        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
     }
 
     .equipment-card:hover .equipment-image-container img {
@@ -912,6 +1043,237 @@ Most important is the immediate acquisition of these parts so we can build this 
 
         .equipment-description {
             font-size: 0.95rem;
+        }
+    }
+
+    /* Benefits Grid */
+    .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        margin: 30px 0;
+    }
+
+    @media only screen and (max-width: 1024px) {
+        .benefits-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .benefit-card {
+        background: linear-gradient(135deg, rgba(24, 24, 24, 0.98) 0%, rgba(18, 18, 18, 0.98) 100%);
+        border: 2px solid rgba(81, 146, 89, 0.3);
+        border-radius: 8px;
+        padding: 25px;
+        transition: all 0.3s ease;
+    }
+
+    .benefit-card:hover {
+        border-color: rgba(81, 146, 89, 0.7);
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(81, 146, 89, 0.3);
+    }
+
+    .benefit-icon {
+        width: 40px;
+        height: 40px;
+        margin-right: 12px;
+        flex-shrink: 0;
+        color: rgb(81, 146, 89);
+    }
+
+    .benefit-icon svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .benefit-title {
+        font-family: 'Orbitron', monospace;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        display: flex;
+        align-items: center;
+    }
+
+    .benefit-description {
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.85);
+    }
+
+    @media only screen and (max-width: 768px) {
+        .benefits-grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+    }
+
+    /* Process Section */
+    .process-section {
+        padding: 20px 0;
+    }
+
+    .process-content {
+        display: flex;
+        gap: 30px;
+        align-items: flex-start;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .process-icon {
+        width: 80px;
+        height: 80px;
+        flex-shrink: 0;
+        color: rgb(81, 146, 89);
+        background: rgba(81, 146, 89, 0.1);
+        border: 2px solid rgba(81, 146, 89, 0.3);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 18px;
+    }
+
+    .process-icon svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .process-text {
+        flex: 1;
+    }
+
+    .process-title {
+        font-family: 'Orbitron', monospace;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: rgb(81, 146, 89);
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .process-text p {
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    @media only screen and (max-width: 768px) {
+        .process-content {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .process-icon {
+            width: 60px;
+            height: 60px;
+        }
+
+        .process-title {
+            font-size: 1.2rem;
+        }
+
+        .process-text p {
+            font-size: 1rem;
+        }
+    }
+
+    /* Contact Section */
+    .contact-section {
+        scroll-margin-top: 100px;
+    }
+
+    .contact-methods {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .contact-method {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        background: linear-gradient(135deg, rgba(24, 24, 24, 0.95) 0%, rgba(18, 18, 18, 0.95) 100%);
+        border: 2px solid rgba(81, 146, 89, 0.4);
+        border-radius: 8px;
+        padding: 25px;
+        transition: all 0.3s ease;
+    }
+
+    .contact-method:hover {
+        border-color: rgba(81, 146, 89, 0.7);
+        box-shadow: 0 5px 20px rgba(81, 146, 89, 0.2);
+        transform: translateX(5px);
+    }
+
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+        color: rgb(81, 146, 89);
+    }
+
+    .contact-icon svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .contact-info {
+        flex: 1;
+    }
+
+    .contact-label {
+        font-family: 'Orbitron', monospace;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.7);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 8px;
+    }
+
+    .contact-value {
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: rgb(81, 146, 89);
+        text-decoration: none;
+        display: block;
+        transition: color 0.3s ease;
+    }
+
+    .contact-value:hover {
+        color: rgba(81, 146, 89, 0.8);
+    }
+
+    .contact-note {
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.6);
+        margin-top: 5px;
+        font-style: italic;
+    }
+
+    @media only screen and (max-width: 640px) {
+        .contact-method {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .contact-value {
+            font-size: 1.1rem;
         }
     }
 

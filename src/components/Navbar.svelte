@@ -23,9 +23,12 @@ function closeMenu() {
 
     <div class="container mx-auto px-4 flex justify-between md:justify-center items-center">
         <!-- Logo with glow effect -->
-        <a href="/" class="h-10 w-10 md:h-12 md:w-12 mx-2 flex justify-center items-center relative group">
-            <div class="absolute inset-0 bg-primary-green/20 blur-xl group-hover:bg-primary-green/40 transition-all duration-300"></div>
-            <img src="/logo_undefined_white.svg" alt="team logo" class="relative z-10 transition-transform duration-300 group-hover:scale-110">
+        <a href="/" class="flex items-center gap-2 md:gap-0 relative group">
+            <div class="h-10 w-10 md:h-12 md:w-12 mx-2 flex justify-center items-center relative">
+                <div class="absolute inset-0 bg-primary-green/20 blur-xl group-hover:bg-primary-green/40 transition-all duration-300"></div>
+                <img src="/logo_undefined_white.svg" alt="team logo" class="relative z-10 transition-transform duration-300 group-hover:scale-110">
+            </div>
+            <span class="md:hidden text-primary-green font-orbitron font-bold text-base tracking-wider">#19112</span>
         </a>
 
         <!-- Desktop menu -->
@@ -33,8 +36,10 @@ function closeMenu() {
             <div class="w-px h-8 mx-4 bg-primary-green/30"></div>
             <NavbarButton href="/" path={url.pathname}>Home</NavbarButton>
             <NavbarButton href="/team" path={url.pathname}>About Us</NavbarButton>
+            <NavbarButton href="/robots" path={url.pathname}>Robots</NavbarButton>
             <NavbarButton href="/team/apply" path={url.pathname}>Apply</NavbarButton>
             <NavbarButton href="/team/sponsors" path={url.pathname}>Sponsors</NavbarButton>
+            <NavbarButton href="/donate" path={url.pathname}>Donate</NavbarButton>
             <div class="w-px h-8 mx-4 bg-primary-green/30"></div>
             <NavbarButton href="/contact" path={url.pathname}>Contact</NavbarButton>
         </div>
@@ -57,8 +62,10 @@ function closeMenu() {
         <div class="flex flex-col py-4" on:click={closeMenu}>
             <NavbarButton href="/" path={url.pathname}>Home</NavbarButton>
             <NavbarButton href="/team" path={url.pathname}>About Us</NavbarButton>
+            <NavbarButton href="/robots" path={url.pathname}>Robots</NavbarButton>
             <NavbarButton href="/team/apply" path={url.pathname}>Apply</NavbarButton>
             <NavbarButton href="/team/sponsors" path={url.pathname}>Sponsors</NavbarButton>
+            <NavbarButton href="/donate" path={url.pathname}>Donate</NavbarButton>
             <NavbarButton href="/contact" path={url.pathname}>Contact</NavbarButton>
         </div>
     </div>

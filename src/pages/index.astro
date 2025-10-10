@@ -25,8 +25,22 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 	</div>
 
+	<!-- UFO -->
+	<div class="ufo" id="ufo">
+		<div class="ufo-body">
+			<div class="ufo-dome"></div>
+			<div class="ufo-lights">
+				<div class="ufo-light"></div>
+				<div class="ufo-light"></div>
+				<div class="ufo-light"></div>
+				<div class="ufo-light"></div>
+			</div>
+			<div class="ufo-beam"></div>
+		</div>
+	</div>
+
 	<script>
-		// Quadcopter flight animation
+		// Quadcopter flight animation (original)
 		const quadcopter = document.getElementById('quadcopter');
 		if (quadcopter) {
 			function flyDrone() {
@@ -93,9 +107,140 @@ import Layout from '../layouts/Layout.astro';
 				animate();
 			}
 
-			// First flight after 3-5 seconds for testing (change to 10-20s later)
+			// First flight after 3-5 seconds
 			setTimeout(flyDrone, 3000 + Math.random() * 2000);
 		}
+
+		// UFO flight animation (separate, parallel)
+		const ufo = document.getElementById('ufo');
+		const robotWalker = document.getElementById('robotWalker');
+
+		if (ufo && robotWalker) {
+			function flyUFO() {
+				// Random start position
+				const startX = Math.random() < 0.5 ? -100 : window.innerWidth + 100;
+				const startY = 100 + Math.random() * (window.innerHeight * 0.4);
+
+				// Random end position (opposite side)
+				const endX = startX < 0 ? window.innerWidth + 100 : -100;
+				const endY = 100 + Math.random() * (window.innerHeight * 0.4);
+
+				// Random mid points for curved path
+				const midX1 = window.innerWidth * (0.2 + Math.random() * 0.3);
+				const midY1 = startY + (Math.random() - 0.5) * 200;
+				const midX2 = window.innerWidth * (0.5 + Math.random() * 0.3);
+				const midY2 = endY + (Math.random() - 0.5) * 200;
+
+				// Set initial position
+				ufo.style.left = startX + 'px';
+				ufo.style.top = startY + 'px';
+				ufo.classList.add('active');
+
+				// Duration between 8-12 seconds
+				const duration = 8000 + Math.random() * 4000;
+				const startTime = Date.now();
+				let beamActivated = false;
+
+				function animate() {
+					const elapsed = Date.now() - startTime;
+					const progress = Math.min(elapsed / duration, 1);
+
+					// Bezier curve for smooth path
+					const t = progress;
+					const t2 = t * t;
+					const t3 = t2 * t;
+					const mt = 1 - t;
+					const mt2 = mt * mt;
+					const mt3 = mt2 * mt;
+
+					const x = mt3 * startX +
+							  3 * mt2 * t * midX1 +
+							  3 * mt * t2 * midX2 +
+							  t3 * endX;
+
+					const y = mt3 * startY +
+							  3 * mt2 * t * midY1 +
+							  3 * mt * t2 * midY2 +
+							  t3 * endY;
+
+					ufo.style.left = x + 'px';
+					ufo.style.top = y + 'px';
+
+					// Check if UFO is above the robot walker
+					if (!beamActivated) {
+						const robotRect = robotWalker.getBoundingClientRect();
+						const ufoX = x;
+						const robotX = robotRect.left + robotRect.width / 2;
+
+						// If UFO is horizontally aligned with robot (within 100px)
+						if (Math.abs(ufoX - robotX) < 100) {
+							beamActivated = true;
+
+							// Activate beam
+							ufo.classList.add('beam-active');
+							robotWalker.classList.add('beamed');
+
+							// Deactivate after 3 seconds
+							setTimeout(() => {
+								ufo.classList.remove('beam-active');
+								robotWalker.classList.remove('beamed');
+							}, 3000);
+						}
+					}
+
+					if (progress < 1) {
+						requestAnimationFrame(animate);
+					} else {
+						// Fade out
+						ufo.classList.remove('active');
+						ufo.classList.remove('beam-active');
+
+						// Schedule next flight (10-30 seconds)
+						const nextFlight = 10000 + Math.random() * 20000;
+						setTimeout(flyUFO, nextFlight);
+					}
+				}
+
+				animate();
+			}
+
+			// First UFO flight after 5-8 seconds
+			setTimeout(flyUFO, 5000 + Math.random() * 3000);
+		}
+
+		// Rotating punchy texts synced with carousel
+		const punchyTexts = [
+			"Anything. Everything. #Undefined.",
+			"You're in #undefined territory.",
+			"Design. Build. Code. Redefine.",
+			"Impossible? Not here!",
+			"Define your limits. #Undefined breaks 'em.",
+			"KISS? Nah. Copycats? LoL.",
+			"#19112. Emergency response team! #1 #911 #112",
+			"Coopertition FTW!"
+		];
+
+		const punchyTextElement = document.getElementById('punchyText');
+		let currentPunchyIndex = 0;
+
+		function rotatePunchyText() {
+			if (punchyTextElement) {
+				// Fade out
+				punchyTextElement.style.opacity = '0';
+
+				setTimeout(() => {
+					// Change text
+					currentPunchyIndex = (currentPunchyIndex + 1) % punchyTexts.length;
+					punchyTextElement.textContent = punchyTexts[currentPunchyIndex];
+
+					// Fade in
+					punchyTextElement.style.opacity = '1';
+				}, 500);
+			}
+		}
+
+		// Rotate text every 4 seconds (synced with carousel autoplay)
+		setInterval(rotatePunchyText, 4000);
 	</script>
 
 	<!-- Hero Section with Carousel -->
@@ -115,19 +260,32 @@ import Layout from '../layouts/Layout.astro';
 			<!-- Tagline with animation -->
 			<div class="relative">
 				<h1 class="text-white text-2xl md:text-4xl lg:text-5xl font-orbitron font-bold uppercase tracking-wider mb-4 glow-text text-center">
-					WE CAN BE ANYTHING
+					WE CAN BE <span class="text-primary-green" style="-webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.8); text-shadow: 0 0 20px rgba(81, 146, 89, 0.8), 0 0 40px rgba(81, 146, 89, 0.5);">ANYTHING</span>
 				</h1>
 				<div class="w-full h-[2px] bg-gradient-to-r from-transparent via-primary-green to-transparent"></div>
 			</div>
 
+			<!-- Rotating Punchy Texts -->
+			<div class="mt-4 h-8 md:h-10">
+				<p id="punchyText" class="text-white text-sm md:text-lg font-orbitron font-bold uppercase tracking-wide text-center transition-opacity duration-500" style="text-shadow: 0 0 15px rgba(81, 146, 89, 0.8);">
+					Anything. Everything. #Undefined.
+				</p>
+			</div>
+
 			<!-- Subtitle -->
-			<p class="text-gray-300 text-base md:text-xl lg:text-2xl font-rajdhani text-center mt-6 max-w-3xl animate-fade-in-up" style="animation-delay: 0.2s;">
+			<p class="text-gray-300 text-base md:text-xl lg:text-2xl font-rajdhani text-center mt-2 max-w-3xl animate-fade-in-up" style="animation-delay: 0.2s;">
 				FIRST Tech Challenge Team #19112 | Câmpina, Romania
 			</p>
 
-			<!-- CTA Button -->
-			<div class="mt-8 animate-fade-in-up" style="animation-delay: 0.4s;">
-				<a href="/team/apply" class="btn-robotic-primary group relative inline-flex items-center gap-3 px-8 py-4 bg-primary-green text-white border-2 border-primary-green font-orbitron font-bold uppercase tracking-wider hover:bg-white hover:border-white hover:text-black shadow-glow-lg">
+			<!-- CTA Buttons -->
+			<div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up" style="animation-delay: 0.4s;">
+				<a href="/team/sponsors" class="btn-robotic-primary group relative inline-flex items-center gap-3 px-8 py-4 bg-primary-green text-white border-2 border-primary-green font-orbitron font-bold uppercase tracking-wider hover:bg-white hover:border-white hover:text-black shadow-glow-lg">
+					<span>Become a Sponsor</span>
+					<svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+					</svg>
+				</a>
+				<a href="/team/apply" class="btn-robotic-secondary group relative inline-flex items-center gap-3 px-8 py-4 bg-transparent border-2 border-primary-green text-primary-green font-orbitron font-bold uppercase tracking-wider hover:bg-primary-green hover:text-white shadow-glow-lg">
 					<span>Join Our Team</span>
 					<svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>

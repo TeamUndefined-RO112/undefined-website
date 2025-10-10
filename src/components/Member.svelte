@@ -3,7 +3,7 @@
     type Member = {
         src: string,
         name: string,
-        department: "Team Leader" | "Pilot/Hardware" | "Hardware" | "Pilot/Programming" | "Programming" | "Engineering Notebook" | "Marketing" | "Volunteer",
+        department: "Team Leader" | "Team Leader - Software" | "Team Leader - Hardware" | "Pilot/Hardware" | "Hardware" | "Pilot/Programming" | "Programming" | "Engineering Notebook" | "Marketing" | "Volunteer",
         desc: string
     }
     export let member: Member;
@@ -17,7 +17,7 @@
         if(arg[sel]=="Programming") return "orange";
         if(arg[sel]=="Engineering Notebook") return "red";
         if(arg[sel]=="Marketing") return "purple";
-        if(arg[sel]=="Team Leader") return "blue";
+        if(arg[sel]=="Team Leader" || arg[sel]=="Team Leader - Software" || arg[sel]=="Team Leader - Hardware") return "blue";
     }
 
     let accentColor = function (department:string) {
@@ -29,7 +29,7 @@
         if(arg[sel]=="Programming") return "rgba(247, 144, 30, 0.3)";
         if(arg[sel]=="Engineering Notebook") return "rgba(220, 76, 76, 0.3)";
         if(arg[sel]=="Marketing") return "rgba(138, 86, 172, 0.3)";
-        if(arg[sel]=="Team Leader") return "rgba(100, 149, 237, 0.3)";
+        if(arg[sel]=="Team Leader" || arg[sel]=="Team Leader - Software" || arg[sel]=="Team Leader - Hardware") return "rgba(100, 149, 237, 0.3)";
     }
 </script>
 

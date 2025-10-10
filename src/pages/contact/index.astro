@@ -2,16 +2,385 @@
 import Contact from "../../components/Contact.svelte";
 import Content from "../../components/Content.svelte";
 import Title from "../../components/Title.svelte";
+import Title3 from "../../components/Title3.svelte";
+import TextBox from "../../components/TextBox.svelte";
 import Layout from "../../layouts/Layout.astro";
 
 ---
 <Layout title="Team Undefined - Contact">
     <Content column big>
-        <Title>Contact us!</Title>
-        <Title secondary>You can contact us on Instagram or Facebook</Title>
+        <Title3>
+            <b style="color: rgb(81, 146, 89);"><span style="color: white;">Let's</span> Talk!</b>
+        </Title3>
+        <TextBox>
+            <p style="font-size: 1.2rem; text-align: center; margin-bottom: 30px;">
+                We have all the time in the world for our sponsors. Ready to make an impact?
+            </p>
+
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <div class="contact-info">
+                        <h4 class="contact-label">Email Us</h4>
+                        <a class="contact-value linkundefined" href="mailto:teamundefined2021@gmail.com" target="_blank" rel="noreferrer">
+                            teamundefined2021@gmail.com
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                    </div>
+                    <div class="contact-info">
+                        <h4 class="contact-label">Call Us</h4>
+                        <div class="phone-numbers">
+                            <div class="phone-item">
+                                <span class="phone-label">Sponsorships:</span>
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <a class="contact-value linkundefined" href="tel:+40729094750">
+                                        +40 729 094 750
+                                    </a>
+                                    <button class="copy-btn copy-btn-small" data-copy-phone="+40729094750">
+                                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="phone-item">
+                                <span class="phone-label">Technical:</span>
+                                <div style="display: flex; align-items: center; gap: 8px;">
+                                    <a class="contact-value linkundefined" href="tel:+40731813166">
+                                        +40 731 813 166
+                                    </a>
+                                    <button class="copy-btn copy-btn-small" data-copy-phone="+40731813166">
+                                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="contact-note" style="color: white; font-weight: 600;">(Please call after 3 PM RO timezone - we have classes!)</p>
+                    </div>
+                </div>
+
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <div class="contact-info">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <h4 class="contact-label" style="margin-bottom: 0;">Shipping Address</h4>
+                            <button class="copy-btn copy-btn-small" id="copyAddressBtn">
+                                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="contact-value">
+                            <span style="display: block;">Andrei Stahie / Stefan Birlica</span>
+                            <span style="display: block; margin-top: 5px;">Team Undefined</span>
+                        </div>
+                        <p class="contact-note" style="margin-top: 8px;">
+                            Colegiul National Nicolae Grigorescu<br/>
+                            Calea Doftanei 4, Câmpina 105600<br/>
+                            Prahova, Romania<br/>
+                            Phone: +40 731 813 166
+                        </p>
+                        <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x40b300790628053f:0x74a7b0aca45472b0?sa=X&ved=1t:8290&ictx=111" target="_blank" rel="noopener noreferrer" class="maps-link" style="margin-top: 12px;">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 16px; height: 16px; margin-right: 6px;">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                            View on Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </TextBox>
+
+        <br/><br/>
+
+        <Title secondary>You can also find us on Instagram or Facebook</Title>
         <Content wrap>
             <a href="https://www.instagram.com/team_undefined/"><Contact image="/img/ig.webp" text="Instagram"></Contact></a>
             <a href="https://www.facebook.com/teamundefinedcnng/"><Contact image="/img/fb.webp" text="Facebook"></Contact></a>
         </Content>
     </Content>
 </Layout>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Handle phone number copy buttons
+        const phoneCopyBtns = document.querySelectorAll('[data-copy-phone]');
+        phoneCopyBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const phoneNumber = btn.getAttribute('data-copy-phone');
+                const icon = btn.querySelector('.icon');
+
+                navigator.clipboard.writeText(phoneNumber).then(() => {
+                    // Change to checkmark icon
+                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>';
+                    btn.classList.add('copied');
+
+                    // Reset after 2 seconds
+                    setTimeout(() => {
+                        icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>';
+                        btn.classList.remove('copied');
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Failed to copy phone number:', err);
+                });
+            });
+        });
+
+        // Handle address copy button
+        const copyAddressBtn = document.getElementById('copyAddressBtn');
+        if (copyAddressBtn) {
+            copyAddressBtn.addEventListener('click', () => {
+                const address = `Andrei Stahie / Stefan Birlica
+Team Undefined
+Colegiul National Nicolae Grigorescu
+Calea Doftanei 4
+Câmpina 105600
+Prahova, Romania
+Phone: +40 731 813 166`;
+
+                const icon = copyAddressBtn.querySelector('.icon');
+
+                navigator.clipboard.writeText(address).then(() => {
+                    // Change to checkmark icon
+                    icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>';
+                    copyAddressBtn.classList.add('copied');
+
+                    // Reset after 2 seconds
+                    setTimeout(() => {
+                        icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>';
+                        copyAddressBtn.classList.remove('copied');
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Failed to copy address:', err);
+                });
+            });
+        }
+    });
+</script>
+
+<style>
+    .contact-methods {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .contact-method {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        background: linear-gradient(135deg, rgba(24, 24, 24, 0.95) 0%, rgba(18, 18, 18, 0.95) 100%);
+        border: 2px solid rgba(81, 146, 89, 0.4);
+        border-radius: 8px;
+        padding: 25px;
+        transition: all 0.3s ease;
+    }
+
+    .contact-method:hover {
+        border-color: rgba(81, 146, 89, 0.7);
+        box-shadow: 0 5px 20px rgba(81, 146, 89, 0.2);
+        transform: translateX(5px);
+    }
+
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+        color: rgb(81, 146, 89);
+    }
+
+    .contact-icon svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .contact-info {
+        flex: 1;
+    }
+
+    .contact-label {
+        font-family: 'Orbitron', monospace;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.7);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 8px;
+    }
+
+    .contact-value {
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: rgb(81, 146, 89);
+        text-decoration: none;
+        display: block;
+        transition: color 0.3s ease;
+    }
+
+    .contact-value:hover {
+        color: rgba(81, 146, 89, 0.8);
+    }
+
+    .contact-note {
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.6);
+        margin-top: 5px;
+        font-style: italic;
+    }
+
+    .maps-link {
+        display: inline-flex;
+        align-items: center;
+        margin-top: 12px;
+        font-family: 'Orbitron', monospace;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: rgb(81, 146, 89);
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        transition: all 0.3s ease;
+        padding: 6px 12px;
+        border: 1px solid rgba(81, 146, 89, 0.4);
+        border-radius: 4px;
+        background: rgba(81, 146, 89, 0.1);
+    }
+
+    .maps-link:hover {
+        color: white;
+        background: rgba(81, 146, 89, 0.8);
+        border-color: rgb(81, 146, 89);
+        transform: translateX(3px);
+    }
+
+    .copy-btn {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        background: rgba(81, 146, 89, 0.15);
+        border: 1px solid rgba(81, 146, 89, 0.4);
+        border-radius: 3px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        padding: 0;
+        clip-path: polygon(
+            0 0,
+            calc(100% - 6px) 0,
+            100% 6px,
+            100% 100%,
+            6px 100%,
+            0 calc(100% - 6px)
+        );
+    }
+
+    .copy-btn:hover {
+        background: rgba(81, 146, 89, 0.25);
+        border-color: rgba(81, 146, 89, 0.7);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(81, 146, 89, 0.3);
+    }
+
+    .copy-btn:active {
+        transform: translateY(0);
+    }
+
+    .copy-btn.copied {
+        background: rgba(81, 146, 89, 0.3);
+        border-color: rgb(81, 146, 89);
+    }
+
+    .copy-btn .icon {
+        width: 18px;
+        height: 18px;
+        color: rgb(81, 146, 89);
+        transition: all 0.2s ease;
+    }
+
+    .copy-btn.copied .icon {
+        color: rgb(81, 146, 89);
+        animation: checkmark 0.3s ease;
+    }
+
+    .copy-btn-small {
+        width: 28px;
+        height: 28px;
+    }
+
+    .copy-btn-small .icon {
+        width: 14px;
+        height: 14px;
+    }
+
+    .phone-numbers {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 8px;
+    }
+
+    .phone-item {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .phone-label {
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.6);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    @keyframes checkmark {
+        0% {
+            transform: scale(0.8);
+            opacity: 0;
+        }
+        50% {
+            transform: scale(1.2);
+        }
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    @media only screen and (max-width: 640px) {
+        .contact-method {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .contact-value {
+            font-size: 1.1rem;
+        }
+    }
+</style>

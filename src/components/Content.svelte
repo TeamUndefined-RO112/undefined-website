@@ -11,7 +11,8 @@
 content {
     display: flex;
     justify-content: center;
-    
+    max-width: 100vw;
+    box-sizing: border-box;
     gap: 20px;
     background: url("/img/home/perlinbg.svg");
     background-size: cover;
@@ -39,6 +40,12 @@ content {
 @media screen and (max-width: 1100px) {
   content {
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .big {
+    padding: 0.2em 5%;
   }
 }
 </style>

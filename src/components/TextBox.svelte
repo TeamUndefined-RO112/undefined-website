@@ -18,7 +18,8 @@ div {
 
 @media screen and (max-width: 600px) {
     div {
-        font-size: 10px;
+        font-size: 18px;
+        line-height: 1.6em;
   }
 }
 </style>
