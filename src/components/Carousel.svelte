@@ -105,13 +105,13 @@
 
 <div class="relative w-full justify-center items-center">
 	<div class="slides" bind:this={siema}>
+		<CarouselImage src="/img/home/piulitza.jpeg"/>
+		<CarouselImage src="/img/home/vik_blur.jpeg"/>
 		<CarouselImage src="/img/home/group photo10.jpeg"/>
-		<CarouselImage src="/img/home/robot cool look.jpeg"/>
 		<CarouselImage src="/img/home/festival.jpeg"/>
 		<CarouselImage src="/img/home/competition photo.jpeg"/>
-		<CarouselImage src="/img/home/gang look.jpeg"/>
-		<CarouselImage src="/img/home/piulitza.jpeg"/>
-		<CarouselImage src="/img/home/robot view.jpeg"/>
+		<CarouselImage src="/img/home/selfie_gang.jpeg"/>
+		<CarouselImage src="/img/home/vik_natie.jpeg"/>
 		<CarouselImage src="/img/home/gang look2.jpeg"/>
 	</div>
 	<button class="left" on:click={left} use:resetInterval={autoplay} aria-label="left">
