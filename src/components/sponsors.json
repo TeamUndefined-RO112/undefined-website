@@ -17,10 +17,16 @@
         "url": "https://cngrigorescu.ro/",
         "description": "Nicolae Grigorescu National College - Câmpina, Romania - Our high school, fostering excellence in education."
     },
-    {
-        "name": "Cameron Romania",
-        "src": "/img/sponsor/cameron.png",
-        "url": "https://www.amcham.ro/company/cameron-romania",
-        "description": "Cameron Romania is part of SLB, and is a world leader in drilling oil and gas equipment production. Cameron Romania is part of the Surface division specialized in production of wellhead, valves and trees. Currently, Cameron Romania has two production facilities: the older one in Câmpina (90km from Bucharest) and the new one in Ploiești city (60km from Bucharest)."
+     {
+        "name": "WAMGROUP Romania",
+        "src": "/img/sponsor/wam romania.jpg",
+        "url": "https://wamgroup.ro/ro-RO/WAMRO/home",
+        "description": "The multinational WAMGROUP Corporation, a global leader in the development and production of equipment and installations for bulk materials handling, has been present in Romania since 2002."
+    },
+     {
+        "name": "Erbasu",
+        "src": "/img/sponsor/Erbasu.png",
+        "url": "https://www.erbasu.ro/",
+        "description": "Erbașu Construction is a fully Romanian-owned construction company, founded in 1990. With more than 3,000 employees, it delivers complex projects in civil construction, infrastructure (roads, bridges, passages), and general contracting, including design and execution"
     }
 ]

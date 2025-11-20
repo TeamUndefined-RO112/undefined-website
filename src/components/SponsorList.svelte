@@ -261,26 +261,29 @@ Most important is the immediate acquisition of these parts so we can build this 
     </div>
 
     <br/><br/>
-    <Title3> <b style="color:gold; font-weight:800">Top Sponsor</b></Title3>
+    <Title3> <b style="color:gold; font-weight:800">Top Sponsors</b></Title3>
     
-    <!-- WAM Top Sponsor Card -->
+    <!-- Aveuro Top Sponsor Card -->
     <div class="top-sponsor-card">
         <div class="corner-accent top-left"></div>
         <div class="corner-accent top-right"></div>
         <div class="corner-accent bottom-left"></div>
         <div class="corner-accent bottom-right"></div>
 
-        <a href="https://wamgroup.ro/ro-RO/WAMRO/home" target="_blank" rel="noopener noreferrer" class="top-sponsor-link">
+        <a href="https://aveuro.com/" target="_blank" rel="noopener noreferrer" class="top-sponsor-link">
             <div class="top-sponsor-image-container">
-                <img src="/img/sponsor/wam romania.jpg" alt="WAMGROUP Romania" />
+                <img src="/img/sponsor/aveuro-seo-image.jpg" alt="WAMGROUP Romania" />
             </div>
-            <h3 class="top-sponsor-name">WAMGROUP Romania</h3>
+            <h3 class="top-sponsor-name">Aveuro international</h3>
         </a>
         <p class="top-sponsor-description">
-            The multinational WAMGROUP Corporation, a global leader in the development and production of equipment and installations for bulk materials handling, has been present in Romania since 2002. Starting in 2008, WAMGROUP Romania has two production facilities in Prahova County, near Ploiești, an industrial city located 50 kilometers north of Bucharest. The WAMGROUP subsidiary in Romania not only distributes WAMGROUP equipment nationally and in the Republic of Moldova, but represents one of the Group's most important production sites in Europe.
+            Aveuro International is a Romanian company specializing in the production of minibuses and electric vehicles for passenger transport. Founded in 2007 and headquartered in Câmpina, Prahova County, the company operates a large manufacturing facility equipped to deliver high-quality, European-certified vehicle conversions.
+
+            Beyond serving the Romanian market, Aveuro exports a significant share of its production to various European countries, becoming a trusted partner for both public and private transport operators. Through continuous investment in innovation—especially in electric mobility—Aveuro International has established itself as one of the region’s notable producers of modern, reliable, and customizable passenger transport solutions.
         </p>
     </div>
     <br/><br/>
+
     <Title3> Important sponsors</Title3>
 </Content>
 
