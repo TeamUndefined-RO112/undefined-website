@@ -6,7 +6,7 @@
     import Title2 from "./Title2.svelte";
     import TextBox from "./TextBox.svelte";
     import members from './members.json';
-    let year: number = 2025;
+    let year: number = 2026;
 </script>
 
 <Content column big>
@@ -189,7 +189,7 @@
         <b>Year:</b>&nbsp;
         <Button small on:click={() => {if(year>2018) year--; if(year==2019) year--;if(year==2022) year--;}}>-</Button>
         <p>{year}</p>
-        <Button small on:click={() => {if(year<2025) year++; if(year==2019) year++;if(year==2022) year++;}}>+</Button>
+        <Button small on:click={() => {if(year<2026) year++; if(year==2019) year++;if(year==2022) year++;}}>+</Button>
     </div>
 </Content>
 

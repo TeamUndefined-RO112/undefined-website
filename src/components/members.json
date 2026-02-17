@@ -1,4 +1,126 @@
 {
+    "2026": [
+        {
+            "src": "/img/members/Stefan .jpeg",
+            "name": "Birlica Stefan",
+            "department": "Team Leader - Software",
+            "desc": "I am a friendly person, I enjoy spending time on computers, playing video games."
+        },
+        {
+            "src": "/img/members/Stahie.jpg",
+            "name": "Stahie Andrei",
+            "department": "Team Leader - Hardware",
+            "desc": "I'm passionate about engineering and in my spare time I create a lot of things."
+        },
+        {
+            "src": "/img/members/Dumitru.jpg",
+            "name": "Tiseanu Dumitru",
+            "department": "Hardware",
+            "desc": ""
+        },
+        {
+            "src": "/img/members/Mihnea.jpg",
+            "name": "Cristache Mihnea",
+            "department": "Hardware",
+            "desc": ""
+        },
+        {
+            "src": "/img/members/Alfonso.jpeg",
+            "name": "Stoica Alfonso",
+            "department": "Hardware",
+            "desc": "I'm part of the hardware team, I'm a curious, receptive, attentive person and I like to learn new things. In my spare time I solve rubik cubes, play with legos and do martial arts."
+        },
+        {
+            "src": "/img/members/Mihoi.jpeg",
+            "name": "Calmâc Mihai",
+            "department": "Volunteer - Hardware",
+            "desc": ""
+        },
+        {
+            "src": "/img/members/Augustin.jpeg",
+            "name": "Bunea Augustin-Stefan",
+            "department": "Software",
+            "desc": ""
+        },
+        {
+            "src": "/img/members/Mitroi.jpeg",
+            "name": "Mitroi Stefan",
+            "department": "Software",
+            "desc": ""
+        },
+        {
+            "src": "/img/members/Tayga.jpeg",
+            "name": "Aydin Tayga",
+            "department": "Software",
+            "desc": "I am very friendly and always eager to meet new people. I enjoy reading, playing the guitar and spending time with my friends."
+        },
+        {
+            "src": "/img/members/David.jpeg",
+            "name": "Mădan David",
+            "department": "Software",
+            "desc": ""
+        },
+        {
+            "src": "/img/members/Lucian.jpeg",
+            "name": "Picioarea Lucian",
+            "department": "Software",
+            "desc": ""
+        },
+        {
+            "src": "/img/members/Rebeca.jpeg",
+            "name": "Moraru Rebeca",
+            "department": "Software",
+            "desc": ""
+        },
+        {
+            "src": "/img/members/Evelina.jpg",
+            "name": "Predoiu Evelina",
+            "department": "Volunteer - Software",
+            "desc": ""
+        },
+        {
+            "src": "/img/members/Daria.jpeg",
+            "name": "Toboc Daria",
+            "department": "Volunteer - Software",
+            "desc": ""
+        },
+        {
+            "src": "/img/members/Cristina.jpeg",
+            "name": "Călărașu Cristina",
+            "department": "Volunteer - Software",
+            "desc": ""
+        },
+        {
+            "src": "/img/members/Ilincaa.jpeg",
+            "name": "Alexandru Ilinca",
+            "department": "Marketing",
+            "desc": "I enjoy meeting new people, programming and travelling."
+        },
+        {
+            "src": "/img/members/Sofia.jpeg",
+            "name": "Tocitu Sofia",
+            "department": "Marketing",
+            "desc": ""
+        },
+        {
+            "src": "/img/members/Sidonia.jpg",
+            "name": "Precup Sidonia",
+            "department": "Marketing",
+            "desc": ""
+        },
+        {
+            "src": "/img/members/Teodora.jpeg",
+            "name": "Brebeanu Teodora",
+            "department": "Marketing",
+            "desc": ""
+        },
+        {
+            "src": "/img/members/Ana.jpeg",
+            "name": "Urleteanu Ana",
+            "department": "Volunteer - Marketing",
+            "desc": ""
+        }
+    ],
     "2025": [
         {
             "src": "/img/members/stefan 3.jpg",
@@ -11,14 +133,12 @@
             "name": "Stahie Andrei",
             "department": "Team Leader - Hardware",
             "desc": "I'm passionate about engineering and in my spare time I create a lot of things."
-
         },
         {
             "src": "/img/members/Marina Andrei.jpg",
             "name": "Marina Andrei",
             "department": "Hardware",
             "desc": "I am a creative and friendly person who enjoys working with others . I have always liked to tinker with different things, and I'm glad I'm finally able to do it with robots."
-
         },
         {
             "src": "/img/members/stoica alfonso.jpeg",
@@ -108,7 +228,7 @@
             "src": "/img/members/rostas maya.jpeg",
             "name": "Rostas Maya",
             "department": "Engineering Notebook",
-            "desc":"I'm a creative individual with a profund appreciation for the fusion of physics and motorsport"
+            "desc": "I'm a creative individual with a profund appreciation for the fusion of physics and motorsport"
         },
         {
             "src": "/img/members/gherasim maria.jpeg",
@@ -129,7 +249,6 @@
             "desc": "I love the magic behind any program or geometric figure...shortly, I like the exact sciences, perfectly combined with teamwork, qualities that define me."
         }
     ],
-
     "2024": [
         {
             "src": "/img/members/stefan 3.jpg",
@@ -142,14 +261,12 @@
             "name": "Stahie Andrei",
             "department": "Team Leader",
             "desc": "I'm passionate about engineering and in my spare time I create a lot of things."
-
         },
         {
             "src": "/img/members/Marina Andrei.jpg",
             "name": "Marina Andrei",
             "department": "Hardware",
             "desc": "I am a creative and friendly person who enjoys working with others . I have always liked to tinker with different things, and I'm glad I'm finally able to do it with robots."
-
         },
         {
             "src": "/img/members/stoica alfonso.jpeg",
@@ -239,7 +356,7 @@
             "src": "/img/members/rostas maya.jpeg",
             "name": "Rostas Maya",
             "department": "Engineering Notebook",
-            "desc":"I‘m a creative individual with a profund appreciation for the fusion of physics and motorsport"
+            "desc": "I‘m a creative individual with a profund appreciation for the fusion of physics and motorsport"
         },
         {
             "src": "/img/members/gherasim maria.jpeg",
@@ -260,7 +377,6 @@
             "desc": "I love the magic behind any program or geometric figure...shortly, I like the exact sciences, perfectly combined with teamwork, qualities that define me."
         }
     ],
-
     "2023": [
         {
             "src": "/img/members/mihnea-manta2.jpeg",
@@ -273,14 +389,12 @@
             "name": "Stahie Andrei",
             "department": "Hardware",
             "desc": "I'm passionate about engineering and in my spare time I create a lot of things."
-
         },
         {
             "src": "/img/members/Marina Andrei.jpg",
             "name": "Marina Andrei",
             "department": "Hardware",
             "desc": "I am a creative and friendly person who enjoys working with others . I have always liked to tinker with different things, and I'm glad I'm finally able to do it with robots."
-
         },
         {
             "src": "/img/members/nichifor darius.jpeg",
@@ -358,7 +472,7 @@
             "src": "/img/members/rostas maya.jpeg",
             "name": "Rostas Maya",
             "department": "Engineering Notebook",
-            "desc":"I‘m a creative individual with a profund appreciation for the fusion of physics and motorsport"
+            "desc": "I‘m a creative individual with a profund appreciation for the fusion of physics and motorsport"
         },
         {
             "src": "/img/members/gherasim maria.jpeg",

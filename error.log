@@ -1,0 +1,24 @@
+STDOUT:
+[2m13:53:05[22m [34m[types][39m Generated [2m2ms[22m
+[2m13:53:05[22m [34m[content][39m Syncing content
+[2m13:53:05[22m [34m[content][39m Astro config changed
+[2m13:53:05[22m [34m[content][39m Clearing content store
+[2m13:53:05[22m [34m[content][39m Synced content
+
+STDERR:
+1:53:05 PM [vite-plugin-svelte] WARNING: The following packages have a svelte field in their package.json but no exports condition for svelte.
+
+svelte-feather-icons@4.0.0
+
+Please see https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/faq.md#missing-exports-condition for details.
+No known conditions for "./register" specifier in "svelte" package
+  [1mLocation:[22m
+    [4mc:\Users\crist\Desktop\Tests-\node_modules\vite\dist\node\chunks\dep-D4NMHUTW.js:12200:25[24m
+  [1mStack trace:[22m
+[2m    at e (file:///c:/Users/crist/Desktop/Tests-/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:12200:25)
+    at o (file:///c:/Users/crist/Desktop/Tests-/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:12200:1293)
+    at resolveDeepImport (file:///c:/Users/crist/Desktop/Tests-/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:16230:25)
+    at ResolveIdContext.resolveId (file:///c:/Users/crist/Desktop/Tests-/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:15831:19)
+    at async resolve (file:///c:/Users/crist/Desktop/Tests-/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:42831:12)[22m
+
+STATUS:1
