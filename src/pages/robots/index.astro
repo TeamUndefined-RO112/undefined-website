@@ -20,71 +20,73 @@ import TextBox from "../../components/TextBox.svelte";
 
     <br/><br/>
 
-    <!-- 2025 Robot - Hidden Reveal -->
+    <!-- 2025 Robot - BOTZILLA -->
     <Content column big>
-        <div class="robot-section reveal-section">
+        <div class="robot-section">
             <Title3>
-                <b style="color: white;">Season 2025: <span style="color: rgb(81, 146, 89);">???</span></b>
+                <b style="color: white;">Season 2025: <span style="color: rgb(81, 146, 89);">BOTZILLA</span></b>
             </Title3>
             <TextBox>
-                <div class="reveal-container">
-                    <div class="reveal-icon">
-                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
-                        </svg>
+                <div class="robot-content">
+                    <div class="robot-description">
+                        <h4 class="robot-subtitle">DECODE</h4>
+                        <p>Meet botzilla, our most massive robot, but one we are very proud of. 
+                            All the effort has led to one of the most innovative robots of this season, 
+                            characterized by precision, strength and a little bit of craftsmanship.</p>
+                        <br/>
+                        <p><b style="color: rgb(81, 146, 89);">Key Features:</b></p>
+                        <ul class="features-list">
+                            <li>Continuous tracking</li>
+                            <li>Parallel execution</li>
+                            <li>Four color sensor indexing</li>
+                            <li>Compact drivetrain - 550RPM</li>
+                            <li>Retry and fail gracefully</li>
+                            <li>270 degree turret with continuous tracking</li>
+                        </ul>
                     </div>
-                    <h3 class="reveal-title">CLASSIFIED</h3>
-                    <p class="reveal-subtitle">Our newest creation is under development...</p>
-                    <p class="reveal-subtitle">Shhhh... geniuses brains are boiling... :)</p>
 
-                    <div class="countdown-container">
-                        <div class="countdown-label">REVEAL DATE</div>
-                        <div class="countdown-display" id="countdown">
-                            <div class="countdown-item">
-                                <span class="countdown-value" id="days">00</span>
-                                <span class="countdown-unit">Days</span>
-                            </div>
-                            <div class="countdown-separator">:</div>
-                            <div class="countdown-item">
-                                <span class="countdown-value" id="hours">00</span>
-                                <span class="countdown-unit">Hours</span>
-                            </div>
-                            <div class="countdown-separator">:</div>
-                            <div class="countdown-item">
-                                <span class="countdown-value" id="minutes">00</span>
-                                <span class="countdown-unit">Minutes</span>
-                            </div>
-                            <div class="countdown-separator">:</div>
-                            <div class="countdown-item">
-                                <span class="countdown-value" id="seconds">00</span>
-                                <span class="countdown-unit">Seconds</span>
+                    <div class="video-container">
+                        <div class="video-wrapper">
+                            <iframe
+                                src="https://www.youtube.com/embed/PfpKA2cZg1A?si=lce8Pwc3IwSGoCwn"
+                                title="Botzilla - Team Undefined Robot 2026"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
+                            ></iframe>
+                        </div>
+                    </div>
+                    <!-- CAD Gallery -->
+                    <div class="gallery-grid">
+                        <div class="gallery-item" onclick="openLightbox('/img/robots/botzilla/cad-main-render.png', 'CAD Main Render')">
+                            <img src="/img/robots/botzilla/cad-main-render.png" alt="BOTZILLA - CAD Main Render" />
+                            <div class="gallery-overlay">
+                                <p>CAD Main Render</p>
                             </div>
                         </div>
-                        <div class="countdown-date">December 1st, 2025 • 00:00 EET</div>
-                    </div>
-
-                    <!-- Social Media Follow CTAs -->
-                    <div class="social-cta-container">
-                        <p class="social-cta-heading">FOLLOW US - Get Notified!</p>
-                        <div class="social-buttons">
-                            <a href="https://www.instagram.com/team_undefined/" target="_blank" rel="noopener noreferrer" class="social-button instagram">
-                                <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                                </svg>
-                                <span class="social-text">
-                                    <span class="social-platform">Instagram</span>
-                                    <span class="social-handle">@team_undefined</span>
-                                </span>
-                            </a>
-                            <a href="https://www.youtube.com/@TeamUndefined19112" target="_blank" rel="noopener noreferrer" class="social-button youtube">
-                                <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                                </svg>
-                                <span class="social-text">
-                                    <span class="social-platform">YouTube</span>
-                                    <span class="social-handle">@TeamUndefined19112</span>
-                                </span>
-                            </a>
+                        <div class="gallery-item" onclick="openLightbox('/img/robots/botzilla/cad-top-view.png', 'CAD Top View')">
+                            <img src="/img/robots/botzilla/cad-top-view.png" alt="BOTZILLA - CAD Top View" />
+                            <div class="gallery-overlay">
+                                <p>CAD Top View</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('/img/robots/botzilla/cad-screenshot-1.png', 'CAD View 1')">
+                            <img src="/img/robots/botzilla/cad-screenshot-1.png" alt="BOTZILLA - CAD View 1" />
+                            <div class="gallery-overlay">
+                                <p>CAD View 1</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('/img/robots/botzilla/cad-screenshot-2.png', 'CAD View 2')">
+                            <img src="/img/robots/botzilla/cad-screenshot-2.png" alt="BOTZILLA - CAD View 2" />
+                            <div class="gallery-overlay">
+                                <p>CAD View 2</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('/img/robots/botzilla/cad-screenshot-3.png', 'CAD View 3')">
+                            <img src="/img/robots/botzilla/cad-screenshot-3.png" alt="BOTZILLA - CAD View 3" />
+                            <div class="gallery-overlay">
+                                <p>CAD View 3</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -199,24 +201,122 @@ import TextBox from "../../components/TextBox.svelte";
         </div>
     </Content>
 
-    <br/><br/><br/>
-
-    <!-- Template for previous years - you can duplicate this for each season -->
+    <!-- 2023-2024 Season - FRANK (Centerstage) -->
     <Content column big>
         <div class="robot-section">
             <Title3>
-                <b style="color: white;">Previous Seasons</b>
+                <b style="color: white;">Season 2023: <span style="color: rgb(81, 146, 89);">FRANK</span></b>
             </Title3>
             <TextBox>
-                <p style="text-align: center; font-size: 1.1rem; color: rgba(255, 255, 255, 0.7);">
-                    More robots and their stories will be added here. Each represents a chapter in our journey of innovation and growth.
-                </p>
-                <br/>
-                <div class="gallery-placeholder">
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
-                    </svg>
-                    <p>Historical robot archives coming soon!</p>
+                <div class="robot-content">
+                    <div class="robot-description">
+                        <h4 class="robot-subtitle">CENTERSTAGE</h4>
+                    </div>
+
+                    <div class="robot-hero-image">
+                        <img src="/img/robots/frank/robot view.jpeg" alt="FRANK Robot" />
+                    </div>
+
+                    <div class="gallery-grid">
+                        <div class="gallery-item" onclick="openLightbox('/img/robots/frank/side robot look.jpeg', 'FRANK - Side View')">
+                            <img src="/img/robots/frank/side robot look.jpeg" alt="FRANK Robot - Side View" />
+                            <div class="gallery-overlay">
+                                <p>Side View</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('/img/robots/frank/side robot look2.jpeg', 'FRANK - Side View 2')">
+                            <img src="/img/robots/frank/side robot look2.jpeg" alt="FRANK Robot - Side View 2" />
+                            <div class="gallery-overlay">
+                                <p>Side View 2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </TextBox>
+        </div>
+    </Content>
+
+    <br/><br/><br/>
+
+    <!-- 2022-2023 Season - AL ABDULAH (Powerplay) -->
+    <Content column big>
+        <div class="robot-section">
+            <Title3>
+                <b style="color: white;">Season 2022: <span style="color: rgb(81, 146, 89);">AL ABDULAH</span></b>
+            </Title3>
+            <TextBox>
+                <div class="robot-content">
+                    <div class="robot-description">
+                        <h4 class="robot-subtitle">POWERPLAY</h4>
+                    </div>
+
+                    <div class="video-container">
+                        <div class="video-wrapper">
+                            <video
+                                controls
+                                poster="/img/robots/al abdulah 2/main.jpeg"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
+                            >
+                                <source src="/img/robots/al abdulah 2/abdulah video.mp4" type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+
+                    <div class="gallery-grid">
+                        <div class="gallery-item" onclick="openLightbox('/img/robots/al abdulah 2/main.jpeg', 'AL ABDULAH - Main')">
+                            <img src="/img/robots/al abdulah 2/main.jpeg" alt="AL ABDULAH - Main" />
+                            <div class="gallery-overlay">
+                                <p>Main Photo</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item" onclick="openLightbox('/img/robots/al abdulah 2/photo-1.jpeg', 'AL ABDULAH - Photo')">
+                            <img src="/img/robots/al abdulah 2/photo-1.jpeg" alt="AL ABDULAH - Photo" />
+                            <div class="gallery-overlay">
+                                <p>Photo 2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </TextBox>
+        </div>
+    </Content>
+
+    <br/><br/><br/>
+
+    <!-- 2021-2022 Season - BOBILDA (Kickoff) -->
+    <Content column big>
+        <div class="robot-section">
+            <Title3>
+                <b style="color: white;">Season 2021: <span style="color: rgb(81, 146, 89);">BOBILDA</span></b>
+            </Title3>
+            <TextBox>
+                <div class="robot-content">
+                    <div class="robot-description">
+                        <h4 class="robot-subtitle">KICKOFF</h4>
+                    </div>
+
+                    <div class="video-container">
+                        <div class="video-wrapper">
+                            <video
+                                controls
+                                poster="/img/robots/Bobilda/photo-1.jpeg"
+                                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
+                            >
+                                <source src="/img/robots/Bobilda/bobilda video.mp4" type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+
+                    <div class="gallery-grid">
+                        <div class="gallery-item" onclick="openLightbox('/img/robots/Bobilda/photo-1.jpeg', 'BOBILDA')">
+                            <img src="/img/robots/Bobilda/photo-1.jpeg" alt="BOBILDA" />
+                            <div class="gallery-overlay">
+                                <p>BOBILDA</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </TextBox>
         </div>
@@ -240,10 +340,19 @@ import TextBox from "../../components/TextBox.svelte";
     // Lightbox functionality
     let currentImageIndex = 0;
     const images = [
-        { src: '/img/robots/vik/robot1.png', caption: 'CAD overview' },
-        { src: '/img/robots/vik/robot2.png', caption: 'CAD rear view' },
-        { src: '/img/robots/vik/robot3.png', caption: 'CAD drivetrain' },
-        { src: '/img/robots/vik/robot4.png', caption: 'CAD top view' },
+        { src: '/img/robots/botzilla/BOTZILLA THE KING.jpg', caption: 'BOTZILLA - Main Photo' },
+        { src: '/img/robots/botzilla/cad-main-render.png', caption: 'BOTZILLA - CAD Main Render' },
+        { src: '/img/robots/botzilla/cad-top-view.png', caption: 'BOTZILLA - CAD Top View' },
+        { src: '/img/robots/botzilla/cad-screenshot-1.png', caption: 'BOTZILLA - CAD View 1' },
+        { src: '/img/robots/botzilla/cad-screenshot-2.png', caption: 'BOTZILLA - CAD View 2' },
+        { src: '/img/robots/botzilla/cad-screenshot-3.png', caption: 'BOTZILLA - CAD View 3' },
+        { src: '/img/robots/vik/robot1.png', caption: 'VIK - CAD overview' },
+        { src: '/img/robots/vik/robot2.png', caption: 'VIK - CAD rear view' },
+        { src: '/img/robots/vik/robot3.png', caption: 'VIK - CAD drivetrain' },
+        { src: '/img/robots/vik/robot4.png', caption: 'VIK - CAD top view' },
+        { src: '/img/robots/al abdulah 2/main.jpeg', caption: 'AL ABDULAH - Main Photo' },
+        { src: '/img/robots/al abdulah 2/photo-1.jpeg', caption: 'AL ABDULAH - Photo' },
+        { src: '/img/robots/Bobilda/photo-1.jpeg', caption: 'BOBILDA - Photo' },
         
     ];
 
@@ -305,39 +414,7 @@ import TextBox from "../../components/TextBox.svelte";
     (window as any).navigateLightbox = navigateLightbox;
 </script>
 
-<script>
-    // Countdown timer for 2025 robot reveal
-    const targetDate = new Date('2025-12-01T00:00:00+02:00').getTime(); // EET timezone
 
-    function updateCountdown() {
-        const now = new Date().getTime();
-        const distance = targetDate - now;
-
-        if (distance < 0) {
-            document.getElementById('countdown')!.innerHTML = '<div class="countdown-complete">REVEALED!</div>';
-            return;
-        }
-
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        const daysEl = document.getElementById('days');
-        const hoursEl = document.getElementById('hours');
-        const minutesEl = document.getElementById('minutes');
-        const secondsEl = document.getElementById('seconds');
-
-        if (daysEl) daysEl.textContent = String(days).padStart(2, '0');
-        if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
-        if (minutesEl) minutesEl.textContent = String(minutes).padStart(2, '0');
-        if (secondsEl) secondsEl.textContent = String(seconds).padStart(2, '0');
-    }
-
-    // Update countdown every second
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-</script>
 
 <style>
     .robot-section {
@@ -348,6 +425,27 @@ import TextBox from "../../components/TextBox.svelte";
         display: flex;
         flex-direction: column;
         gap: 40px;
+    }
+
+    .robot-hero-image {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        border: 2px solid rgba(81, 146, 89, 0.4);
+        border-radius: 8px;
+        overflow: hidden;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .robot-hero-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    .robot-hero-image:hover img {
+        transform: scale(1.02);
     }
 
     .robot-description {

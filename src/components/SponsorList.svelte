@@ -1,5 +1,6 @@
 <script lang="ts">
     import sponsors from './sponsors.json';
+    import partners from './partners.json';
     import Sponsor from "./Sponsor.svelte";
     import Title from "./Title.svelte";
     import Content from "./Content.svelte";
@@ -261,34 +262,52 @@ Most important is the immediate acquisition of these parts so we can build this 
     </div>
 
     <br/><br/>
-    <Title3> <b style="color:gold; font-weight:800">Top Sponsors</b></Title3>
-    
-    <!-- Aveuro Top Sponsor Card -->
-    <div class="top-sponsor-card">
-        <div class="corner-accent top-left"></div>
-        <div class="corner-accent top-right"></div>
-        <div class="corner-accent bottom-left"></div>
-        <div class="corner-accent bottom-right"></div>
 
-        <a href="https://aveuro.com/" target="_blank" rel="noopener noreferrer" class="top-sponsor-link">
-            <div class="top-sponsor-image-container">
-                <img src="/img/sponsor/aveuro-seo-image.jpg" alt="WAMGROUP Romania" />
-            </div>
-            <h3 class="top-sponsor-name">Aveuro international</h3>
-        </a>
-        <p class="top-sponsor-description">
-            Aveuro International is a Romanian company specializing in the production of minibuses and electric vehicles for passenger transport. Founded in 2007 and headquartered in Câmpina, Prahova County, the company operates a large manufacturing facility equipped to deliver high-quality, European-certified vehicle conversions.
-
-            Beyond serving the Romanian market, Aveuro exports a significant share of its production to various European countries, becoming a trusted partner for both public and private transport operators. Through continuous investment in innovation—especially in electric mobility—Aveuro International has established itself as one of the region’s notable producers of modern, reliable, and customizable passenger transport solutions.
-        </p>
+    <!-- Partners Section -->
+    <div class="section-divider partners-divider">
+        <div class="divider-line"></div>
+        <h2 class="section-label partners-label">
+            <svg class="section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+            Our Partners
+        </h2>
+        <div class="divider-line"></div>
     </div>
-    <br/><br/>
-
-    <Title3> Important sponsors</Title3>
 </Content>
 
 <section>
-    <!-- Lista de sponsori -->
+    <div class="sponsor-list">
+        {#if partners.length > 0}
+            {#each partners as partner}
+                <Sponsor
+                    image={partner.src}
+                    text={partner.name}
+                    url={partner.url || ""}
+                    description={partner.description || ""}
+                ></Sponsor>
+            {/each}
+        {:else}
+            <Title secondary>No partners yet</Title>
+        {/if}
+    </div>
+
+    <br/><br/>
+
+    <!-- Sponsors Section -->
+    <Content column big>
+        <div class="section-divider sponsors-divider">
+            <div class="divider-line green-line"></div>
+            <h2 class="section-label sponsors-label">
+                <svg class="section-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                </svg>
+                Our Sponsors
+            </h2>
+            <div class="divider-line green-line"></div>
+        </div>
+    </Content>
+
     <div class="sponsor-list">
         {#if sponsors.length > 0}
             {#each sponsors as sponsor}
@@ -335,7 +354,80 @@ Most important is the immediate acquisition of these parts so we can build this 
         flex-wrap: wrap;
         justify-content: center;
         gap: 40px;
+        padding: 10px 20px;
         touch-action: pan-y pan-x;
+    }
+
+    /* Section Divider Styling */
+    .section-divider {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin: 20px 0 30px 0;
+        width: 100%;
+    }
+
+    .divider-line {
+        flex: 1;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, rgba(218, 165, 32, 0.5), transparent);
+    }
+
+    .divider-line.green-line {
+        background: linear-gradient(90deg, transparent, rgba(81, 146, 89, 0.5), transparent);
+    }
+
+    .section-label {
+        font-family: 'Orbitron', monospace;
+        font-size: 1.8rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .section-icon {
+        width: 32px;
+        height: 32px;
+        flex-shrink: 0;
+    }
+
+    .partners-label {
+        color: gold;
+        text-shadow: 0 0 20px rgba(218, 165, 32, 0.4);
+    }
+
+    .partners-label .section-icon {
+        color: gold;
+        filter: drop-shadow(0 0 6px rgba(218, 165, 32, 0.4));
+    }
+
+    .sponsors-label {
+        color: rgb(81, 146, 89);
+        text-shadow: 0 0 20px rgba(81, 146, 89, 0.4);
+    }
+
+    .sponsors-label .section-icon {
+        color: rgb(81, 146, 89);
+        filter: drop-shadow(0 0 6px rgba(81, 146, 89, 0.4));
+    }
+
+    @media only screen and (max-width: 640px) {
+        .section-label {
+            font-size: 1.2rem;
+        }
+
+        .section-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        .section-divider {
+            gap: 12px;
+        }
     }
 
     /* Thank You Title Styling */

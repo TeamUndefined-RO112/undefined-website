@@ -1,32 +1,51 @@
 [
-    {
-        "name": "Dulcelle",
-        "src": "/img/sponsor/dulcelle.png",
-        "url": "https://dulcelle.com/contact/",
-        "description": "Artisanal Chocolaterie - Crafting premium handmade chocolates with passion and dedication."
-    },
-    {
-        "name": "Lemet",
-        "src": "/img/sponsor/logo-lemet.webp",
-        "url": "https://www.lemet.ro/",
-        "description": "Enthusiasm and Passion - Furniture factory LEMET, established in Câmpina since December 1991."
-    },
-    {
-        "name": "Colegiul National Nicolae Grigorescu",
-        "src": "/img/sponsor/cnng1.jpeg",
-        "url": "https://cngrigorescu.ro/",
-        "description": "Nicolae Grigorescu National College - Câmpina, Romania - Our high school, fostering excellence in education."
-    },
-     {
-        "name": "WAMGROUP Romania",
-        "src": "/img/sponsor/wam romania.jpg",
-        "url": "https://wamgroup.ro/ro-RO/WAMRO/home",
-        "description": "The multinational WAMGROUP Corporation, a global leader in the development and production of equipment and installations for bulk materials handling, has been present in Romania since 2002."
-    },
-     {
-        "name": "Erbasu",
-        "src": "/img/sponsor/Erbasu.png",
-        "url": "https://www.erbasu.ro/",
-        "description": "Erbașu Construction is a fully Romanian-owned construction company, founded in 1990. With more than 3,000 employees, it delivers complex projects in civil construction, infrastructure (roads, bridges, passages), and general contracting, including design and execution"
-    }
+{
+  "name": "Asociația părinților Colegiul Național Nicolae Grigorescu",
+  "src": "/img/sponsor/Sponsori 2025-2026/apcnng.png",
+  "url": "https://www.facebook.com/APCNNG/",
+  "description": "The Parents' Association of CNNG is the driving force behind our school's extracurricular success. Their generous sponsorship and unwavering encouragement ensure our students have the materials, tools, and travel resources needed to excel in competitive robotics."
+},
+{
+  "name": "Manro",
+  "src": "/img/sponsor/Sponsori 2025-2026/manro.png",
+  "url": "https://www.manro-lighting.ro/",
+  "description": "A prominent name in the local industrial sector, Manro brings strong manufacturing and technical expertise to our community. Their sponsorship reflects a deep, practical commitment to investing in Câmpina's next generation of engineers and innovators."
+},
+{
+  "name": "Raibak",
+  "src": "/img/sponsor/Sponsori 2025-2026/raibak logo.png",
+  "url": "https://raibak.ro/produse.php",
+  "description": "A highly valued local business, Raibak S.R.L. is deeply dedicated to community growth and youth empowerment. Their financial backing plays a crucial role in giving our team the foundation we need to design, build, and compete at the highest levels."
+},
+{
+  "name": "Erbașu",
+  "src": "/img/sponsor/Sponsori 2025-2026/Erbasu_-_logo.png",
+  "url": "https://www.erbasu.ro/",
+  "description": "As one of Romania's leading construction and engineering companies, Erbașu knows exactly what it takes to build the future. Their sponsorship of our team highlights a corporate dedication to fostering excellence in STEM and supporting ambitious, large-scale engineering mentalities among youth."
+},
+{
+  "name": "Protelco",
+  "src": "/img/sponsor/Sponsori 2025-2026/protelco.jpg",
+  "url": "https://www.protelco.ro/",
+  "description": "Specializing in precision engineering, topography, and technical design, Protelco is a local beacon of technical excellence. Their sponsorship enables our robotics team to push the boundaries of technology and apply real-world precision to our robot designs."
+},
+{
+  "name": "Lemet",
+  "src": "/img/sponsor/Sponsori 2025-2026/logo_Lems.png",
+  "url": "https://www.lemet.ro/?srsltid=AfmBOooX2I_DvSPyNezF9YrT0szVVITMNOF6MHowlHRqdHOX7gQ0zPhA",
+  "description": "Founded locally in Prahova and grown into a leading national furniture brand, Lemet represents the perfect blend of innovation, smart design, and manufacturing excellence. Their sponsorship inspires our team to combine creative problem-solving with solid engineering."
+},
+{
+  "name": "Aveuro Internațional",
+  "src": "/img/sponsor/Sponsori 2025-2026/AVEURO-logo-abbc-1024x265-1.png",
+  "url": "https://aveuro.com/",
+  "description": "As a highly successful manufacturer specializing in customized commercial vehicles and automotive solutions, Aveuro International is a prime example of industrial innovation in our region. Their sponsorship demonstrates a strong commitment to advancing mechanical engineering and supporting the technical aspirations of local youth."
+},
+{
+  "name": "Watt-Oferta",
+  "src": "/img/sponsor/Sponsori 2025-2026/watt.png",
+  "url": "",
+  "description": "Specializing in electrical equipment and energy solutions, Watt-Oferta provides the literal spark for local industries. Their crucial support directly empowers our team, ensuring we can source the high-quality electronic components and wiring needed to bring our robots to life and perform efficiently on the competition field."
+}
+
 ]
