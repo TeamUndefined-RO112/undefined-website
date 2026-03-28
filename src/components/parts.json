@@ -1,74 +1,52 @@
 [
     {
-        "name": "Motor",
-        "image": "/img/parts/motor 312.jpg",
-        "price_item": "45",
-        "total": "360"
+        "name": "Axon MAX MK2 Servo",
+        "image": "/img/parts/AXON.png",
+        "price_item": 129
     },
     {
-        "name": "Servo",
-        "image": "/img/parts/servo.jpg",
-        "price_item": 30.3,
-        "total": 90.9
+        "name": "Planetary Gear Motor",
+        "image": "/img/parts/GoBilda Motor.jpg",
+        "price_item": 55
     },
     {
-        "name": "Battery",
-        "image": "/img/parts/battery.webp",
-        "price_item": 55,
-        "total": 165
+        "name": "Distance Sensor",
+        "image": "/img/parts/Laser Sensor.jpg",
+        "price_item": 30
     },
     {
-        "name": "Belt pulley",
-        "image": "/img/parts/pulley.jpg",
-        "price_item": 13,
-        "total": 78
+        "name": "NiMH Battery",
+        "image": "/img/parts/Battery.jpg",
+        "price_item": 65
     },
     {
-        "name": "Quad Block",
-        "image": "/img/parts/idk block.jpg",
-        "price_item": 6.99,
-        "total": 69.9
+        "name": "Mecanum Wheel",
+        "image": "/img/parts/Mecanum Wheel.jpg",
+        "price_item": 189
     },
     {
-        "name": "Pillow Block",
-        "image": "/img/parts/pillow block.jpg",
-        "price_item": 10.99,
-        "total": 54.95
+        "name": "Charger",
+        "image": "/img/parts/Charger.avif",
+        "price_item": 150
+    },
+    {
+        "name": "Driver Hub",
+        "image": "/img/parts/Driver Hub.webp",
+        "price_item": 275
     },
     {
         "name": "Control Hub",
         "image": "/img/parts/Control Hub.webp",
-        "price_item": 350,
-        "total": 350
+        "price_item": 375
     },
     {
-        "name": "Expansion Hub",
-        "image": "/img/parts/Expansion Hub.webp",
-        "price_item": 250,
-        "total": 250
+        "name": "Servo Hub",
+        "image": "/img/parts/Servo Hub.webp",
+        "price_item": 90
     },
     {
-        "name": "Odometry Pod",
-        "image": "/img/parts/Odometry Pod.jpg",
-        "price_item": 99,
-        "total": 297
-    },
-    {
-        "name": "Misumi Slides",
-        "image": "/img/parts/MISUMI slides.webp",
-        "price_item": 32,
-        "total": 256
-    },
-    {
-        "name": "Mecanum Wheel Set",
-        "image": "/img/parts/Mecanum Wheel Set.jpg",
-        "price_item": 184.99,
-        "total": 184.99
-    },
-    {
-        "name": "Battery Charger",
-        "image": "/img/parts/Battery Charger.webp",
-        "price_item": 36.5,
-        "total": 36.5
+        "name": "Hardware Bundle",
+        "image": "/img/parts/Hardware Bundle.webp",
+        "price_item": 200
     }
 ]

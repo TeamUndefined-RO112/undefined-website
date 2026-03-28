@@ -2,13 +2,32 @@
     import Content from "./Content.svelte";
     import Title3 from "./Title3.svelte";
     import TextBox from "./TextBox.svelte";
-    import FieldPartsList from "./FieldPartsList.svelte";
     import PartList from "./PartList.svelte";
-    import fieldParts from './fieldParts.json';
     import parts from './parts.json';
+
+    type OtherNeed = {
+        name: string;
+        details: string;
+    };
 
     let copyIBANSuccess = false;
     let copyRevolutSuccess = false;
+
+    // Add or remove event-related needs here.
+    const otherNeeds: OtherNeed[] = [
+        {
+            name: "Competition Transport",
+            details: "Fuel, bus/van rental, and local travel costs for league and tournament events."
+        },
+        {
+            name: "Event Booth Materials",
+            details: "Roll-up banners, flyers, and printed outreach materials for public demos and pits."
+        },
+        {
+            name: "Team Event Supplies",
+            details: "Water, snacks, first-aid consumables, and pit organization supplies during competitions."
+        }
+    ];
 
     function copyIBAN() {
         const iban = "RO11 BRMA 0999 1000 4423 0153";
@@ -176,8 +195,50 @@ Most important is the immediate acquisition of these parts so we can build this 
     <h2>Robot Parts Needed</h2>
     <PartList parts={parts}></PartList>
 
-    <h2>Field Parts Needed</h2>
-    <FieldPartsList fieldParts={fieldParts}></FieldPartsList>
+    <div class="other-needs-section">
+        <div class="other-needs-ambient" aria-hidden="true"></div>
+        <div class="other-needs-header">
+            <span class="other-needs-tag">Other Needs</span>
+            <h3 class="other-needs-heading">Event Support Wishlist</h3>
+            <p class="other-needs-subtitle">
+                These are additional items that keep our team prepared during competitions and outreach events.
+            </p>
+            <div class="other-needs-illustrations">
+                <div class="needs-illustration">
+                    <div class="illustration-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 17h8M6 17h.01M18 17h.01M3 11h18v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2h9l3 3z"></path>
+                        </svg>
+                    </div>
+                    <span>Travel</span>
+                </div>
+                <div class="needs-illustration">
+                    <div class="illustration-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5l-6 6h4v8h4v-5h2m0-4h4l-6-6v6z"></path>
+                        </svg>
+                    </div>
+                    <span>Booth</span>
+                </div>
+                <div class="needs-illustration">
+                    <div class="illustration-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.7 6.3l3 3m-9.4 9.4l-3-3m2.1-5.1l5.8-5.8a2 2 0 012.8 0l1.2 1.2a2 2 0 010 2.8l-5.8 5.8a2 2 0 01-1.4.6H8.7a1 1 0 01-1-1v-1.3a2 2 0 01.6-1.4z"></path>
+                        </svg>
+                    </div>
+                    <span>Pit Setup</span>
+                </div>
+            </div>
+        </div>
+        <div class="other-needs-grid">
+            {#each otherNeeds as need}
+                <article class="other-need-card">
+                    <h3 class="other-need-title">{need.name}</h3>
+                    <p class="other-need-details">{need.details}</p>
+                </article>
+            {/each}
+        </div>
+    </div>
 </section>
 
 <style>
@@ -655,5 +716,239 @@ Most important is the immediate acquisition of these parts so we can build this 
     .inline-link:hover {
         border-bottom-color: rgb(81, 146, 89);
         color: rgba(81, 146, 89, 0.8);
+    }
+
+    .other-needs-section {
+        position: relative;
+        margin: 50px 20px 20px 20px;
+        padding: 26px 22px 24px 22px;
+        overflow: hidden;
+        background: linear-gradient(135deg, rgba(81, 146, 89, 0.2) 0%, rgba(24, 24, 24, 0.96) 35%, rgba(18, 18, 18, 0.98) 100%);
+        border: 3px solid rgba(81, 146, 89, 0.6);
+        border-left: 5px solid rgb(81, 146, 89);
+        border-right: 5px solid rgb(81, 146, 89);
+        box-shadow: 0 0 50px rgba(81, 146, 89, 0.34),
+                    inset 0 0 45px rgba(81, 146, 89, 0.12);
+        clip-path: polygon(
+            0 0,
+            calc(100% - 12px) 0,
+            100% 12px,
+            100% 100%,
+            12px 100%,
+            0 calc(100% - 12px)
+        );
+        animation: other-needs-pulse 2.6s ease-in-out infinite;
+    }
+
+    .other-needs-section::before,
+    .other-needs-section::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, rgb(81, 146, 89), transparent);
+    }
+
+    .other-needs-section::before {
+        top: 0;
+    }
+
+    .other-needs-section::after {
+        bottom: 0;
+    }
+
+    .other-needs-ambient {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background:
+            radial-gradient(circle at 12% 20%, rgba(81, 146, 89, 0.25) 0%, transparent 30%),
+            radial-gradient(circle at 88% 80%, rgba(81, 146, 89, 0.18) 0%, transparent 34%),
+            repeating-linear-gradient(
+                120deg,
+                rgba(81, 146, 89, 0.08) 0px,
+                rgba(81, 146, 89, 0.08) 2px,
+                transparent 2px,
+                transparent 14px
+            );
+        opacity: 0.55;
+        transform: translateX(-8%);
+        animation: other-needs-scan 7s linear infinite;
+        z-index: 0;
+    }
+
+    .other-needs-header {
+        margin-bottom: 18px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .other-needs-tag {
+        display: inline-block;
+        font-family: 'Orbitron', monospace;
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: white;
+        background: linear-gradient(90deg, rgba(81, 146, 89, 1), rgba(59, 114, 66, 1));
+        border: 1px solid rgba(81, 146, 89, 1);
+        padding: 8px 14px;
+        margin-bottom: 10px;
+        box-shadow: 0 0 14px rgba(81, 146, 89, 0.45);
+        animation: other-needs-tag-pulse 1.8s ease-in-out infinite;
+    }
+
+    .other-needs-heading {
+        margin: 6px 0 8px 0;
+        font-family: 'Orbitron', monospace;
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        text-shadow: 0 0 18px rgba(81, 146, 89, 0.6);
+    }
+
+    .other-needs-subtitle {
+        margin: 0 0 14px 0;
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 1.05rem;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.95);
+    }
+
+    .other-needs-illustrations {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .needs-illustration {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 12px;
+        background: rgba(0, 0, 0, 0.35);
+        border: 1px solid rgba(81, 146, 89, 0.45);
+    }
+
+    .illustration-icon {
+        width: 34px;
+        height: 34px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(81, 146, 89);
+        background: rgba(81, 146, 89, 0.14);
+        border: 1px solid rgba(81, 146, 89, 0.5);
+    }
+
+    .illustration-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .needs-illustration span {
+        font-family: 'Orbitron', monospace;
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: rgba(255, 255, 255, 0.95);
+    }
+
+    .other-needs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 16px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .other-need-card {
+        background: linear-gradient(135deg, rgba(81, 146, 89, 0.12) 0%, rgba(24, 24, 24, 0.85) 100%);
+        border: 2px solid rgba(81, 146, 89, 0.4);
+        border-left: 4px solid rgba(81, 146, 89, 0.8);
+        padding: 16px;
+        transition: all 0.25s ease;
+    }
+
+    .other-need-card:hover {
+        border-color: rgba(81, 146, 89, 0.7);
+        box-shadow: 0 8px 22px rgba(81, 146, 89, 0.22);
+        transform: translateY(-2px);
+    }
+
+    .other-need-title {
+        margin: 0 0 8px 0;
+        font-family: 'Orbitron', monospace;
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: rgb(81, 146, 89);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+    }
+
+    .other-need-details {
+        margin: 0;
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: rgba(255, 255, 255, 0.85);
+    }
+
+    @keyframes other-needs-pulse {
+        0%, 100% {
+            box-shadow: 0 0 50px rgba(81, 146, 89, 0.32),
+                        inset 0 0 45px rgba(81, 146, 89, 0.1);
+        }
+        50% {
+            box-shadow: 0 0 66px rgba(81, 146, 89, 0.5),
+                        inset 0 0 55px rgba(81, 146, 89, 0.2);
+        }
+    }
+
+    @keyframes other-needs-tag-pulse {
+        0%, 100% {
+            transform: translateY(0);
+            box-shadow: 0 0 14px rgba(81, 146, 89, 0.45);
+        }
+        50% {
+            transform: translateY(-1px);
+            box-shadow: 0 0 24px rgba(81, 146, 89, 0.7);
+        }
+    }
+
+    @keyframes other-needs-scan {
+        0% {
+            transform: translateX(-10%);
+        }
+        50% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(10%);
+        }
+    }
+
+    @media only screen and (max-width: 640px) {
+        .other-needs-section {
+            margin: 35px 10px 15px 10px;
+            padding: 14px;
+        }
+
+        .other-needs-heading {
+            font-size: 1.2rem;
+        }
+
+        .other-needs-subtitle {
+            font-size: 0.95rem;
+        }
+
+        .other-needs-illustrations {
+            grid-template-columns: 1fr;
+        }
     }
 </style>

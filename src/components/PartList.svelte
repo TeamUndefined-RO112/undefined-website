@@ -3,7 +3,6 @@
       name: string;
       image: string;
       price_item: string | number;
-      total: string | number;
     }
 
     export let parts: Part[] = [];
@@ -23,7 +22,6 @@
         <h3 class="part-name">{part.name}</h3>
         <div class="part-pricing">
           <p class="price-label">Price/item: <span class="price-value">${part.price_item}</span></p>
-          <p class="price-label total">Total: <span class="price-value total">${part.total}</span></p>
         </div>
       </div>
     {/each}
@@ -184,17 +182,6 @@
       font-weight: 700;
       color: rgb(81, 146, 89);
       font-size: 1rem;
-    }
-
-    .price-label.total {
-      margin-top: 8px;
-      padding-top: 8px;
-      border-top: 1px solid rgba(81, 146, 89, 0.2);
-    }
-
-    .price-value.total {
-      font-size: 1.1rem;
-      text-shadow: 0 0 8px rgba(81, 146, 89, 0.3);
     }
 
     @media only screen and (max-width: 640px) {

@@ -6,7 +6,78 @@
     import Title2 from "./Title2.svelte";
     import TextBox from "./TextBox.svelte";
     import members from './members.json';
+
+    type Achievement = {
+        name: string;
+        date: string;
+        result?: string;
+    };
+
+    type AchievementSeason = {
+        seasonLabel: string;
+        intro: string;
+        record?: string;
+        competitions: Achievement[];
+        awards: string[];
+        eventsUrl?: string;
+    };
+
+    const achievements: { [key: number]: AchievementSeason } = {
+        2024: {
+            seasonLabel: "2024 Season",
+            intro: "We're proud of our achievements in the 2024-2025 FIRST Tech Challenge season! Here's what we accomplished:",
+            record: "13 Wins - 3 Losses",
+            competitions: [
+                { name: "Zilele Roboticii#3", date: "November 23, 2024" },
+                { name: "Meet Quantum Robotics", date: "December 15, 2024" },
+                { name: "Hansei WaveZ", date: "January 5, 2025" },
+                { name: "StarBloom", date: "January 25, 2025" },
+                { name: "Meet Eastern Foxes", date: "February 1, 2025" },
+                { name: "South Romania League Tournament", date: "February 7-9, 2025", result: "Ranked 18th out of 58 teams" }
+            ],
+            awards: ["Judges' Choice Award at South Romania League Tournament"],
+            eventsUrl: "https://ftc-events.firstinspires.org/2024/team/19112"
+        },
+        2025: {
+            seasonLabel: "2025 Season",
+            intro: "We are proud of the results we managed to achieve during this season (2025-2026 Decode) and especially of the qualifications we only dreamed of in previous seasons. This is the list of results: ",
+            competitions: [
+                {name: "Zilele Roboticii#4", date: "November 29, 2025"},
+                {name: "Eastern Arena", date: "December 13, 2025"},
+                {name: "Air's AgeZ", date: "January 25, 2026"},
+                {name: "Campina X.I Meet", date: "January 31, 2026"},
+                {name: "South-East Romania League Tournament", date: "February 7-8, 2026", result: "Ranked 9th out of 32 teams, Qualified for National Championship"},
+                {name: "Ice Breaker Scrimmage", date: "March 7, 2026"},
+                {name: "Romanian National Championship - VLAICU Division", date: "March 13-15, 2026", result: "Ranked 2th out of 48 teams, Qualified for European Championship"}
+            ],
+            awards: ["Innovate Award at South-East Romania League Tournament", "Innovate Award at Romanian National Championship - 3rd Place"],
+            eventsUrl: "https://ftc-events.firstinspires.org/2025/team/19112"
+        }
+    };
+
+    const achievementYears = Object.keys(achievements)
+        .map(Number)
+        .sort((a, b) => a - b);
+
     let year: number = 2026;
+    let achievementYear: number = 2024;
+    let selectedAchievements: AchievementSeason | undefined;
+
+    $: selectedAchievements = achievements[achievementYear];
+
+    function previousAchievementYear() {
+        const currentIndex = achievementYears.indexOf(achievementYear);
+        if (currentIndex > 0) {
+            achievementYear = achievementYears[currentIndex - 1];
+        }
+    }
+
+    function nextAchievementYear() {
+        const currentIndex = achievementYears.indexOf(achievementYear);
+        if (currentIndex < achievementYears.length - 1) {
+            achievementYear = achievementYears[currentIndex + 1];
+        }
+    }
 </script>
 
 <Content column big>
@@ -159,28 +230,55 @@
     <br/>
     <br/>
 
-    <Title2><span style="color: rgb(81, 146, 89);">2024 Season</span> Results</Title2>
+    <Title2><span style="color: rgb(81, 146, 89);">{selectedAchievements ? selectedAchievements.seasonLabel : `${achievementYear} Season`}</span> Results</Title2>
+    <div class="flex justify-center items-center gap-2">
+        <b>Year:</b>&nbsp;
+        <Button small on:click={previousAchievementYear}>-</Button>
+        <p>{achievementYear}</p>
+        <Button small on:click={nextAchievementYear}>+</Button>
+    </div>
     <br/>
-    <TextBox>
-        <p>We're proud of our achievements in the 2024-2025 FIRST Tech Challenge season! Here's what we accomplished:</p>
-        <br/>
-        <p><b style="color: rgb(81, 146, 89); font-size: 1.2rem;">Season Record: 13 Wins - 3 Losses</b></p>
-        <br/>
-        <p><b>Competitions Attended:</b></p>
-        <ul style="margin-left: 20px; margin-top: 10px;">
-            <li>🏆 <b>Zilele Roboticii#3</b> (November 23, 2024)</li>
-            <li>🏆 <b>Meet Quantum Robotics</b> (December 15, 2024)</li>
-            <li>🏆 <b>Hansei WaveZ</b> (January 5, 2025)</li>
-            <li>🏆 <b>StarBloom</b> (January 25, 2025)</li>
-            <li>🏆 <b>Meet Eastern Foxes</b> (February 1, 2025)</li>
-            <li>🏆 <b>South Romania League Tournament</b> (February 7-9, 2025) - <b style="color: rgb(81, 146, 89);">Ranked 18th out of 58 teams</b></li>
-        </ul>
-        <br/>
-        <p><b style="color: gold;">🏅 Awards:</b></p>
-        <p style="margin-left: 20px; margin-top: 10px;"><b>Judges' Choice Award</b> at South Romania League Tournament</p>
-        <br/>
-        <p>Check out our full competition history on <b><a class="linkundefined" href="https://ftc-events.firstinspires.org/2024/team/19112" target="_blank" rel="noreferrer">FIRST Tech Challenge Events</a></b></p>
-    </TextBox>
+    {#if selectedAchievements}
+        <TextBox>
+            <p>{selectedAchievements.intro}</p>
+            {#if selectedAchievements.record}
+                <br/>
+                <p><b style="color: rgb(81, 146, 89); font-size: 1.2rem;">Season Record: {selectedAchievements.record}</b></p>
+            {/if}
+
+            {#if selectedAchievements.competitions.length > 0}
+                <br/>
+                <p><b>Competitions Attended:</b></p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    {#each selectedAchievements.competitions as competition}
+                        <li>
+                            🏆 <b>{competition.name}</b> ({competition.date})
+                            {#if competition.result}
+                                - <b style="color: rgb(81, 146, 89);">{competition.result}</b>
+                            {/if}
+                        </li>
+                    {/each}
+                </ul>
+            {/if}
+
+            {#if selectedAchievements.awards.length > 0}
+                <br/>
+                <p><b style="color: gold;">🏅 Awards:</b></p>
+                {#each selectedAchievements.awards as award}
+                    <p style="margin-left: 20px; margin-top: 10px;">{award}</p>
+                {/each}
+            {/if}
+
+            {#if selectedAchievements.eventsUrl}
+                <br/>
+                <p>Check out our full competition history on <b><a class="linkundefined" href={selectedAchievements.eventsUrl} target="_blank" rel="noreferrer">FIRST Tech Challenge Events</a></b></p>
+            {/if}
+        </TextBox>
+    {:else}
+        <TextBox>
+            <p>Achievements not yet established!</p>
+        </TextBox>
+    {/if}
     <br/>
     <br/>
 
