@@ -105,13 +105,14 @@
 
 <div class="relative w-full justify-center items-center">
 	<div class="slides" bind:this={siema}>
-		<CarouselImage src="/img/home/Home 2025-2026/WhatsApp Image 2026-03-07 at 21.09.26.jpeg"/>
+		<CarouselImage src="/img/home/Home 2025-2026/IMG_20260617_194811.jpg"/>
 		<CarouselImage src="/img/home/Home 2025-2026/DSC_9880.jpg"/>
+		<CarouselImage src="/img/home/Home 2025-2026/IMG_20260620_183539.jpg"/>
+		<CarouselImage src="/img/home/Home 2025-2026/IMG-20260622-WA0012.jpg"/>
 		<CarouselImage src="/img/home/Home 2025-2026/Copie a fișierului IMG_1403.jpg"/>
 		<CarouselImage src="/img/home/Home 2025-2026/IMG-317.JPG"/>
 		<CarouselImage src="/img/home/Home 2025-2026/IMG-69.JPG"/>
 		<CarouselImage src="/img/home/Home 2025-2026/WhatsApp Image 2026-02-01 at 13.32.43.jpg"/>
-		<CarouselImage src="/img/home/Home 2025-2026/DSC_9851.jpg"/>
 		<CarouselImage src="/img/home/selfie_gang.jpeg"/>
 	</div>
 	<button class="left" on:click={left} use:resetInterval={autoplay} aria-label="left">

@@ -13,18 +13,26 @@
         result?: string;
     };
 
+    type AchievementAward = {
+        name: string;
+        event: string;
+        result?: string;
+        image?: string;
+        description?: string;
+    };
+
     type AchievementSeason = {
         seasonLabel: string;
         intro: string;
         record?: string;
         competitions: Achievement[];
-        awards: string[];
+        awards: AchievementAward[];
         eventsUrl?: string;
     };
 
     const achievements: { [key: number]: AchievementSeason } = {
         2024: {
-            seasonLabel: "2024 Season",
+            seasonLabel: "2024 Season INTO THE DEEP",
             intro: "We're proud of our achievements in the 2024-2025 FIRST Tech Challenge season! Here's what we accomplished:",
             record: "13 Wins - 3 Losses",
             competitions: [
@@ -35,11 +43,17 @@
                 { name: "Meet Eastern Foxes", date: "February 1, 2025" },
                 { name: "South Romania League Tournament", date: "February 7-9, 2025", result: "Ranked 18th out of 58 teams" }
             ],
-            awards: ["Judges' Choice Award at South Romania League Tournament"],
+            awards: [
+                {
+                    name: "Judges' Choice Award",
+                    event: "South Romania League Tournament",
+                    result: "Winner"
+                }
+            ],
             eventsUrl: "https://ftc-events.firstinspires.org/2024/team/19112"
         },
         2025: {
-            seasonLabel: "2025 Season",
+            seasonLabel: "2025 Season DECODE",
             intro: "We are proud of the results we managed to achieve during this season (2025-2026 Decode) and especially of the qualifications we only dreamed of in previous seasons. This is the list of results: ",
             competitions: [
                 {name: "Zilele Roboticii#4", date: "November 29, 2025"},
@@ -48,9 +62,40 @@
                 {name: "Campina X.I Meet", date: "January 31, 2026"},
                 {name: "South-East Romania League Tournament", date: "February 7-8, 2026", result: "Ranked 9th out of 32 teams, Qualified for National Championship"},
                 {name: "Ice Breaker Scrimmage", date: "March 7, 2026"},
-                {name: "Romanian National Championship - VLAICU Division", date: "March 13-15, 2026", result: "Ranked 2th out of 48 teams, Qualified for European Championship"}
+                {name: "Romanian National Championship - VLAICU Division", date: "March 13-15, 2026", result: "Ranked 2th out of 48 teams, Qualified for European Championship"},
+                {name: "European Championship - ESCHER Division", date: "June 17-20, 2026", result: "Ranked 4th out of 52 teams"},
+                {name: "European Championship", date: "June 20, 2026", result: "Winning Alliance 1st Pick"}
             ],
-            awards: ["Innovate Award at South-East Romania League Tournament", "Innovate Award at Romanian National Championship - 3rd Place"],
+            awards: [
+                {
+                    name: "Innovate Award",
+                    event: "South-East Romania League Tournament",
+                    result: "Winner",
+                    image: "/img/awards/regio innovate.jpg",
+                    description: "Recognized for a creative engineering solution and a thoughtful design process during the DECODE season."
+                },
+                {
+                    name: "Innovate Award",
+                    event: "Romanian National Championship",
+                    result: "3rd Place",
+                    image: "/img/awards/natio innovate.jpg",
+                    description: "A national-level recognition for engineering iteration, robot design, and the team's ability to solve hard technical problems."
+                },
+                {
+                    name: "Connect Award",
+                    event: "European Championship",
+                    result: "2nd Place",
+                    image: "/img/awards/europene 3.jpg",
+                    description: "Awarded for connecting engineering, outreach, and team identity into a strong presence beyond the playing field."
+                },
+                {
+                    name: "Winning Alliance",
+                    event: "European Championship",
+                    result: "1st Pick",
+                    image: "/img/awards/europene.jpg",
+                    description: "Selected for the winning alliance at the European Championship after a powerful DECODE season run."
+                }
+            ],
             eventsUrl: "https://ftc-events.firstinspires.org/2025/team/19112"
         }
     };
@@ -60,10 +105,34 @@
         .sort((a, b) => a - b);
 
     let year: number = 2026;
-    let achievementYear: number = 2024;
+    let achievementYear: number = 2025;
     let selectedAchievements: AchievementSeason | undefined;
+    let selectedAward: AchievementAward | null = null;
+    let failedAwardImages = new Set<string>();
 
     $: selectedAchievements = achievements[achievementYear];
+
+    function openAwardPopup(award: AchievementAward) {
+        selectedAward = award;
+    }
+
+    function closeAwardPopup() {
+        selectedAward = null;
+    }
+
+    function handleAwardKeydown(event: KeyboardEvent) {
+        if (event.key === "Escape" && selectedAward) {
+            closeAwardPopup();
+        }
+    }
+
+    function markAwardImageFailed(image: string | undefined) {
+        if (!image) {
+            return;
+        }
+
+        failedAwardImages = new Set([...failedAwardImages, image]);
+    }
 
     function previousAchievementYear() {
         const currentIndex = achievementYears.indexOf(achievementYear);
@@ -79,6 +148,8 @@
         }
     }
 </script>
+
+<svelte:window on:keydown={handleAwardKeydown}/>
 
 <Content column big>
     <Title2> Join Us in <span style="color: rgb(81, 146, 89);">Building the Future</span> with Team Undefined!</Title2>
@@ -97,7 +168,7 @@
             <div class="corner-accent bottom-right"></div>
             <div class="accent-border-left"></div>
             <div class="accent-border-right"></div>
-            <img src="/img/gallery/team2024.png" title="Team Undefined 2024" alt="Team Undefined 2024"/>
+            <img src="/img/gallery/grup_prime.jpg" title="Team Undefined 2024" alt="Team Undefined 2024"/>
             <div class="image-overlay"></div>
         </div>
         <br/>
@@ -263,10 +334,31 @@
 
             {#if selectedAchievements.awards.length > 0}
                 <br/>
-                <p><b style="color: gold;">🏅 Awards:</b></p>
-                {#each selectedAchievements.awards as award}
-                    <p style="margin-left: 20px; margin-top: 10px;">{award}</p>
-                {/each}
+                <p><b style="color: gold;">Awards:</b></p>
+                <div class="awards-grid">
+                    {#each selectedAchievements.awards as award}
+                        <button
+                            type="button"
+                            class="award-card"
+                            on:click={() => openAwardPopup(award)}
+                            aria-label={`View ${award.name} from ${award.event}`}
+                        >
+                            <span class="award-card-glow"></span>
+                            <span class="award-card-icon" aria-hidden="true">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 21h8m-4-4v4m7-17h2v2a5 5 0 01-5 5M5 4H3v2a5 5 0 005 5m0-7h8v5a4 4 0 01-8 0V4z"></path>
+                                </svg>
+                            </span>
+                            <span class="award-card-copy">
+                                <span class="award-card-title">{award.name}</span>
+                                <span class="award-card-event">{award.event}</span>
+                                {#if award.result}
+                                    <span class="award-card-result">{award.result}</span>
+                                {/if}
+                            </span>
+                        </button>
+                    {/each}
+                </div>
             {/if}
 
             {#if selectedAchievements.eventsUrl}
@@ -302,6 +394,46 @@
     {/if}
 
 </Content>
+
+{#if selectedAward}
+    <div class="award-modal-backdrop" role="presentation" on:click|self={closeAwardPopup}>
+        <div
+            class="award-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="award-modal-title"
+        >
+            <button class="award-modal-close" type="button" aria-label="Close award popup" on:click={closeAwardPopup}>X</button>
+            <div class="award-modal-image-frame">
+                {#if selectedAward.image && !failedAwardImages.has(selectedAward.image)}
+                    <img
+                        src={selectedAward.image}
+                        alt={`${selectedAward.name} at ${selectedAward.event}`}
+                        on:error={() => markAwardImageFailed(selectedAward?.image)}
+                    />
+                {:else}
+                    <div class="award-photo-placeholder">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-16 6h16a2 2 0 002-2V6a2 2 0 00-2-2H4a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                        <span>Award photo coming soon</span>
+                    </div>
+                {/if}
+            </div>
+            <div class="award-modal-copy">
+                <p class="award-modal-kicker">2025 DECODE Award</p>
+                <h3 id="award-modal-title">{selectedAward.name}</h3>
+                <p class="award-modal-event">{selectedAward.event}</p>
+                {#if selectedAward.result}
+                    <p class="award-modal-result">{selectedAward.result}</p>
+                {/if}
+                {#if selectedAward.description}
+                    <p class="award-modal-description">{selectedAward.description}</p>
+                {/if}
+            </div>
+        </div>
+    </div>
+{/if}
 
 <style>
 .robotic-image-container {
@@ -583,6 +715,279 @@
     color: rgba(255, 255, 255, 0.8);
 }
 
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+    margin: 18px 0 8px 0;
+}
+
+.award-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-height: 126px;
+    padding: 20px;
+    overflow: hidden;
+    text-align: left;
+    color: white;
+    background: linear-gradient(135deg, rgba(24, 24, 24, 0.98) 0%, rgba(12, 16, 13, 0.98) 100%);
+    border: 2px solid rgba(81, 146, 89, 0.35);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.award-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(255, 215, 0, 0.14);
+    border-radius: 6px;
+    pointer-events: none;
+}
+
+.award-card-glow {
+    position: absolute;
+    top: -40%;
+    right: -20%;
+    width: 140px;
+    height: 140px;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.2) 0%, rgba(81, 146, 89, 0.12) 45%, transparent 70%);
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.award-card:hover,
+.award-card:focus-visible {
+    transform: translateY(-4px);
+    border-color: rgba(81, 146, 89, 0.8);
+    box-shadow: 0 12px 35px rgba(81, 146, 89, 0.28), 0 0 22px rgba(255, 215, 0, 0.1);
+    outline: none;
+}
+
+.award-card-icon {
+    position: relative;
+    flex: 0 0 54px;
+    width: 54px;
+    height: 54px;
+    display: grid;
+    place-items: center;
+    color: gold;
+    background: rgba(255, 215, 0, 0.08);
+    border: 1px solid rgba(255, 215, 0, 0.45);
+    border-radius: 8px;
+    box-shadow: inset 0 0 20px rgba(255, 215, 0, 0.08);
+}
+
+.award-card-icon svg {
+    width: 30px;
+    height: 30px;
+    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.35));
+}
+
+.award-card-copy {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+}
+
+.award-card-title {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.05rem;
+    font-weight: 800;
+    line-height: 1.25;
+    text-transform: uppercase;
+    color: white;
+}
+
+.award-card-event {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.35;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.award-card-result {
+    width: fit-content;
+    padding: 4px 10px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 700;
+    line-height: 1;
+    color: rgb(12, 12, 12);
+    background: linear-gradient(135deg, gold, rgb(81, 146, 89));
+    border-radius: 999px;
+}
+
+.award-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background: rgba(0, 0, 0, 0.78);
+    backdrop-filter: blur(10px);
+}
+
+.award-modal {
+    position: relative;
+    width: min(1040px, 100%);
+    max-height: min(760px, 92vh);
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.8fr);
+    overflow: hidden;
+    background: linear-gradient(135deg, rgb(15, 16, 15) 0%, rgb(24, 24, 24) 52%, rgb(12, 18, 13) 100%);
+    border: 2px solid rgba(81, 146, 89, 0.65);
+    border-radius: 8px;
+    box-shadow: 0 22px 80px rgba(0, 0, 0, 0.65), 0 0 45px rgba(81, 146, 89, 0.22);
+}
+
+.award-modal::before {
+    content: '';
+    position: absolute;
+    inset: 14px;
+    border: 1px solid rgba(255, 215, 0, 0.16);
+    border-radius: 4px;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.award-modal-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    z-index: 4;
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    color: white;
+    font-family: 'Orbitron', monospace;
+    font-weight: 800;
+    background: rgba(0, 0, 0, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.award-modal-close:hover,
+.award-modal-close:focus-visible {
+    background: rgba(81, 146, 89, 0.35);
+    border-color: rgba(81, 146, 89, 0.85);
+    transform: translateY(-2px);
+    outline: none;
+}
+
+.award-modal-image-frame {
+    position: relative;
+    min-height: 420px;
+    background:
+        linear-gradient(135deg, rgba(81, 146, 89, 0.1), transparent 45%),
+        rgb(8, 8, 8);
+}
+
+.award-modal-image-frame img {
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    max-height: 760px;
+    display: block;
+    object-fit: cover;
+}
+
+.award-photo-placeholder {
+    min-height: 420px;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    gap: 18px;
+    padding: 42px;
+    color: rgba(255, 255, 255, 0.78);
+    background:
+        linear-gradient(135deg, rgba(81, 146, 89, 0.14), transparent 50%),
+        repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.035) 0, rgba(255, 255, 255, 0.035) 1px, transparent 1px, transparent 14px);
+}
+
+.award-photo-placeholder svg {
+    width: 78px;
+    height: 78px;
+    color: rgba(81, 146, 89, 0.9);
+    filter: drop-shadow(0 0 15px rgba(81, 146, 89, 0.35));
+}
+
+.award-photo-placeholder span {
+    font-family: 'Orbitron', monospace;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.award-modal-copy {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+    padding: 58px 42px 42px 42px;
+}
+
+.award-modal-kicker {
+    font-family: 'Orbitron', monospace;
+    font-size: 0.82rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: gold;
+    letter-spacing: 0.05em;
+}
+
+.award-modal-copy h3 {
+    font-family: 'Orbitron', monospace;
+    font-size: clamp(1.7rem, 4vw, 2.6rem);
+    font-weight: 900;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 0 0 18px rgba(81, 146, 89, 0.35);
+}
+
+.award-modal-event {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: rgba(255, 255, 255, 0.86);
+}
+
+.award-modal-result {
+    width: fit-content;
+    padding: 8px 14px;
+    font-family: 'Orbitron', monospace;
+    font-size: 0.88rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: rgb(9, 12, 9);
+    background: linear-gradient(135deg, gold, rgb(81, 146, 89));
+    border-radius: 999px;
+}
+
+.award-modal-description {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.78);
+}
+
 @media only screen and (max-width: 768px) {
     .core-values-grid,
     .special-values {
@@ -600,6 +1005,39 @@
 
     .core-value-icon {
         font-size: 2.5rem;
+    }
+
+    .awards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .award-modal-backdrop {
+        padding: 14px;
+        align-items: start;
+        overflow-y: auto;
+    }
+
+    .award-modal {
+        grid-template-columns: 1fr;
+        max-height: none;
+    }
+
+    .award-modal-image-frame,
+    .award-modal-image-frame img,
+    .award-photo-placeholder {
+        min-height: 300px;
+    }
+
+    .award-modal-copy {
+        padding: 34px 24px 28px 24px;
+    }
+
+    .award-modal-copy h3 {
+        font-size: 1.7rem;
+    }
+
+    .award-modal-event {
+        font-size: 1.15rem;
     }
 }
 </style>
