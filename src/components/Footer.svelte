@@ -7,19 +7,22 @@
             <li class="p-2 pt-0">
                 <a
                     href="https://www.instagram.com/team_undefined/"
-                    target="_blank">Instagram</a
+                    target="_blank"
+                    rel="noreferrer">Instagram</a
                 >
             </li>
             <li class="p-2 pt-0">
                 <a
                     href="https://www.facebook.com/teamundefinedcnng/"
-                    target="_blank">Facebook</a
+                    target="_blank"
+                    rel="noreferrer">Facebook</a
                 >
             </li>
             <li class="p-2 pt-0">
                 <a
                     href="https://www.youtube.com/channel/UCN4OeYg_hz3U1jyXbdKV9cw"
-                    target="_blank">Youtube</a
+                    target="_blank"
+                    rel="noreferrer">Youtube</a
                 >
             </li>
         </ul>
