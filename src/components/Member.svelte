@@ -25,7 +25,7 @@
         let arg = department.split("/");
         if(arg.length != 1) sel = 1;
         if(arg[sel][0]=="V") return "rgba(150, 150, 150, 0.3)";
-        if(arg[sel]=="Hardware") return "rgba(81, 146, 89, 0.3)";
+        if(arg[sel]=="Hardware") return "rgba(34, 197, 94, 0.3)";
         if(arg[sel]=="Programming" || arg[sel]=="Software") return "rgba(247, 144, 30, 0.3)";
         if(arg[sel]=="Engineering Notebook") return "rgba(220, 76, 76, 0.3)";
         if(arg[sel]=="Marketing") return "rgba(138, 86, 172, 0.3)";
@@ -62,16 +62,9 @@
 <style>
 .member-card {
     position: relative;
-    background: linear-gradient(135deg, rgba(24, 24, 24, 0.98) 0%, rgba(18, 18, 18, 0.98) 100%);
-    border: 1px solid rgba(81, 146, 89, 0.2);
-    clip-path: polygon(
-        0 0,
-        calc(100% - 15px) 0,
-        100% 15px,
-        100% 100%,
-        15px 100%,
-        0 calc(100% - 15px)
-    );
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
     padding: 24px;
     color: #ffffff;
     width: 100%;
@@ -80,7 +73,9 @@
     gap: 20px;
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     overflow: hidden;
-    font-family: 'Rajdhani', 'Exo 2', sans-serif;
+    font-family: 'Inter', sans-serif;
+    backdrop-filter: blur(22px);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
 }
 
 .member-card::before {
@@ -90,7 +85,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(81, 146, 89, 0.08), transparent);
+    background: linear-gradient(90deg, transparent, rgba(34, 197, 94, 0.08), transparent);
     transition: left 0.6s ease;
 }
 
@@ -99,10 +94,9 @@
 }
 
 .member-card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(81, 146, 89, 0.5);
-    box-shadow: 0 10px 40px rgba(81, 146, 89, 0.2),
-                0 0 20px rgba(81, 146, 89, 0.1);
+    transform: translateY(-6px);
+    border-color: rgba(34, 197, 94, 0.42);
+    box-shadow: 0 26px 90px rgba(34, 197, 94, 0.12);
 }
 
 /* Corner accents */
@@ -110,7 +104,7 @@
     position: absolute;
     width: 12px;
     height: 12px;
-    border: 2px solid rgba(81, 146, 89, 0.4);
+    border: 2px solid rgba(34, 197, 94, 0.4);
     transition: all 0.3s ease;
 }
 
@@ -143,7 +137,7 @@
 }
 
 .member-card:hover .corner-accent {
-    border-color: rgba(81, 146, 89, 0.8);
+    border-color: rgba(34, 197, 94, 0.8);
     width: 16px;
     height: 16px;
 }
@@ -155,7 +149,7 @@
     top: 0;
     width: 4px;
     height: 100%;
-    background: rgba(81, 146, 89, 0.3);
+    background: rgba(34, 197, 94, 0.3);
     transition: width 0.3s ease;
 }
 
@@ -174,19 +168,19 @@ img {
     height: 160px;
     object-fit: cover;
     border-radius: 2px;
-    border: 2px solid rgba(81, 146, 89, 0.3);
+    border: 2px solid rgba(34, 197, 94, 0.3);
     transition: all 0.3s ease;
 }
 
 .member-card:hover img {
-    border-color: rgba(81, 146, 89, 0.6);
+    border-color: rgba(34, 197, 94, 0.6);
     transform: scale(1.02);
 }
 
 .image-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(81, 146, 89, 0.1) 0%, transparent 50%);
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, transparent 50%);
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
@@ -212,7 +206,7 @@ img {
 }
 
 .title {
-    font-family: 'Orbitron', monospace;
+    font-family: 'Space Grotesk', 'Orbitron', sans-serif;
     font-size: 1.25rem;
     font-weight: 700;
     margin: 0;
@@ -231,13 +225,13 @@ img {
     padding: 4px 10px;
     border-radius: 2px;
     width: fit-content;
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .department-badge.green {
-    background: rgba(81, 146, 89, 0.2);
-    color: rgb(81, 146, 89);
-    border: 1px solid rgba(81, 146, 89, 0.4);
+    background: rgba(34, 197, 94, 0.2);
+    color: rgb(34, 197, 94);
+    border: 1px solid rgba(34, 197, 94, 0.4);
 }
 
 .department-badge.orange {

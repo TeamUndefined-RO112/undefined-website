@@ -61,7 +61,7 @@
 <div id="support" class="support-section">
     <Content column big>
         <TextBox>
-        <br/><b style="color: white; font-weight:800; font-size:2.2rem; font-family: 'Orbitron', monospace; letter-spacing: 0.05em;">Monetary Donations <span style="color: rgb(81, 146, 89);">YOU CAN MAKE</span>:</b>
+        <br/><b style="color: white; font-weight:800; font-size:2.2rem; font-family: 'Space Grotesk', 'Orbitron', sans-serif; letter-spacing: 0.05em;">Monetary Donations <span style="color: #22c55e;">YOU CAN MAKE</span>:</b>
         <br/><br/>
         <p>- Bank transfer:</p>
         <div class="iban-container">
@@ -122,10 +122,10 @@
 
 <Content column big>
     <TextBox>
-        <br/><p> <b style="color: white; font-weight:800; font-size:2.2rem; font-family: 'Orbitron', monospace; letter-spacing: 0.05em;">Sponsorship <span style="color: rgb(81, 146, 89);">OPPORTUNITIES</span></b></p>
+        <br/><p> <b style="color: white; font-weight:800; font-size:2.2rem; font-family: 'Space Grotesk', 'Orbitron', sans-serif; letter-spacing: 0.05em;">Sponsorship <span style="color: #22c55e;">OPPORTUNITIES</span></b></p>
         <br/>
         <p style="text-align: center; font-size: 1.1rem; line-height: 1.8;">
-            Looking to make a bigger impact? <b style="color: rgb(81, 146, 89);">Become a sponsor!</b> Your company's support helps us compete at the highest level while gaining valuable visibility in the robotics community. From logo placement to event appearances, we offer multiple sponsorship tiers to match your goals.
+            Looking to make a bigger impact? <b style="color: #22c55e;">Become a sponsor!</b> Your company's support helps us compete at the highest level while gaining valuable visibility in the robotics community. From logo placement to event appearances, we offer multiple sponsorship tiers to match your goals.
         </p>
         <br/>
         <div style="text-align: center;">
@@ -143,7 +143,7 @@
 
 <Content column big>
     <TextBox>
-        <br/><p> <b style="color: white; font-weight:800; font-size:2.2rem; font-family: 'Orbitron', monospace; letter-spacing: 0.05em;">Equipment Donations <span style="color: rgb(81, 146, 89);">WE NEED</span>:</b></p>
+        <br/><p> <b style="color: white; font-weight:800; font-size:2.2rem; font-family: 'Space Grotesk', 'Orbitron', sans-serif; letter-spacing: 0.05em;">Equipment Donations <span style="color: #22c55e;">WE NEED</span>:</b></p>
         Any gear you can contribute with, matters. From laptops, 3d printers, CNCs, raw materials.
 Most important is the immediate acquisition of these parts so we can build this year theme:
     </TextBox>
@@ -186,7 +186,7 @@ Most important is the immediate acquisition of these parts so we can build this 
 <section>
     <div class="donation-info">
         <p style="text-align: center; font-size: 1.15rem; line-height: 1.8; max-width: 800px; margin: 0 auto 40px auto; color: rgba(255, 255, 255, 0.9);">
-            <b style="color: rgb(81, 146, 89);">Two ways to help:</b> You can make a monetary donation using the methods above, <b>or</b> you can purchase items from our parts list and ship them directly to our high school.
+            <b style="color: #22c55e;">Two ways to help:</b> You can make a monetary donation using the methods above, <b>or</b> you can purchase items from our parts list and ship them directly to our high school.
             <br/><br/>
             Find our <a href="/contact" class="inline-link">shipping address on the contact page</a>.
         </p>
@@ -250,12 +250,12 @@ Most important is the immediate acquisition of these parts so we can build this 
     h2 {
         font-size: 2.5rem;
         text-align: center;
-        font-family: 'Orbitron', monospace;
+        font-family: 'Space Grotesk', 'Orbitron', sans-serif;
         font-weight: 700;
         color: white;
         text-transform: uppercase;
         letter-spacing: 0.05em;
-        text-shadow: 0 0 15px rgba(81, 146, 89, 0.4);
+        text-shadow: 0 0 15px rgba(34, 197, 94, 0.4);
     }
 
     /* IBAN Container Styling */
@@ -265,26 +265,19 @@ Most important is the immediate acquisition of these parts so we can build this 
         align-items: center;
         gap: 10px;
         margin: 15px 0;
-        background: linear-gradient(135deg, rgba(24, 24, 24, 0.95) 0%, rgba(18, 18, 18, 0.95) 100%);
-        border: 2px solid rgba(81, 146, 89, 0.4);
-        border-radius: 4px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 20px;
         padding: 12px 16px;
-        clip-path: polygon(
-            0 0,
-            calc(100% - 8px) 0,
-            100% 8px,
-            100% 100%,
-            8px 100%,
-            0 calc(100% - 8px)
-        );
+        backdrop-filter: blur(22px);
         text-decoration: none;
         transition: all 0.3s ease;
     }
 
     .payment-container:hover {
-        border-color: rgba(81, 146, 89, 0.7);
-        box-shadow: 0 4px 15px rgba(81, 146, 89, 0.25);
-        transform: translateY(-2px);
+        border-color: rgba(34, 197, 94, 0.42);
+        box-shadow: 0 26px 90px rgba(34, 197, 94, 0.12);
+        transform: translateY(-6px);
     }
 
     a.payment-container {
@@ -306,13 +299,13 @@ Most important is the immediate acquisition of these parts so we can build this 
     }
 
     .patreon-logo {
-        fill: rgb(81, 146, 89);
+        fill: rgb(34, 197, 94);
     }
 
     .external-icon {
         width: 18px;
         height: 18px;
-        color: rgb(81, 146, 89);
+        color: rgb(34, 197, 94);
         flex-shrink: 0;
         opacity: 0.7;
         transition: all 0.3s ease;
@@ -325,7 +318,7 @@ Most important is the immediate acquisition of these parts so we can build this 
 
     .iban-label,
     .payment-label {
-        font-family: 'Rajdhani', sans-serif;
+        font-family: 'Inter', sans-serif;
         font-size: 0.9rem;
         font-weight: 600;
         color: rgba(255, 255, 255, 0.7);
@@ -335,12 +328,12 @@ Most important is the immediate acquisition of these parts so we can build this 
 
     .iban-value,
     .payment-value {
-        font-family: 'Orbitron', monospace;
+        font-family: 'Space Grotesk', 'Orbitron', sans-serif;
         font-size: 1.1rem;
         font-weight: 700;
-        color: rgb(81, 146, 89);
+        color: rgb(34, 197, 94);
         letter-spacing: 0.1em;
-        text-shadow: 0 0 10px rgba(81, 146, 89, 0.3);
+        text-shadow: 0 0 10px rgba(34, 197, 94, 0.3);
     }
 
     .copy-btn {
@@ -350,27 +343,19 @@ Most important is the immediate acquisition of these parts so we can build this 
         justify-content: center;
         width: 36px;
         height: 36px;
-        background: rgba(81, 146, 89, 0.15);
-        border: 1px solid rgba(81, 146, 89, 0.4);
-        border-radius: 3px;
+        background: rgba(34, 197, 94, 0.15);
+        border: 1px solid rgba(34, 197, 94, 0.4);
+        border-radius: 12px;
         cursor: pointer;
         transition: all 0.2s ease;
         padding: 0;
-        clip-path: polygon(
-            0 0,
-            calc(100% - 6px) 0,
-            100% 6px,
-            100% 100%,
-            6px 100%,
-            0 calc(100% - 6px)
-        );
     }
 
     .copy-btn:hover {
-        background: rgba(81, 146, 89, 0.25);
-        border-color: rgba(81, 146, 89, 0.7);
+        background: rgba(34, 197, 94, 0.25);
+        border-color: rgba(34, 197, 94, 0.7);
         transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(81, 146, 89, 0.3);
+        box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
     }
 
     .copy-btn:active {
@@ -378,19 +363,19 @@ Most important is the immediate acquisition of these parts so we can build this 
     }
 
     .copy-btn.copied {
-        background: rgba(81, 146, 89, 0.3);
-        border-color: rgb(81, 146, 89);
+        background: rgba(34, 197, 94, 0.3);
+        border-color: rgb(34, 197, 94);
     }
 
     .copy-btn .icon {
         width: 18px;
         height: 18px;
-        color: rgb(81, 146, 89);
+        color: rgb(34, 197, 94);
         transition: all 0.2s ease;
     }
 
     .copy-btn.copied .icon {
-        color: rgb(81, 146, 89);
+        color: rgb(34, 197, 94);
         animation: checkmark 0.3s ease;
     }
 
@@ -434,48 +419,34 @@ Most important is the immediate acquisition of these parts so we can build this 
     /* Support Section Styling */
     .support-section {
         position: relative;
-        background: linear-gradient(135deg, rgba(81, 146, 89, 0.08) 0%, rgba(24, 24, 24, 0.95) 50%, rgba(81, 146, 89, 0.08) 100%);
-        border: 2px solid rgba(81, 146, 89, 0.3);
-        border-left: 4px solid rgb(81, 146, 89);
-        border-right: 4px solid rgb(81, 146, 89);
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 20px;
         padding: 20px 20px;
         margin: 40px 0;
-        box-shadow: 0 0 40px rgba(81, 146, 89, 0.15),
-                    inset 0 0 60px rgba(81, 146, 89, 0.05);
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
+        backdrop-filter: blur(22px);
         scroll-margin-top: 100px;
     }
 
     .support-section::before,
     .support-section::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        background: linear-gradient(90deg, transparent, rgb(81, 146, 89), transparent);
-        left: 0;
-    }
-
-    .support-section::before {
-        top: 0;
-    }
-
-    .support-section::after {
-        bottom: 0;
+        display: none;
     }
 
     .support-title {
         font-size: 2.5rem;
-        color: rgb(81, 146, 89);
-        text-shadow: 0 0 20px rgba(81, 146, 89, 0.5);
+        color: rgb(34, 197, 94);
+        text-shadow: 0 0 20px rgba(34, 197, 94, 0.5);
         animation: pulse-glow 3s ease-in-out infinite;
     }
 
     @keyframes pulse-glow {
         0%, 100% {
-            text-shadow: 0 0 20px rgba(81, 146, 89, 0.5);
+            text-shadow: 0 0 20px rgba(34, 197, 94, 0.5);
         }
         50% {
-            text-shadow: 0 0 30px rgba(81, 146, 89, 0.8);
+            text-shadow: 0 0 30px rgba(34, 197, 94, 0.8);
         }
     }
 
@@ -510,21 +481,16 @@ Most important is the immediate acquisition of these parts so we can build this 
         position: relative;
         display: flex;
         flex-direction: column;
-        background: linear-gradient(135deg, rgba(24, 24, 24, 0.98) 0%, rgba(18, 18, 18, 0.98) 100%);
-        border: 2px solid rgba(81, 146, 89, 0.3);
-        clip-path: polygon(
-            0 0,
-            calc(100% - 15px) 0,
-            100% 15px,
-            100% 100%,
-            15px 100%,
-            0 calc(100% - 15px)
-        );
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 20px;
         padding: 0;
         transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         overflow: hidden;
         text-decoration: none;
         cursor: pointer;
+        backdrop-filter: blur(22px);
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
     }
 
     .equipment-card::before {
@@ -534,7 +500,7 @@ Most important is the immediate acquisition of these parts so we can build this 
         left: -100%;
         width: 100%;
         height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(81, 146, 89, 0.1), transparent);
+        background: linear-gradient(90deg, transparent, rgba(34, 197, 94, 0.1), transparent);
         transition: left 0.6s ease;
         z-index: 1;
     }
@@ -544,10 +510,9 @@ Most important is the immediate acquisition of these parts so we can build this 
     }
 
     .equipment-card:hover {
-        transform: translateY(-8px);
-        border-color: rgba(81, 146, 89, 0.6);
-        box-shadow: 0 15px 50px rgba(81, 146, 89, 0.3),
-                    0 0 30px rgba(81, 146, 89, 0.15);
+        transform: translateY(-6px);
+        border-color: rgba(34, 197, 94, 0.42);
+        box-shadow: 0 26px 90px rgba(34, 197, 94, 0.12);
     }
 
     .equipment-image-container {
@@ -558,7 +523,7 @@ Most important is the immediate acquisition of these parts so we can build this 
         align-items: center;
         justify-content: center;
         padding: 20px;
-        border-bottom: 2px solid rgba(81, 146, 89, 0.3);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         overflow: hidden;
     }
 
@@ -575,10 +540,10 @@ Most important is the immediate acquisition of these parts so we can build this 
     }
 
     .equipment-title {
-        font-family: 'Orbitron', monospace;
+        font-family: 'Space Grotesk', 'Orbitron', sans-serif;
         font-size: 1.25rem;
         font-weight: 700;
-        color: rgb(81, 146, 89);
+        color: rgb(34, 197, 94);
         text-transform: uppercase;
         letter-spacing: 0.05em;
         margin: 20px 20px 15px 20px;
@@ -587,10 +552,10 @@ Most important is the immediate acquisition of these parts so we can build this 
     }
 
     .equipment-description {
-        font-family: 'Rajdhani', sans-serif;
+        font-family: 'Inter', sans-serif;
         font-size: 1rem;
         line-height: 1.6;
-        color: rgba(255, 255, 255, 0.85);
+        color: #d4d4d4;
         margin: 0 20px 20px 20px;
         flex-grow: 1;
         position: relative;
@@ -603,12 +568,12 @@ Most important is the immediate acquisition of these parts so we can build this 
         gap: 8px;
         justify-content: center;
         padding: 15px 20px;
-        background: rgba(81, 146, 89, 0.1);
-        border-top: 1px solid rgba(81, 146, 89, 0.3);
-        font-family: 'Orbitron', monospace;
+        background: rgba(34, 197, 94, 0.1);
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        font-family: 'Space Grotesk', 'Orbitron', sans-serif;
         font-size: 0.9rem;
         font-weight: 600;
-        color: rgb(81, 146, 89);
+        color: rgb(34, 197, 94);
         text-transform: uppercase;
         letter-spacing: 0.08em;
         transition: all 0.3s ease;
@@ -617,7 +582,7 @@ Most important is the immediate acquisition of these parts so we can build this 
     }
 
     .equipment-card:hover .equipment-link {
-        background: rgba(81, 146, 89, 0.2);
+        background: rgba(34, 197, 94, 0.2);
     }
 
     .equipment-link svg {
@@ -656,33 +621,26 @@ Most important is the immediate acquisition of these parts so we can build this 
         display: inline-flex;
         align-items: center;
         gap: 10px;
-        padding: 14px 28px;
-        font-family: 'Orbitron', monospace;
-        font-size: 1rem;
-        font-weight: 700;
+        min-height: 52px;
+        padding: 0.95rem 1.45rem;
+        font-family: 'Space Grotesk', 'Orbitron', sans-serif;
+        font-size: 0.78rem;
+        font-weight: 800;
         text-transform: uppercase;
-        letter-spacing: 0.08em;
+        letter-spacing: 0.15em;
         text-decoration: none;
-        background: rgb(81, 146, 89);
-        color: white;
-        border: 2px solid rgb(81, 146, 89);
-        transition: all 0.3s ease;
+        background: #22c55e;
+        color: #06130a;
+        border: none;
+        border-radius: 999px;
+        box-shadow: 0 0 34px rgba(34, 197, 94, 0.28);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
         cursor: pointer;
-        clip-path: polygon(
-            0 0,
-            calc(100% - 10px) 0,
-            100% 10px,
-            100% 100%,
-            10px 100%,
-            0 calc(100% - 10px)
-        );
     }
 
     .btn-robotic-primary:hover {
-        background: white;
-        color: rgb(81, 146, 89);
-        box-shadow: 0 8px 25px rgba(81, 146, 89, 0.4);
-        transform: translateY(-3px);
+        transform: translateY(-2px);
+        box-shadow: 0 0 44px rgba(34, 197, 94, 0.45);
     }
 
     .btn-icon {
@@ -698,24 +656,25 @@ Most important is the immediate acquisition of these parts so we can build this 
     /* Donation Info */
     .donation-info {
         padding: 30px 20px;
-        background: linear-gradient(135deg, rgba(81, 146, 89, 0.05) 0%, rgba(24, 24, 24, 0.5) 100%);
-        border-left: 3px solid rgb(81, 146, 89);
-        border-right: 3px solid rgb(81, 146, 89);
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 20px;
+        backdrop-filter: blur(22px);
         margin-bottom: 40px;
     }
 
     .inline-link {
-        color: rgb(81, 146, 89);
+        color: rgb(34, 197, 94);
         text-decoration: none;
         font-weight: 700;
-        border-bottom: 2px solid rgba(81, 146, 89, 0.3);
+        border-bottom: 2px solid rgba(34, 197, 94, 0.3);
         transition: all 0.3s ease;
         padding-bottom: 2px;
     }
 
     .inline-link:hover {
-        border-bottom-color: rgb(81, 146, 89);
-        color: rgba(81, 146, 89, 0.8);
+        border-bottom-color: rgb(34, 197, 94);
+        color: rgba(34, 197, 94, 0.8);
     }
 
     .other-needs-section {
@@ -723,31 +682,17 @@ Most important is the immediate acquisition of these parts so we can build this 
         margin: 50px 20px 20px 20px;
         padding: 26px 22px 24px 22px;
         overflow: hidden;
-        background: linear-gradient(135deg, rgba(81, 146, 89, 0.2) 0%, rgba(24, 24, 24, 0.96) 35%, rgba(18, 18, 18, 0.98) 100%);
-        border: 3px solid rgba(81, 146, 89, 0.6);
-        border-left: 5px solid rgb(81, 146, 89);
-        border-right: 5px solid rgb(81, 146, 89);
-        box-shadow: 0 0 50px rgba(81, 146, 89, 0.34),
-                    inset 0 0 45px rgba(81, 146, 89, 0.12);
-        clip-path: polygon(
-            0 0,
-            calc(100% - 12px) 0,
-            100% 12px,
-            100% 100%,
-            12px 100%,
-            0 calc(100% - 12px)
-        );
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 20px;
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
+        backdrop-filter: blur(22px);
         animation: other-needs-pulse 2.6s ease-in-out infinite;
     }
 
     .other-needs-section::before,
     .other-needs-section::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background: linear-gradient(90deg, transparent, rgb(81, 146, 89), transparent);
+        display: none;
     }
 
     .other-needs-section::before {
@@ -763,12 +708,12 @@ Most important is the immediate acquisition of these parts so we can build this 
         inset: 0;
         pointer-events: none;
         background:
-            radial-gradient(circle at 12% 20%, rgba(81, 146, 89, 0.25) 0%, transparent 30%),
-            radial-gradient(circle at 88% 80%, rgba(81, 146, 89, 0.18) 0%, transparent 34%),
+            radial-gradient(circle at 12% 20%, rgba(34, 197, 94, 0.25) 0%, transparent 30%),
+            radial-gradient(circle at 88% 80%, rgba(34, 197, 94, 0.18) 0%, transparent 34%),
             repeating-linear-gradient(
                 120deg,
-                rgba(81, 146, 89, 0.08) 0px,
-                rgba(81, 146, 89, 0.08) 2px,
+                rgba(34, 197, 94, 0.08) 0px,
+                rgba(34, 197, 94, 0.08) 2px,
                 transparent 2px,
                 transparent 14px
             );
@@ -786,37 +731,38 @@ Most important is the immediate acquisition of these parts so we can build this 
 
     .other-needs-tag {
         display: inline-block;
-        font-family: 'Orbitron', monospace;
-        font-size: 0.85rem;
-        font-weight: 700;
+        font-family: 'Space Grotesk', 'Orbitron', sans-serif;
+        font-size: 0.75rem;
+        font-weight: 800;
         text-transform: uppercase;
-        letter-spacing: 0.12em;
-        color: white;
-        background: linear-gradient(90deg, rgba(81, 146, 89, 1), rgba(59, 114, 66, 1));
-        border: 1px solid rgba(81, 146, 89, 1);
+        letter-spacing: 0.24em;
+        color: #22c55e;
+        background: rgba(34, 197, 94, 0.1);
+        border: 1px solid rgba(34, 197, 94, 0.3);
+        border-radius: 999px;
         padding: 8px 14px;
         margin-bottom: 10px;
-        box-shadow: 0 0 14px rgba(81, 146, 89, 0.45);
+        box-shadow: 0 0 14px rgba(34, 197, 94, 0.25);
         animation: other-needs-tag-pulse 1.8s ease-in-out infinite;
     }
 
     .other-needs-heading {
         margin: 6px 0 8px 0;
-        font-family: 'Orbitron', monospace;
+        font-family: 'Space Grotesk', 'Orbitron', sans-serif;
         font-size: 1.8rem;
         font-weight: 800;
         color: white;
         text-transform: uppercase;
         letter-spacing: 0.07em;
-        text-shadow: 0 0 18px rgba(81, 146, 89, 0.6);
+        text-shadow: 0 0 18px rgba(34, 197, 94, 0.6);
     }
 
     .other-needs-subtitle {
         margin: 0 0 14px 0;
-        font-family: 'Rajdhani', sans-serif;
+        font-family: 'Inter', sans-serif;
         font-size: 1.05rem;
         line-height: 1.6;
-        color: rgba(255, 255, 255, 0.95);
+        color: #d4d4d4;
     }
 
     .other-needs-illustrations {
@@ -831,7 +777,8 @@ Most important is the immediate acquisition of these parts so we can build this 
         gap: 10px;
         padding: 10px 12px;
         background: rgba(0, 0, 0, 0.35);
-        border: 1px solid rgba(81, 146, 89, 0.45);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
     }
 
     .illustration-icon {
@@ -841,9 +788,10 @@ Most important is the immediate acquisition of these parts so we can build this 
         display: flex;
         align-items: center;
         justify-content: center;
-        color: rgb(81, 146, 89);
-        background: rgba(81, 146, 89, 0.14);
-        border: 1px solid rgba(81, 146, 89, 0.5);
+        color: rgb(34, 197, 94);
+        background: rgba(34, 197, 94, 0.14);
+        border: 1px solid rgba(34, 197, 94, 0.5);
+        border-radius: 10px;
     }
 
     .illustration-icon svg {
@@ -852,7 +800,7 @@ Most important is the immediate acquisition of these parts so we can build this 
     }
 
     .needs-illustration span {
-        font-family: 'Orbitron', monospace;
+        font-family: 'Space Grotesk', 'Orbitron', sans-serif;
         font-size: 0.78rem;
         text-transform: uppercase;
         letter-spacing: 0.08em;
@@ -868,56 +816,54 @@ Most important is the immediate acquisition of these parts so we can build this 
     }
 
     .other-need-card {
-        background: linear-gradient(135deg, rgba(81, 146, 89, 0.12) 0%, rgba(24, 24, 24, 0.85) 100%);
-        border: 2px solid rgba(81, 146, 89, 0.4);
-        border-left: 4px solid rgba(81, 146, 89, 0.8);
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
         padding: 16px;
-        transition: all 0.25s ease;
+        transition: all 0.3s ease;
     }
 
     .other-need-card:hover {
-        border-color: rgba(81, 146, 89, 0.7);
-        box-shadow: 0 8px 22px rgba(81, 146, 89, 0.22);
-        transform: translateY(-2px);
+        border-color: rgba(34, 197, 94, 0.42);
+        box-shadow: 0 26px 90px rgba(34, 197, 94, 0.12);
+        transform: translateY(-6px);
     }
 
     .other-need-title {
         margin: 0 0 8px 0;
-        font-family: 'Orbitron', monospace;
+        font-family: 'Space Grotesk', 'Orbitron', sans-serif;
         font-size: 0.95rem;
         font-weight: 700;
-        color: rgb(81, 146, 89);
+        color: rgb(34, 197, 94);
         text-transform: uppercase;
         letter-spacing: 0.06em;
     }
 
     .other-need-details {
         margin: 0;
-        font-family: 'Rajdhani', sans-serif;
+        font-family: 'Inter', sans-serif;
         font-size: 1rem;
         line-height: 1.5;
-        color: rgba(255, 255, 255, 0.85);
+        color: #d4d4d4;
     }
 
     @keyframes other-needs-pulse {
         0%, 100% {
-            box-shadow: 0 0 50px rgba(81, 146, 89, 0.32),
-                        inset 0 0 45px rgba(81, 146, 89, 0.1);
+            box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
         }
         50% {
-            box-shadow: 0 0 66px rgba(81, 146, 89, 0.5),
-                        inset 0 0 55px rgba(81, 146, 89, 0.2);
+            box-shadow: 0 26px 90px rgba(34, 197, 94, 0.12);
         }
     }
 
     @keyframes other-needs-tag-pulse {
         0%, 100% {
             transform: translateY(0);
-            box-shadow: 0 0 14px rgba(81, 146, 89, 0.45);
+            box-shadow: 0 0 14px rgba(34, 197, 94, 0.25);
         }
         50% {
             transform: translateY(-1px);
-            box-shadow: 0 0 24px rgba(81, 146, 89, 0.7);
+            box-shadow: 0 0 24px rgba(34, 197, 94, 0.45);
         }
     }
 

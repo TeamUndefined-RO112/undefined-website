@@ -37,16 +37,9 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(245, 245, 245, 0.98) 100%);
-    border: 2px solid rgba(81, 146, 89, 0.3);
-    clip-path: polygon(
-        0 0,
-        calc(100% - 15px) 0,
-        100% 15px,
-        100% 100%,
-        15px 100%,
-        0 calc(100% - 15px)
-    );
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
     padding: 30px 20px;
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     overflow: hidden;
@@ -54,6 +47,8 @@
     max-width: 420px;
     pointer-events: auto;
     touch-action: auto;
+    backdrop-filter: blur(22px);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
 }
 
 .sponsor-card::before {
@@ -63,7 +58,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(81, 146, 89, 0.1), transparent);
+    background: linear-gradient(90deg, transparent, rgba(34, 197, 94, 0.08), transparent);
     transition: left 0.6s ease;
     z-index: 1;
 }
@@ -73,10 +68,9 @@
 }
 
 .sponsor-card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(81, 146, 89, 0.6);
-    box-shadow: 0 15px 50px rgba(81, 146, 89, 0.25),
-                0 0 30px rgba(81, 146, 89, 0.15);
+    transform: translateY(-6px);
+    border-color: rgba(34, 197, 94, 0.42);
+    box-shadow: 0 26px 90px rgba(34, 197, 94, 0.12);
 }
 
 /* Corner accents */
@@ -84,7 +78,7 @@
     position: absolute;
     width: 12px;
     height: 12px;
-    border: 2px solid rgba(81, 146, 89, 0.5);
+    border: 2px solid rgba(34, 197, 94, 0.4);
     transition: all 0.3s ease;
     z-index: 2;
 }
@@ -118,7 +112,7 @@
 }
 
 .sponsor-card:hover .corner-accent {
-    border-color: rgba(81, 146, 89, 0.9);
+    border-color: rgba(34, 197, 94, 0.8);
     width: 16px;
     height: 16px;
 }
@@ -132,9 +126,9 @@
     justify-content: center;
     padding: 20px;
     background: white;
-    border-radius: 4px;
+    border-radius: 12px;
     margin-bottom: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     z-index: 1;
 }
 
@@ -162,8 +156,8 @@ img {
 .sponsor-name {
     font-size: 1.25rem;
     font-weight: 700;
-    font-family: 'Rajdhani', sans-serif;
-    color: #1a1a1a;
+    font-family: 'Space Grotesk', 'Orbitron', sans-serif;
+    color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     position: relative;
@@ -172,13 +166,13 @@ img {
 }
 
 .sponsor-card:hover .sponsor-name {
-    color: rgb(81, 146, 89);
+    color: rgb(34, 197, 94);
 }
 
 .sponsor-description {
     font-size: 0.95rem;
-    font-family: 'Rajdhani', sans-serif;
-    color: #555;
+    font-family: 'Inter', sans-serif;
+    color: #cfcfcf;
     line-height: 1.5;
     margin-top: 15px;
     padding: 0 10px;

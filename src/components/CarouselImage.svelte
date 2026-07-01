@@ -2,7 +2,7 @@
     export let src: string;
 </script>
 
-<img src={src} alt="carousel" class="h-carousel w-full object-cover overflow-hidden transition-transform duration-700 ease-out">
+<img src={src} alt="carousel" class="h-screen w-full object-cover overflow-hidden transition-transform duration-700 ease-out">
 
 <style>
     img {
