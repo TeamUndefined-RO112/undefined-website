@@ -14,11 +14,6 @@ content {
     max-width: 100vw;
     box-sizing: border-box;
     gap: 20px;
-    background: url("/img/home/perlinbg.svg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
 }
 
 .center {

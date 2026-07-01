@@ -8,7 +8,8 @@ module.exports = {
 		fontFamily: {
 			'orbitron': ['Orbitron', 'monospace'],
 			'rajdhani': ['Rajdhani', 'sans-serif'],
-			'exo': ['Exo 2', 'sans-serif'],
+			'grotesk': ['Space Grotesk', 'Orbitron', 'sans-serif'],
+			'inter': ['Inter', 'Manrope', 'sans-serif'],
 			'noto': ['Noto Sans']
 		},
 		extend: {
@@ -24,13 +25,13 @@ module.exports = {
 				'scanline': 'scanline 8s linear infinite',
 			},
 			boxShadow: {
-				'glow-sm': '0 0 5px rgba(81, 146, 89, 0.3)',
-				'glow': '0 0 15px rgba(81, 146, 89, 0.5)',
-				'glow-lg': '0 0 30px rgba(81, 146, 89, 0.6)',
-				'neon': '0 0 5px rgba(81, 146, 89, 0.5), 0 0 10px rgba(81, 146, 89, 0.3), 0 0 15px rgba(81, 146, 89, 0.2)',
+				'glow-sm': '0 0 5px rgba(34, 197, 94, 0.3)',
+				'glow': '0 0 15px rgba(34, 197, 94, 0.5)',
+				'glow-lg': '0 0 30px rgba(34, 197, 94, 0.6)',
+				'neon': '0 0 5px rgba(34, 197, 94, 0.5), 0 0 10px rgba(34, 197, 94, 0.3), 0 0 15px rgba(34, 197, 94, 0.2)',
 			},
 			backgroundImage: {
-				'grid-pattern': 'linear-gradient(rgba(81, 146, 89, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(81, 146, 89, 0.03) 1px, transparent 1px)',
+				'grid-pattern': 'linear-gradient(rgba(34, 197, 94, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(34, 197, 94, 0.03) 1px, transparent 1px)',
 			},
 		},
 		colors: {

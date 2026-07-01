@@ -152,7 +152,7 @@
 <svelte:window on:keydown={handleAwardKeydown}/>
 
 <Content column big>
-    <Title2> Join Us in <span style="color: rgb(81, 146, 89);">Building the Future</span> with Team Undefined!</Title2>
+    <Title2> Join Us in <span style="color: rgb(34, 197, 94);">Building the Future</span> with Team Undefined!</Title2>
     <br/>
     <TextBox>
         <p><b>Hey there!</b></p>
@@ -189,7 +189,7 @@
     <br/>
     <TextBox>
         <p style="text-align: center; font-size: 1.1rem; line-height: 1.8;">
-            At <b style="color: rgb(81, 146, 89);">Team Undefined (#19112)</b>, we believe success means more than winning matches —
+            At <b style="color: rgb(34, 197, 94);">Team Undefined (#19112)</b>, we believe success means more than winning matches —
             it means learning, collaborating, and inspiring others through every build, code, and match.
             We live by the <b>FIRST® Tech Challenge Core Values</b>, which define how we work, learn, and compete.
         </p>
@@ -289,19 +289,19 @@
     <br/>
 
     <TextBox>
-        <p style="text-align: center; font-size: 1.3rem; font-weight: 700; line-height: 1.8; color: rgb(81, 146, 89);">
+        <p style="text-align: center; font-size: 1.3rem; font-weight: 700; line-height: 1.8; color: rgb(34, 197, 94);">
             🧭 In short:<br/>
             <span style="color: white; font-size: 1.1rem;">
                 We design. We build. We code.<br/>
                 We compete fiercely.<br/>
-                And we stay <b style="color: rgb(81, 146, 89);">#Undefined</b> in how far we can go.
+                And we stay <b style="color: rgb(34, 197, 94);">#Undefined</b> in how far we can go.
             </span>
         </p>
     </TextBox>
     <br/>
     <br/>
 
-    <Title2><span style="color: rgb(81, 146, 89);">{selectedAchievements ? selectedAchievements.seasonLabel : `${achievementYear} Season`}</span> Results</Title2>
+    <Title2><span style="color: rgb(34, 197, 94);">{selectedAchievements ? selectedAchievements.seasonLabel : `${achievementYear} Season`}</span> Results</Title2>
     <div class="flex justify-center items-center gap-2">
         <b>Year:</b>&nbsp;
         <Button small on:click={previousAchievementYear}>-</Button>
@@ -314,7 +314,7 @@
             <p>{selectedAchievements.intro}</p>
             {#if selectedAchievements.record}
                 <br/>
-                <p><b style="color: rgb(81, 146, 89); font-size: 1.2rem;">Season Record: {selectedAchievements.record}</b></p>
+                <p><b style="color: rgb(34, 197, 94); font-size: 1.2rem;">Season Record: {selectedAchievements.record}</b></p>
             {/if}
 
             {#if selectedAchievements.competitions.length > 0}
@@ -325,7 +325,7 @@
                         <li>
                             🏆 <b>{competition.name}</b> ({competition.date})
                             {#if competition.result}
-                                - <b style="color: rgb(81, 146, 89);">{competition.result}</b>
+                                - <b style="color: rgb(34, 197, 94);">{competition.result}</b>
                             {/if}
                         </li>
                     {/each}
@@ -441,16 +441,11 @@
     max-width: 600px;
     margin: 2rem auto;
     padding: 20px;
-    background: linear-gradient(135deg, rgba(24, 24, 24, 0.98) 0%, rgba(18, 18, 18, 0.98) 100%);
-    border: 2px solid rgba(81, 146, 89, 0.3);
-    clip-path: polygon(
-        0 0,
-        calc(100% - 20px) 0,
-        100% 20px,
-        100% 100%,
-        20px 100%,
-        0 calc(100% - 20px)
-    );
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    backdrop-filter: blur(22px);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     overflow: hidden;
 }
@@ -462,7 +457,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(81, 146, 89, 0.1), transparent);
+    background: linear-gradient(90deg, transparent, rgba(34, 197, 94, 0.1), transparent);
     transition: left 0.6s ease;
     z-index: 2;
 }
@@ -472,10 +467,9 @@
 }
 
 .robotic-image-container:hover {
-    transform: translateY(-5px);
-    border-color: rgba(81, 146, 89, 0.6);
-    box-shadow: 0 15px 50px rgba(81, 146, 89, 0.3),
-                0 0 30px rgba(81, 146, 89, 0.15);
+    transform: translateY(-6px);
+    border-color: rgba(34, 197, 94, 0.42);
+    box-shadow: 0 26px 90px rgba(34, 197, 94, 0.12);
 }
 
 /* Corner accents */
@@ -483,7 +477,7 @@
     position: absolute;
     width: 15px;
     height: 15px;
-    border: 2px solid rgba(81, 146, 89, 0.5);
+    border: 2px solid rgba(34, 197, 94, 0.5);
     transition: all 0.3s ease;
     z-index: 3;
 }
@@ -517,7 +511,7 @@
 }
 
 .robotic-image-container:hover .corner-accent {
-    border-color: rgba(81, 146, 89, 0.9);
+    border-color: rgba(34, 197, 94, 0.9);
     width: 20px;
     height: 20px;
 }
@@ -529,7 +523,7 @@
     top: 0;
     width: 4px;
     height: 100%;
-    background: rgba(81, 146, 89, 0.4);
+    background: rgba(34, 197, 94, 0.4);
     transition: width 0.3s ease;
     z-index: 2;
 }
@@ -540,7 +534,7 @@
     top: 0;
     width: 4px;
     height: 100%;
-    background: rgba(81, 146, 89, 0.4);
+    background: rgba(34, 197, 94, 0.4);
     transition: width 0.3s ease;
     z-index: 2;
 }
@@ -554,27 +548,27 @@
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 4px;
-    border: 2px solid rgba(81, 146, 89, 0.3);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
     position: relative;
     z-index: 1;
 }
 
 .robotic-image-container:hover img {
-    border-color: rgba(81, 146, 89, 0.6);
+    border-color: rgba(34, 197, 94, 0.42);
     transform: scale(1.02);
 }
 
 .image-overlay {
     position: absolute;
     inset: 20px;
-    background: linear-gradient(135deg, rgba(81, 146, 89, 0.15) 0%, transparent 50%);
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.15) 0%, transparent 50%);
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
     z-index: 2;
-    border-radius: 4px;
+    border-radius: 16px;
 }
 
 .robotic-image-container:hover .image-overlay {
@@ -609,45 +603,47 @@
 }
 
 .core-value-card {
-    background: linear-gradient(135deg, rgba(24, 24, 24, 0.98) 0%, rgba(18, 18, 18, 0.98) 100%);
-    border: 2px solid rgba(81, 146, 89, 0.3);
-    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
     padding: 30px 25px;
     transition: all 0.3s ease;
     text-align: center;
+    backdrop-filter: blur(22px);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
 }
 
 .core-value-card:hover {
-    border-color: rgba(81, 146, 89, 0.7);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(81, 146, 89, 0.3);
+    border-color: rgba(34, 197, 94, 0.42);
+    transform: translateY(-6px);
+    box-shadow: 0 26px 90px rgba(34, 197, 94, 0.12);
 }
 
 .core-value-icon {
     width: 60px;
     height: 60px;
     margin: 0 auto 15px auto;
-    color: rgb(81, 146, 89);
+    color: rgb(34, 197, 94);
 }
 
 .core-value-icon svg {
     width: 100%;
     height: 100%;
-    filter: drop-shadow(0 0 10px rgba(81, 146, 89, 0.3));
+    filter: drop-shadow(0 0 10px rgba(34, 197, 94, 0.3));
 }
 
 .core-value-title {
-    font-family: 'Orbitron', monospace;
+    font-family: 'Space Grotesk', 'Orbitron', sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
-    color: rgb(81, 146, 89);
+    color: rgb(34, 197, 94);
     margin-bottom: 12px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
 
 .core-value-subtitle {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1.1rem;
     font-weight: 600;
     color: rgba(255, 255, 255, 0.8);
@@ -657,7 +653,7 @@
 }
 
 .core-value-description {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1rem;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.75);
@@ -672,34 +668,35 @@
 }
 
 .special-value-card {
-    background: linear-gradient(135deg, rgba(81, 146, 89, 0.15) 0%, rgba(24, 24, 24, 0.98) 50%, rgba(81, 146, 89, 0.15) 100%);
-    border: 3px solid rgba(81, 146, 89, 0.5);
-    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
     padding: 35px 30px;
     transition: all 0.3s ease;
     text-align: center;
-    box-shadow: 0 0 20px rgba(81, 146, 89, 0.2);
+    backdrop-filter: blur(22px);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
 }
 
 .special-value-card:hover {
-    border-color: rgba(81, 146, 89, 0.9);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 40px rgba(81, 146, 89, 0.4);
+    border-color: rgba(34, 197, 94, 0.42);
+    transform: translateY(-6px);
+    box-shadow: 0 26px 90px rgba(34, 197, 94, 0.12);
 }
 
 .special-value-title {
-    font-family: 'Orbitron', monospace;
+    font-family: 'Space Grotesk', 'Orbitron', sans-serif;
     font-size: 1.8rem;
     font-weight: 800;
-    color: rgb(81, 146, 89);
+    color: rgb(34, 197, 94);
     margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    text-shadow: 0 0 15px rgba(81, 146, 89, 0.5);
+    text-shadow: 0 0 15px rgba(34, 197, 94, 0.5);
 }
 
 .special-value-subtitle {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1.2rem;
     font-weight: 600;
     color: rgba(255, 255, 255, 0.9);
@@ -709,7 +706,7 @@
 }
 
 .special-value-description {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1.05rem;
     line-height: 1.7;
     color: rgba(255, 255, 255, 0.8);
@@ -732,9 +729,11 @@
     overflow: hidden;
     text-align: left;
     color: white;
-    background: linear-gradient(135deg, rgba(24, 24, 24, 0.98) 0%, rgba(12, 16, 13, 0.98) 100%);
-    border: 2px solid rgba(81, 146, 89, 0.35);
-    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    backdrop-filter: blur(22px);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
     cursor: pointer;
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
@@ -744,7 +743,7 @@
     position: absolute;
     inset: 0;
     border: 1px solid rgba(255, 215, 0, 0.14);
-    border-radius: 6px;
+    border-radius: 18px;
     pointer-events: none;
 }
 
@@ -754,16 +753,16 @@
     right: -20%;
     width: 140px;
     height: 140px;
-    background: radial-gradient(circle, rgba(255, 215, 0, 0.2) 0%, rgba(81, 146, 89, 0.12) 45%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.2) 0%, rgba(34, 197, 94, 0.12) 45%, transparent 70%);
     opacity: 0.8;
     pointer-events: none;
 }
 
 .award-card:hover,
 .award-card:focus-visible {
-    transform: translateY(-4px);
-    border-color: rgba(81, 146, 89, 0.8);
-    box-shadow: 0 12px 35px rgba(81, 146, 89, 0.28), 0 0 22px rgba(255, 215, 0, 0.1);
+    transform: translateY(-6px);
+    border-color: rgba(34, 197, 94, 0.42);
+    box-shadow: 0 26px 90px rgba(34, 197, 94, 0.12), 0 0 22px rgba(255, 215, 0, 0.1);
     outline: none;
 }
 
@@ -777,7 +776,7 @@
     color: gold;
     background: rgba(255, 215, 0, 0.08);
     border: 1px solid rgba(255, 215, 0, 0.45);
-    border-radius: 8px;
+    border-radius: 14px;
     box-shadow: inset 0 0 20px rgba(255, 215, 0, 0.08);
 }
 
@@ -796,7 +795,7 @@
 }
 
 .award-card-title {
-    font-family: 'Orbitron', monospace;
+    font-family: 'Space Grotesk', 'Orbitron', sans-serif;
     font-size: 1.05rem;
     font-weight: 800;
     line-height: 1.25;
@@ -805,7 +804,7 @@
 }
 
 .award-card-event {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1rem;
     font-weight: 600;
     line-height: 1.35;
@@ -815,12 +814,12 @@
 .award-card-result {
     width: fit-content;
     padding: 4px 10px;
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 0.92rem;
     font-weight: 700;
     line-height: 1;
     color: rgb(12, 12, 12);
-    background: linear-gradient(135deg, gold, rgb(81, 146, 89));
+    background: linear-gradient(135deg, gold, rgb(34, 197, 94));
     border-radius: 999px;
 }
 
@@ -842,10 +841,11 @@
     display: grid;
     grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.8fr);
     overflow: hidden;
-    background: linear-gradient(135deg, rgb(15, 16, 15) 0%, rgb(24, 24, 24) 52%, rgb(12, 18, 13) 100%);
-    border: 2px solid rgba(81, 146, 89, 0.65);
-    border-radius: 8px;
-    box-shadow: 0 22px 80px rgba(0, 0, 0, 0.65), 0 0 45px rgba(81, 146, 89, 0.22);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    backdrop-filter: blur(22px);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
 }
 
 .award-modal::before {
@@ -853,7 +853,7 @@
     position: absolute;
     inset: 14px;
     border: 1px solid rgba(255, 215, 0, 0.16);
-    border-radius: 4px;
+    border-radius: 16px;
     pointer-events: none;
     z-index: 2;
 }
@@ -868,19 +868,19 @@
     display: grid;
     place-items: center;
     color: white;
-    font-family: 'Orbitron', monospace;
+    font-family: 'Space Grotesk', 'Orbitron', sans-serif;
     font-weight: 800;
     background: rgba(0, 0, 0, 0.55);
     border: 1px solid rgba(255, 255, 255, 0.22);
-    border-radius: 8px;
+    border-radius: 14px;
     cursor: pointer;
     transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
 .award-modal-close:hover,
 .award-modal-close:focus-visible {
-    background: rgba(81, 146, 89, 0.35);
-    border-color: rgba(81, 146, 89, 0.85);
+    background: rgba(34, 197, 94, 0.35);
+    border-color: rgba(34, 197, 94, 0.85);
     transform: translateY(-2px);
     outline: none;
 }
@@ -889,7 +889,7 @@
     position: relative;
     min-height: 420px;
     background:
-        linear-gradient(135deg, rgba(81, 146, 89, 0.1), transparent 45%),
+        linear-gradient(135deg, rgba(34, 197, 94, 0.1), transparent 45%),
         rgb(8, 8, 8);
 }
 
@@ -912,19 +912,19 @@
     padding: 42px;
     color: rgba(255, 255, 255, 0.78);
     background:
-        linear-gradient(135deg, rgba(81, 146, 89, 0.14), transparent 50%),
+        linear-gradient(135deg, rgba(34, 197, 94, 0.14), transparent 50%),
         repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.035) 0, rgba(255, 255, 255, 0.035) 1px, transparent 1px, transparent 14px);
 }
 
 .award-photo-placeholder svg {
     width: 78px;
     height: 78px;
-    color: rgba(81, 146, 89, 0.9);
-    filter: drop-shadow(0 0 15px rgba(81, 146, 89, 0.35));
+    color: rgba(34, 197, 94, 0.9);
+    filter: drop-shadow(0 0 15px rgba(34, 197, 94, 0.35));
 }
 
 .award-photo-placeholder span {
-    font-family: 'Orbitron', monospace;
+    font-family: 'Space Grotesk', 'Orbitron', sans-serif;
     font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -942,7 +942,7 @@
 }
 
 .award-modal-kicker {
-    font-family: 'Orbitron', monospace;
+    font-family: 'Space Grotesk', 'Orbitron', sans-serif;
     font-size: 0.82rem;
     font-weight: 800;
     text-transform: uppercase;
@@ -951,17 +951,17 @@
 }
 
 .award-modal-copy h3 {
-    font-family: 'Orbitron', monospace;
+    font-family: 'Space Grotesk', 'Orbitron', sans-serif;
     font-size: clamp(1.7rem, 4vw, 2.6rem);
     font-weight: 900;
     line-height: 1.1;
     text-transform: uppercase;
     color: white;
-    text-shadow: 0 0 18px rgba(81, 146, 89, 0.35);
+    text-shadow: 0 0 18px rgba(34, 197, 94, 0.35);
 }
 
 .award-modal-event {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1.35rem;
     font-weight: 700;
     line-height: 1.35;
@@ -971,17 +971,17 @@
 .award-modal-result {
     width: fit-content;
     padding: 8px 14px;
-    font-family: 'Orbitron', monospace;
+    font-family: 'Space Grotesk', 'Orbitron', sans-serif;
     font-size: 0.88rem;
     font-weight: 800;
     text-transform: uppercase;
     color: rgb(9, 12, 9);
-    background: linear-gradient(135deg, gold, rgb(81, 146, 89));
+    background: linear-gradient(135deg, gold, rgb(34, 197, 94));
     border-radius: 999px;
 }
 
 .award-modal-description {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1.1rem;
     font-weight: 500;
     line-height: 1.65;

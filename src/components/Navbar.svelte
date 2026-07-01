@@ -4,6 +4,19 @@ import NavbarButton from "./NavbarButton.svelte";
 export let url: URL;
 let mobileMenuOpen = false;
 
+let y = 0;
+let lastY = 0;
+let hidden = false;
+
+$: {
+    if (y > lastY && y > 80) {
+        hidden = true;
+    } else if (y < lastY) {
+        hidden = false;
+    }
+    lastY = y;
+}
+
 function toggleMenu() {
     mobileMenuOpen = !mobileMenuOpen;
 }
@@ -13,13 +26,10 @@ function closeMenu() {
 }
 </script>
 
-<nav class="fixed top-0 w-full h-16 md:h-20 flex justify-center items-center z-[500] text-xs md:text-base backdrop-blur-md bg-black/80 border-b border-primary-green/30 shadow-glow">
-    <!-- Animated accent line at top -->
-    <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary-green to-transparent opacity-50"></div>
+<svelte:window bind:scrollY={y} />
 
-    <!-- Corner accents -->
-    <div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-primary-green/40"></div>
-    <div class="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-primary-green/40"></div>
+<nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[92%] max-w-5xl h-14 md:h-16 flex justify-center items-center z-[500] text-xs md:text-base backdrop-blur-md hover:backdrop-blur-[24px] bg-[rgba(255,255,255,0.02)] hover:bg-[rgba(255,255,255,0.06)] border border-[rgba(255,255,255,0.05)] hover:border-[rgba(34,197,94,0.3)] shadow-lg hover:shadow-[0_24px_80px_rgba(34,197,94,0.15)] rounded-2xl transition-all duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] {hidden ? '-translate-y-[150%] opacity-0' : 'translate-y-0 opacity-100'}">
+    <!-- Mobile menu button inside nav -->
 
     <div class="container mx-auto px-4 flex justify-between md:justify-center items-center">
         <!-- Logo with glow effect -->
@@ -58,7 +68,7 @@ function closeMenu() {
 
     <!-- Mobile menu dropdown -->
     {#if mobileMenuOpen}
-    <div class="md:hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-md border-b border-primary-green/30 animate-fade-in-up">
+    <div class="md:hidden absolute top-[calc(100%+0.5rem)] left-0 w-full bg-[rgba(10,10,10,0.4)] backdrop-blur-[24px] border border-[rgba(255,255,255,0.08)] shadow-[0_24px_80px_rgba(0,0,0,0.3)] rounded-2xl animate-fade-in-up overflow-hidden">
         <div class="flex flex-col py-4" on:click={closeMenu}>
             <NavbarButton href="/" path={url.pathname}>Home</NavbarButton>
             <NavbarButton href="/team" path={url.pathname}>About Us</NavbarButton>

@@ -1,0 +1,302 @@
+/* ============================================
+   PREMIUM DESIGN SYSTEM
+   Shared CSS tokens extracted from homepage
+   ============================================ */
+
+/* ------ Page Hero (non-fullscreen, for subpages) ------ */
+.page-hero {
+	position: relative;
+	isolation: isolate;
+	overflow: hidden;
+	background: #090909;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: clamp(5rem, 12vw, 8rem) 1.5rem clamp(3rem, 6vw, 5rem);
+}
+
+.page-hero::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: -2;
+	background:
+		radial-gradient(circle at 50% 60%, rgba(34, 197, 94, 0.15), transparent 40%),
+		linear-gradient(180deg, rgba(9, 9, 9, 0.4), #090909 92%);
+}
+
+.page-hero .hero-grid {
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	background-image:
+		linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+	background-size: 72px 72px;
+	mask-image: radial-gradient(circle at center, black, transparent 72%);
+	opacity: 0.3;
+}
+
+/* ------ Premium Section ------ */
+.premium-section {
+	position: relative;
+	isolation: isolate;
+	overflow: hidden;
+	background: #090909;
+	padding: clamp(4rem, 8vw, 7rem) 1.5rem;
+}
+
+.section-shell {
+	width: min(1180px, 100%);
+	margin: 0 auto;
+}
+
+.section-heading {
+	max-width: 760px;
+	margin-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+
+/* ------ Eyebrow Label ------ */
+.eyebrow {
+	margin: 0 0 1rem;
+	color: #22c55e;
+	font-size: 0.75rem;
+	font-weight: 800;
+	letter-spacing: 0.24em;
+	text-transform: uppercase;
+}
+
+/* ------ Premium Headings ------ */
+.premium-h1,
+.premium-h2,
+.premium-h3 {
+	margin: 0;
+	font-family: 'Space Grotesk', 'Orbitron', sans-serif;
+	letter-spacing: 0;
+	text-transform: none;
+	color: white;
+}
+
+.premium-h1 {
+	font-size: clamp(2.8rem, 8vw, 5.4rem);
+	line-height: 0.92;
+	font-weight: 700;
+}
+
+.premium-h2 {
+	font-size: clamp(2rem, 5vw, 4rem);
+	line-height: 0.95;
+	font-weight: 700;
+}
+
+.premium-h3 {
+	font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+	line-height: 1;
+	font-weight: 700;
+}
+
+.premium-body {
+	color: #cfcfcf;
+	font-size: 1.05rem;
+	line-height: 1.85;
+}
+
+/* ------ Glassmorphic Card ------ */
+.glass-card {
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	background: rgba(255, 255, 255, 0.04);
+	box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
+	backdrop-filter: blur(22px);
+	border-radius: 20px;
+	transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+	border-color: rgba(34, 197, 94, 0.42);
+	box-shadow: 0 26px 90px rgba(34, 197, 94, 0.12);
+	transform: translateY(-6px);
+}
+
+/* ------ Premium Buttons ------ */
+.premium-button {
+	position: relative;
+	display: inline-flex;
+	min-height: 52px;
+	align-items: center;
+	justify-content: center;
+	border-radius: 999px;
+	padding: 0.95rem 1.45rem;
+	font-size: 0.78rem;
+	font-weight: 800;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+	text-decoration: none;
+	border: none;
+	cursor: pointer;
+	transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.premium-button:hover {
+	transform: translateY(-2px);
+}
+
+.premium-button-primary {
+	background: #22c55e;
+	color: #06130a;
+	box-shadow: 0 0 34px rgba(34, 197, 94, 0.28);
+}
+
+.premium-button-primary:hover {
+	box-shadow: 0 0 46px rgba(34, 197, 94, 0.45);
+}
+
+.premium-button-glass {
+	border: 1px solid rgba(255, 255, 255, 0.12);
+	background: rgba(255, 255, 255, 0.05);
+	color: white;
+	backdrop-filter: blur(18px);
+}
+
+.premium-button-glass:hover {
+	border-color: rgba(34, 197, 94, 0.5);
+	box-shadow: 0 0 28px rgba(34, 197, 94, 0.18);
+}
+
+/* ------ Pill Tags ------ */
+.pill-tag {
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.04);
+	color: #d4d4d4;
+	font-size: 0.74rem;
+	font-weight: 700;
+	padding: 0.45rem 0.7rem;
+}
+
+/* ------ Mouse-following Glow ------ */
+.site-glow {
+	--x: 50vw;
+	--y: 35vh;
+	position: fixed;
+	inset: 0;
+	z-index: 1;
+	pointer-events: none;
+	background: radial-gradient(520px circle at var(--x) var(--y), rgba(34, 197, 94, 0.13), transparent 45%);
+	opacity: 0.85;
+}
+
+/* ------ Reveal Animation ------ */
+.reveal {
+	opacity: 0;
+	transform: translateY(34px);
+	transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.is-visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* ------ Background Glow Blob ------ */
+.glow-blob::before {
+	content: '';
+	position: absolute;
+	inset: auto 8% 6% auto;
+	z-index: -1;
+	width: 420px;
+	height: 420px;
+	border-radius: 999px;
+	background: rgba(34, 197, 94, 0.1);
+	filter: blur(90px);
+	pointer-events: none;
+}
+
+/* ------ Join/CTA Panel ------ */
+.join-panel {
+	position: relative;
+	overflow: hidden;
+	border-radius: 24px;
+	padding: clamp(2rem, 6vw, 5rem);
+	text-align: center;
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	background: rgba(255, 255, 255, 0.04);
+	box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
+	backdrop-filter: blur(22px);
+}
+
+.join-panel::before {
+	content: '';
+	position: absolute;
+	inset: -40% 10% auto;
+	height: 360px;
+	border-radius: 999px;
+	background: rgba(34, 197, 94, 0.14);
+	filter: blur(80px);
+	z-index: -1;
+}
+
+/* ------ Responsive ------ */
+@media (max-width: 640px) {
+	.page-hero {
+		padding-inline: 1rem;
+	}
+}
+
+/* ------ Ambient Immersive Background ------ */
+.ambient-background {
+	position: fixed;
+	inset: 0;
+	z-index: -5;
+	overflow: hidden;
+	pointer-events: none;
+	background: #040805;
+}
+
+.ambient-orb {
+	position: absolute;
+	border-radius: 50%;
+	filter: blur(120px);
+	opacity: 0.5;
+	animation: float-orb 20s infinite ease-in-out alternate;
+}
+
+.ambient-orb-1 {
+	top: -20%; left: -10%;
+	width: 60vw; height: 60vw;
+	background: rgba(34, 197, 94, 0.12);
+	animation-duration: 25s;
+}
+
+.ambient-orb-2 {
+	bottom: -20%; right: -10%;
+	width: 70vw; height: 70vw;
+	background: rgba(22, 163, 74, 0.1);
+	animation-duration: 28s;
+	animation-direction: alternate-reverse;
+}
+
+.ambient-orb-3 {
+	top: 30%; left: 50%;
+	width: 50vw; height: 50vw;
+	background: rgba(34, 197, 94, 0.08);
+	animation-duration: 22s;
+	animation-delay: -5s;
+}
+
+.noise-overlay {
+	position: fixed;
+	inset: 0;
+	z-index: -4;
+	pointer-events: none;
+	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+	opacity: 0.04;
+}
+
+@keyframes float-orb {
+	0% { transform: translate(0, 0) scale(1); }
+	33% { transform: translate(3vw, 5vh) scale(1.05); }
+	66% { transform: translate(-4vw, 3vh) scale(0.95); }
+	100% { transform: translate(0, 0) scale(1); }
+}

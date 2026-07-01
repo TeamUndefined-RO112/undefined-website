@@ -40,6 +40,6 @@
 
 <style>
     .active {
-        text-shadow: 0 0 10px rgba(81, 146, 89, 0.5);
+        text-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
     }
 </style>
