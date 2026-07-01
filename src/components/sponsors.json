@@ -46,6 +46,35 @@
   "src": "/img/sponsor/Sponsori 2025-2026/watt.png",
   "url": "",
   "description": "Specializing in electrical equipment and energy solutions, Watt-Oferta provides the literal spark for local industries. Their crucial support directly empowers our team, ensuring we can source the high-quality electronic components and wiring needed to bring our robots to life and perform efficiently on the competition field."
+},
+{
+  "name": "Tinmar Energy",
+  "src": "/img/sponsor/Sponsori 2025-2026/tinmar.png",
+  "url": "https://tinmar.ro/",
+  "description": "Tinmar Energy is one of Romania's leading energy companies, providing reliable electricity and natural gas solutions for businesses and households while promoting innovation and sustainability."
+},
+{
+  "name": "Enache Best Service",
+  "src": "/img/sponsor/Sponsori 2025-2026/bosch.png",
+  "url": "https://enacheservice.ro/",
+  "description": "Enache Best Service is an authorized Bosch partner specializing in professional automotive diagnostics, maintenance, and repair services, delivering quality and reliability to every customer."
+},
+{
+  "name": "Partidul Campina Curata",
+  "src": "/img/sponsor/Sponsori 2025-2026/PCC_Logo.png",
+  "url": "https://partidulcampinacurata.ro/",
+  "description": "Partidul Câmpina Curată is a local political organization dedicated to improving the community through transparency, sustainable development, and active civic engagement."
+},
+{
+  "name": "Michelin",
+  "src": "/img/sponsor/Sponsori 2025-2026/michelin.webp",
+  "url": "https://www.michelin.ro/",
+  "description": "Michelin is a global leader in tire manufacturing, renowned for its innovation, safety, and high-performance mobility solutions for drivers around the world."
+},
+{
+  "name": "Heart Bit",
+  "src": "/img/sponsor/Sponsori 2025-2026/cuplu.png",
+  "url": "https://heartbit.ro/",
+  "description": "Heart Bit, known through its Couple Joy brand, creates personalized gifts and accessories designed to celebrate love, strengthen relationships, and create lasting memories."
 }
-
 ]
