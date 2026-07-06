@@ -28,7 +28,7 @@ function closeMenu() {
 
 <svelte:window bind:scrollY={y} />
 
-<nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[92%] max-w-5xl h-14 md:h-16 flex justify-center items-center z-[500] text-xs md:text-base backdrop-blur-md hover:backdrop-blur-[24px] bg-[rgba(255,255,255,0.02)] hover:bg-[rgba(255,255,255,0.06)] border border-[rgba(255,255,255,0.05)] hover:border-[rgba(34,197,94,0.3)] shadow-lg hover:shadow-[0_24px_80px_rgba(34,197,94,0.15)] rounded-2xl transition-all duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] {hidden ? '-translate-y-[150%] opacity-0' : 'translate-y-0 opacity-100'}">
+<nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[92%] max-w-5xl h-14 md:h-16 flex justify-center items-center z-[500] text-xs md:text-base backdrop-blur-md hover:backdrop-blur-[24px] bg-[rgba(10,10,10,0.65)] hover:bg-[rgba(10,10,10,0.80)] border border-[rgba(255,255,255,0.08)] hover:border-[rgba(34,197,94,0.3)] shadow-lg hover:shadow-[0_24px_80px_rgba(34,197,94,0.15)] rounded-2xl transition-all duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)] {hidden ? '-translate-y-[150%] opacity-0' : 'translate-y-0 opacity-100'}">
     <!-- Mobile menu button inside nav -->
 
     <div class="container mx-auto px-4 flex justify-between md:justify-center items-center">
@@ -68,7 +68,7 @@ function closeMenu() {
 
     <!-- Mobile menu dropdown -->
     {#if mobileMenuOpen}
-    <div class="md:hidden absolute top-[calc(100%+0.5rem)] left-0 w-full bg-[rgba(10,10,10,0.4)] backdrop-blur-[24px] border border-[rgba(255,255,255,0.08)] shadow-[0_24px_80px_rgba(0,0,0,0.3)] rounded-2xl animate-fade-in-up overflow-hidden">
+    <div class="md:hidden absolute top-[calc(100%+0.5rem)] left-0 w-full bg-[rgba(10,10,10,0.75)] backdrop-blur-[24px] border border-[rgba(255,255,255,0.10)] shadow-[0_24px_80px_rgba(0,0,0,0.5)] rounded-2xl animate-fade-in-up overflow-hidden">
         <div class="flex flex-col py-4" on:click={closeMenu}>
             <NavbarButton href="/" path={url.pathname}>Home</NavbarButton>
             <NavbarButton href="/team" path={url.pathname}>About Us</NavbarButton>

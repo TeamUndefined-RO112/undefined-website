@@ -62,7 +62,7 @@
                 {name: "Campina X.I Meet", date: "January 31, 2026"},
                 {name: "South-East Romania League Tournament", date: "February 7-8, 2026", result: "Ranked 9th out of 32 teams, Qualified for National Championship"},
                 {name: "Ice Breaker Scrimmage", date: "March 7, 2026"},
-                {name: "Romanian National Championship - VLAICU Division", date: "March 13-15, 2026", result: "Ranked 2th out of 48 teams, Qualified for European Championship"},
+                {name: "Romanian National Championship - VLAICU Division", date: "March 13-15, 2026", result: "Ranked 2nd out of 48 teams, Qualified for European Championship"},
                 {name: "European Championship - ESCHER Division", date: "June 17-20, 2026", result: "Ranked 4th out of 52 teams"},
                 {name: "European Championship", date: "June 20, 2026", result: "Winning Alliance 1st Pick"}
             ],
