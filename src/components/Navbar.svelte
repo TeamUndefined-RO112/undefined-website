@@ -47,6 +47,7 @@ function closeMenu() {
             <NavbarButton href="/" path={url.pathname}>Home</NavbarButton>
             <NavbarButton href="/team" path={url.pathname}>About Us</NavbarButton>
             <NavbarButton href="/robots" path={url.pathname}>Robots</NavbarButton>
+            <a href="https://defined.teamundefined.com" target="_blank" rel="noopener noreferrer" class="relative group px-4 py-2 text-white/80 hover:text-white transition-colors duration-300 font-rajdhani font-semibold tracking-wide uppercase">Defined</a>
             <NavbarButton href="/team/apply" path={url.pathname}>Apply</NavbarButton>
             <NavbarButton href="/team/sponsors" path={url.pathname}>Sponsors</NavbarButton>
             <NavbarButton href="/donate" path={url.pathname}>Donate</NavbarButton>
@@ -73,6 +74,7 @@ function closeMenu() {
             <NavbarButton href="/" path={url.pathname}>Home</NavbarButton>
             <NavbarButton href="/team" path={url.pathname}>About Us</NavbarButton>
             <NavbarButton href="/robots" path={url.pathname}>Robots</NavbarButton>
+            <a href="https://defined.teamundefined.com" target="_blank" rel="noopener noreferrer" class="block w-full px-6 py-3 text-left text-white/80 hover:text-white hover:bg-white/5 transition-colors duration-300 font-rajdhani font-semibold tracking-wide uppercase">Defined</a>
             <NavbarButton href="/team/apply" path={url.pathname}>Apply</NavbarButton>
             <NavbarButton href="/team/sponsors" path={url.pathname}>Sponsors</NavbarButton>
             <NavbarButton href="/donate" path={url.pathname}>Donate</NavbarButton>
