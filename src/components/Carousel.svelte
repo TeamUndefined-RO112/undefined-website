@@ -59,7 +59,6 @@
 	
 	export function right () {
 		controller.next()
-		console.log(controller)
 	}
 	
 	export function go (index: number) {
@@ -123,7 +122,14 @@
 	</button>
 	<ul>
 		{#each {length: totalDots} as _, i}
-		<li on:click={() => go(i*currentPerPage)} class={isDotActive(currentIndex, i) ? "active" : ""}></li>
+		<li
+			role="button"
+			tabindex="0"
+			aria-label={"Slide " + (i + 1)}
+			on:click={() => go(i*currentPerPage)}
+			on:keydown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(i*currentPerPage); } }}
+			class={isDotActive(currentIndex, i) ? "active" : ""}
+		></li>
 		{/each}
 	</ul>
 </div>

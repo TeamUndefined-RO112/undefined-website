@@ -20,6 +20,40 @@ import TextBox from "../../components/TextBox.svelte";
 
     <br/><br/>
 
+    <!-- 2026 Robot - BIOBUZZ (Coming Soon) -->
+    <!-- TODO: Replace "COMING SOON" with the robot's name and add photos to /public/img/robots/<robot-name>/ once revealed -->
+    <Content column big>
+        <div class="robot-section">
+            <Title3>
+                <b style="color: white;">Season 2026: <span style="color: rgb(34, 197, 94);">COMING SOON</span></b>
+            </Title3>
+            <TextBox>
+                <div class="robot-content">
+                    <div class="robot-description">
+                        <span class="coming-soon-badge">Reveal Incoming</span>
+                        <h4 class="robot-subtitle">BIOBUZZ&trade; presented by RTX</h4>
+                        <p>Our newest robot for the 2026-2027 BIOBUZZ season is almost ready to leave the workshop.
+                            Inspired by the power of the natural world, the team is designing, building and programming
+                            a machine that pushes our engineering further than ever before. Stay tuned for the official reveal!</p>
+                    </div>
+
+                    <div class="robot-hero-image">
+                        <img src="/COMING SOON.png" alt="BIOBUZZ 2026 Robot - Coming Soon" />
+                    </div>
+
+                    <div class="gallery-placeholder">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <p>Robot photos, CAD renders and reveal video coming soon.</p>
+                    </div>
+                </div>
+            </TextBox>
+        </div>
+    </Content>
+
+    <br/><br/><br/>
+
     <!-- 2025 Robot - BOTZILLA -->
     <Content column big>
         <div class="robot-section">
@@ -58,6 +92,12 @@ import TextBox from "../../components/TextBox.svelte";
                     </div>
                     <!-- CAD Gallery -->
                     <div class="gallery-grid">
+                        <div class="gallery-item" onclick="openLightbox('/img/robots/botzilla/BOTZILLA THE KING.jpg', 'BOTZILLA - Main Photo')">
+                            <img src="/img/robots/botzilla/BOTZILLA THE KING.jpg" alt="BOTZILLA - Main Photo" />
+                            <div class="gallery-overlay">
+                                <p>Main Photo</p>
+                            </div>
+                        </div>
                         <div class="gallery-item" onclick="openLightbox('/img/robots/botzilla/cad-main-render.png', 'CAD Main Render')">
                             <img src="/img/robots/botzilla/cad-main-render.png" alt="BOTZILLA - CAD Main Render" />
                             <div class="gallery-overlay">
@@ -509,6 +549,27 @@ import TextBox from "../../components/TextBox.svelte";
         margin-bottom: 15px;
     }
 
+    .coming-soon-badge {
+        display: inline-block;
+        font-family: 'Orbitron', monospace;
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: rgb(34, 197, 94);
+        border: 1px solid rgba(34, 197, 94, 0.6);
+        background: rgba(34, 197, 94, 0.1);
+        padding: 4px 14px;
+        margin-bottom: 15px;
+        clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+        animation: comingSoonPulse 2s ease-in-out infinite;
+    }
+
+    @keyframes comingSoonPulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.6; }
+    }
+
     .features-list {
         list-style: none;
         padding: 0;
@@ -646,346 +707,6 @@ import TextBox from "../../components/TextBox.svelte";
         padding: 2px 8px;
         border-radius: 4px;
         font-family: monospace;
-    }
-
-    /* Reveal Section */
-    .reveal-section {
-        position: relative;
-    }
-
-    .reveal-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 60px 20px;
-        background: rgba(255, 255, 255, 0.04);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 20px;
-        backdrop-filter: blur(22px);
-        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
-    }
-
-    .reveal-container::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(34, 197, 94, 0.1), transparent);
-        animation: reveal-shimmer 3s infinite;
-    }
-
-    @keyframes reveal-shimmer {
-        0% { left: -100%; }
-        100% { left: 100%; }
-    }
-
-    .reveal-icon {
-        width: 100px;
-        height: 100px;
-        color: rgb(34, 197, 94);
-        margin-bottom: 20px;
-        animation: pulse-icon 2s ease-in-out infinite;
-    }
-
-    .reveal-icon svg {
-        width: 100%;
-        height: 100%;
-        filter: drop-shadow(0 0 20px rgba(34, 197, 94, 0.5));
-    }
-
-    @keyframes pulse-icon {
-        0%, 100% {
-            transform: scale(1);
-            opacity: 0.8;
-        }
-        50% {
-            transform: scale(1.1);
-            opacity: 1;
-        }
-    }
-
-    .reveal-title {
-        font-family: 'Space Grotesk', 'Orbitron', sans-serif;
-        font-size: 3rem;
-        font-weight: 900;
-        color: rgb(34, 197, 94);
-        text-transform: uppercase;
-        letter-spacing: 0.2em;
-        margin-bottom: 10px;
-        text-shadow: 0 0 30px rgba(34, 197, 94, 0.6);
-    }
-
-    .reveal-subtitle {
-        font-family: 'Inter', sans-serif;
-        font-size: 1.3rem;
-        color: rgba(255, 255, 255, 0.7);
-        margin-bottom: 40px;
-    }
-
-    /* Social Media CTAs */
-    .social-cta-container {
-        width: 100%;
-        max-width: 600px;
-        margin: 30px 0 40px 0;
-        padding: 30px;
-        background: rgba(34, 197, 94, 0.05);
-        border: 1px solid rgba(34, 197, 94, 0.2);
-        border-radius: 20px;
-    }
-
-    .social-cta-heading {
-        font-family: 'Space Grotesk', 'Orbitron', sans-serif;
-        font-size: 1.1rem;
-        font-weight: 700;
-        color: rgb(34, 197, 94);
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .social-buttons {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .social-button {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        padding: 15px 20px;
-        background: rgba(0, 0, 0, 0.3);
-        border: 2px solid rgba(34, 197, 94, 0.3);
-        border-radius: 20px;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .social-button::before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 0;
-        height: 0;
-        border-radius: 50%;
-        background: rgba(34, 197, 94, 0.1);
-        transform: translate(-50%, -50%);
-        transition: width 0.4s ease, height 0.4s ease;
-    }
-
-    .social-button:hover::before {
-        width: 300px;
-        height: 300px;
-    }
-
-    .social-button:hover {
-        border-color: rgb(34, 197, 94);
-        transform: translateY(-3px);
-        box-shadow: 0 5px 20px rgba(34, 197, 94, 0.3);
-    }
-
-    .social-icon {
-        width: 30px;
-        height: 30px;
-        flex-shrink: 0;
-        color: rgb(34, 197, 94);
-        transition: transform 0.3s ease;
-        position: relative;
-        z-index: 1;
-    }
-
-    .social-button:hover .social-icon {
-        transform: scale(1.1);
-    }
-
-    .social-text {
-        display: flex;
-        flex-direction: column;
-        gap: 3px;
-        position: relative;
-        z-index: 1;
-    }
-
-    .social-platform {
-        font-family: 'Space Grotesk', 'Orbitron', sans-serif;
-        font-size: 0.95rem;
-        font-weight: 600;
-        color: white;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-    }
-
-    .social-handle {
-        font-family: 'Inter', sans-serif;
-        font-size: 0.9rem;
-        color: rgba(255, 255, 255, 0.7);
-    }
-
-    /* Countdown */
-    .countdown-container {
-        width: 100%;
-        max-width: 700px;
-    }
-
-    .countdown-label {
-        font-family: 'Space Grotesk', 'Orbitron', sans-serif;
-        font-size: 0.9rem;
-        font-weight: 600;
-        color: rgba(255, 255, 255, 0.6);
-        text-transform: uppercase;
-        letter-spacing: 0.15em;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .countdown-display {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 20px;
-    }
-
-    .countdown-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background: rgba(34, 197, 94, 0.1);
-        border: 2px solid rgba(34, 197, 94, 0.3);
-        border-radius: 20px;
-        padding: 15px 20px;
-        min-width: 100px;
-    }
-
-    .countdown-value {
-        font-family: 'Space Grotesk', 'Orbitron', sans-serif;
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: rgb(34, 197, 94);
-        line-height: 1;
-        text-shadow: 0 0 20px rgba(34, 197, 94, 0.5);
-    }
-
-    .countdown-unit {
-        font-family: 'Inter', sans-serif;
-        font-size: 0.8rem;
-        font-weight: 600;
-        color: rgba(255, 255, 255, 0.6);
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        margin-top: 5px;
-    }
-
-    .countdown-separator {
-        font-family: 'Space Grotesk', 'Orbitron', sans-serif;
-        font-size: 2rem;
-        color: rgb(34, 197, 94);
-        font-weight: 700;
-    }
-
-    .countdown-date {
-        font-family: 'Inter', sans-serif;
-        font-size: 1.1rem;
-        color: rgba(255, 255, 255, 0.8);
-        text-align: center;
-        font-weight: 600;
-    }
-
-    .countdown-complete {
-        font-family: 'Space Grotesk', 'Orbitron', sans-serif;
-        font-size: 3rem;
-        font-weight: 900;
-        color: rgb(34, 197, 94);
-        text-transform: uppercase;
-        letter-spacing: 0.2em;
-        text-shadow: 0 0 30px rgba(34, 197, 94, 0.8);
-        animation: reveal-pulse 1s ease-in-out infinite;
-    }
-
-    @keyframes reveal-pulse {
-        0%, 100% {
-            transform: scale(1);
-        }
-        50% {
-            transform: scale(1.05);
-        }
-    }
-
-    @media only screen and (max-width: 768px) {
-        .reveal-title {
-            font-size: 2rem;
-            letter-spacing: 0.15em;
-        }
-
-        .reveal-subtitle {
-            font-size: 1.1rem;
-        }
-
-        .social-cta-container {
-            padding: 20px;
-        }
-
-        .social-cta-heading {
-            font-size: 0.95rem;
-        }
-
-        .social-button {
-            padding: 12px 15px;
-        }
-
-        .social-icon {
-            width: 26px;
-            height: 26px;
-        }
-
-        .social-platform {
-            font-size: 0.85rem;
-        }
-
-        .social-handle {
-            font-size: 0.8rem;
-        }
-
-        .countdown-display {
-            gap: 5px;
-        }
-
-        .countdown-item {
-            padding: 10px 15px;
-            min-width: 70px;
-        }
-
-        .countdown-value {
-            font-size: 1.8rem;
-        }
-
-        .countdown-unit {
-            font-size: 0.7rem;
-        }
-
-        .countdown-separator {
-            font-size: 1.5rem;
-        }
-    }
-
-    @media only screen and (max-width: 480px) {
-        .countdown-display {
-            flex-wrap: wrap;
-        }
-
-        .countdown-separator {
-            display: none;
-        }
-
-        .countdown-item {
-            min-width: calc(50% - 10px);
-        }
     }
 
     /* Lightbox Modal */

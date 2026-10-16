@@ -1,10 +1,5 @@
 ---
 import Carousel from '../components/Carousel.svelte';
-import Content from '../components/Content.svelte';
-import HomeImage from '../components/HomeImage.svelte';
-import TextBox from '../components/TextBox.svelte';
-import Title from '../components/Title.svelte';
-import Button from '../components/Button.svelte';
 import Layout from '../layouts/Layout.astro';
 ---
 
@@ -477,24 +472,24 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 	</section>
 
-	<!-- DECODE 2025 Theme Section -->
+	<!-- BIOBUZZ 2026 Theme Section -->
 	<section class="relative py-20 md:py-32 px-4 bg-black">
 		<div class="container mx-auto max-w-7xl">
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 				<!-- Text Content -->
 				<div>
 					<h2 class="text-3xl md:text-5xl font-orbitron font-bold text-white mb-4 uppercase">
-						2025 Season Theme
+						2026 Season Theme
 					</h2>
 					<h3 class="text-2xl md:text-3xl font-rajdhani text-primary-green mb-6 uppercase">
-						DECODE<sup class="text-sm">™</sup> presented by RTX
+						BIOBUZZ<sup class="text-sm">™</sup> presented by RTX
 					</h3>
 					<div class="w-24 h-1 bg-primary-green mb-8"></div>
 					<p class="text-gray-300 font-rajdhani text-lg leading-relaxed mb-6">
-						Starting September 6, 2025, FIRST® Tech Challenge teams will investigate the power of the world's artifacts and unlock mysteries in a new challenge, DECODE™ presented by RTX.
+						Starting September 12, 2026, FIRST® Tech Challenge teams will explore the power of the natural world and amplify excitement in a new challenge, BIOBUZZ™ presented by RTX.
 					</p>
 					<p class="text-gray-300 font-rajdhani text-lg leading-relaxed mb-8">
-						Every artifact we uncover holds a story. Each tool, each innovation, each work of art connects us to the people and ideas that came before us. Using STEM skills and teamwork, today we can dig deeper into discoveries than ever before.
+						Nothing on Earth thrives alone. Every species, every connection powers the ecosystems that sustain our world. Using STEM skills and teamwork, today's students take inspiration from nature to build, innovate, and grow stronger together.
 					</p>
 					<a href="https://www.firstinspires.org/programs/ftc/game-and-season" target="_blank" rel="noopener noreferrer" class="btn-robotic-secondary group relative inline-flex items-center gap-3 px-8 py-4 bg-transparent border-2 border-primary-green text-primary-green font-orbitron font-bold uppercase tracking-wider hover:bg-primary-green hover:text-white">
 						<span>Read More</span>
@@ -504,15 +499,88 @@ import Layout from '../layouts/Layout.astro';
 					</a>
 				</div>
 
-				<!-- DECODE Image -->
+				<!-- BIOBUZZ Image -->
 				<div>
 					<div class="card-robotic p-2 border-glow">
-						<img src="/img/decode2025.webp" alt="DECODE 2025 Theme" class="w-full h-auto">
+						<img src="/img/biobuzz2026.webp" alt="BIOBUZZ 2026 Theme" class="w-full h-auto">
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
+
+	<!-- BIOBUZZ Team Presentation Video -->
+	<section class="relative py-20 md:py-32 px-4 bg-gradient-to-b from-black via-dark-bg to-black overflow-hidden">
+		<!-- Background decorative elements -->
+		<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-primary-green/10 rounded-full blur-[140px] pointer-events-none"></div>
+
+		<div class="container mx-auto max-w-5xl relative z-10">
+			<!-- Section Header -->
+			<div class="text-center mb-12">
+				<div class="defined-section-label">BIOBUZZ™ Season 2026</div>
+				<h2 class="text-3xl md:text-5xl font-orbitron font-bold text-white mb-4 uppercase glow-text">
+					Team Presentation
+				</h2>
+				<div class="w-24 h-1 bg-primary-green mx-auto mb-6"></div>
+				<p class="text-gray-300 font-rajdhani text-lg md:text-xl max-w-2xl mx-auto">
+					Meet the people, the robot and the ideas behind Team UNDEFINED this BIOBUZZ season.
+				</p>
+			</div>
+
+			<!-- Video Frame -->
+			<div class="video-hud relative">
+				<span class="hud-corner hud-tl"></span>
+				<span class="hud-corner hud-tr"></span>
+				<span class="hud-corner hud-bl"></span>
+				<span class="hud-corner hud-br"></span>
+				<div class="card-robotic video-card p-2 border-glow">
+					<div class="relative w-full aspect-video overflow-hidden rounded-[14px] bg-black">
+						<iframe
+							class="absolute inset-0 w-full h-full"
+							src="https://www.youtube.com/embed/cvWIqzRBq3w?si=PBEG35nlwXtof6KT&rel=0"
+							title="Team Undefined - BIOBUZZ Team Presentation"
+							frameborder="0"
+							loading="lazy"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							referrerpolicy="strict-origin-when-cross-origin"
+							allowfullscreen
+						></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<style>
+		/* Keep the hover sweep from intercepting clicks on the video */
+		.video-card::before {
+			pointer-events: none;
+			z-index: 1;
+		}
+		.video-card:hover {
+			transform: none;
+		}
+		.hud-corner {
+			position: absolute;
+			width: 28px;
+			height: 28px;
+			border-color: rgb(81, 146, 89);
+			border-style: solid;
+			border-width: 0;
+			z-index: 2;
+			pointer-events: none;
+			filter: drop-shadow(0 0 6px rgba(81, 146, 89, 0.8));
+			transition: all 0.3s ease;
+		}
+		.hud-tl { top: -10px; left: -10px; border-top-width: 3px; border-left-width: 3px; }
+		.hud-tr { top: -10px; right: -10px; border-top-width: 3px; border-right-width: 3px; }
+		.hud-bl { bottom: -10px; left: -10px; border-bottom-width: 3px; border-left-width: 3px; }
+		.hud-br { bottom: -10px; right: -10px; border-bottom-width: 3px; border-right-width: 3px; }
+		.video-hud:hover .hud-corner {
+			width: 40px;
+			height: 40px;
+		}
+	</style>
 
 	<!-- Defined Action System Showcase -->
 	<section class="relative py-20 md:py-32 px-4 bg-black overflow-hidden" id="defined-showcase">

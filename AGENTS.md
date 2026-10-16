@@ -35,27 +35,32 @@ npm run preview
 - Pages are in `src/pages/` as `.astro` files
 - Main layout wrapper: `src/layouts/Layout.astro` (includes Navbar, Footer, and analytics)
 - Routes:
-  - `/` - Homepage with carousel, team intro, and FTC info
-  - `/team` - Team members page
-  - `/team/apply` - Application page
-  - `/team/sponsors` - Sponsors page
-  - `/contact` - Contact page
+  - `/` - Homepage with carousel, team intro, Defined action system showcase, and FTC info
+  - `/team` - Team members page and achievements
+  - `/team/apply` - Application page with embedded form
+  - `/team/sponsors` - Sponsors and partners page
+  - `/donate` - Monetary donation options and robot parts wishlist
+  - `/robots` - Robot showcase with galleries and videos
+  - `/contact` - Contact information and location
 
 ### Components
 All Svelte components are in `src/components/`:
-- **Navbar.svelte**: Fixed top navigation (takes `url` prop for active state)
+- **Navbar.svelte**: Fixed top navigation (takes `url` prop for active state, mobile drawer)
 - **Carousel.svelte**: Image carousel using Siema library (autoplay, navigation, dots)
 - **Footer.svelte**: Site footer
 - **Member.svelte**: Team member card display
-- **Sponsor.svelte**: Sponsor display component
-- Various utility components: Button, Title, TextBox, Content, etc.
+- **Sponsor.svelte**: Sponsor and partner display card
+- **AboutUs.svelte**: Team story, FTC Core Values, season results with award popups, and dynamic year member browser
+- **SponsorList.svelte**: Sponsor benefits, sponsorship process, equipment wishlist, and sponsor/partner lists
+- **DonateSection.svelte**: IBAN / Patreon / Revolut donations and parts list
+- Various utility components: Button, Title, Title2, Title3, Title4, TextBox, Content, etc.
 
 ### Data Management
 Team data is stored in JSON files in `src/components/`:
-- `members.json` - Team members organized by year (2024, 2023, 2021, 2020, 2018)
+- `members.json` - Team members organized by year (2026, 2025, 2024, 2023, 2021, 2020, 2018; browsed dynamically)
 - `sponsors.json` - Sponsor information
-- `parts.json` - Robot parts catalog
-- `fieldParts.json` - Field parts catalog
+- `partners.json` - Community and institutional partners
+- `parts.json` - Robot parts catalog needed for donations
 
 Each member object contains: `src`, `name`, `department`, `desc`
 
@@ -72,13 +77,13 @@ The site includes both Google Tag Manager (GTM-W5C9V9LJ) and Google Analytics (G
 
 ## Deployment
 
-The site deploys automatically to GitHub Pages when pushing to the `main` branch via `.github/workflows/deploy.yml`. The workflow uses the official Astro GitHub Action (`withastro/action@v0`).
+The site deploys automatically to GitHub Pages when pushing to the `main` branch via `.github/workflows/deploy.yml`. The workflow uses the official Astro GitHub Action (`withastro/action@v3`).
 
 Site URL: https://team-undefined.ro
 
 ## Configuration
 
-- `astro.config.mjs`: Svelte and Tailwind integrations configured, site URL set to https://team-undefined.ro
+- `astro.config.mjs`: Svelte and Tailwind integrations configured, site URL set to https://team-undefined.ro, telemetry disabled
 - `svelte.config.js`: Default Svelte configuration (if it exists)
 - Tailwind applies custom base styles configured in `base.css`
 
@@ -168,17 +173,18 @@ Site URL: https://team-undefined.ro
   - Primary: "Contact Us" → `/contact`
   - Secondary: "Too complicated - Donate instead!" → `/donate`
 - **Equipment Donation Cards**: 3D printer and laser cutter with product links
-- **Top Sponsor Section**: WAMGROUP Romania highlighted with gold title
 - **Image Styling**: NO drop shadows on any sponsor or equipment images
 
 ### Robots Page
-- Countdown to robot reveal: January 9, 2025, 3:00 PM EET (Europe/Bucharest)
-- Social media follow section positioned AFTER countdown
-- Gallery section prepared (commented code with examples in `/public/img/robots/README.md`)
+- Showcase robots: BOTZILLA (2025 DECODE), VIK (2024 INTO THE DEEP), FRANK (2023 CENTERSTAGE), AL ABDULAH (2022 POWERPLAY), and BOBILDA (2021 KICKOFF)
+- Interactive full-screen Lightbox modal with arrow navigation and keyboard shortcuts (Escape / Arrow keys)
+- Responsive CAD and photo galleries with embedded competition videos
 
 ### About Us
-- Team photo updated to `/img/gallery/team2024.png`
+- Team photo displayed with robotic container styling
 - FTC Core Values section included
+- Dynamic season results browser with interactive award modal
+- Dynamic member browser reading directly from `members.json`
 
 ### Home Page
 - Rotating punchy texts synced with carousel (4s intervals)

@@ -7,7 +7,7 @@
 
 <a
     href={href}
-    class="relative mx-2 md:mx-4 px-3 py-2 font-rajdhani font-medium text-sm md:text-base uppercase tracking-wide transition-all duration-300 group"
+    class="relative mx-2 md:mx-2 lg:mx-4 px-3 py-2 font-rajdhani font-medium text-sm md:text-base uppercase tracking-wide transition-all duration-300 group whitespace-nowrap"
     class:active={isActive}
 >
     <!-- Background glow on hover -->

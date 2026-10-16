@@ -43,15 +43,15 @@ function closeMenu() {
 
         <!-- Desktop menu -->
         <div class="hidden md:flex items-center">
-            <div class="w-px h-8 mx-4 bg-primary-green/30"></div>
+            <div class="w-px h-8 mx-2 lg:mx-4 bg-primary-green/30"></div>
             <NavbarButton href="/" path={url.pathname}>Home</NavbarButton>
             <NavbarButton href="/team" path={url.pathname}>About Us</NavbarButton>
             <NavbarButton href="/robots" path={url.pathname}>Robots</NavbarButton>
-            <a href="https://defined.teamundefined.com" target="_blank" rel="noopener noreferrer" class="relative group px-4 py-2 text-white/80 hover:text-white transition-colors duration-300 font-rajdhani font-semibold tracking-wide uppercase">Defined</a>
+            <a href="https://defined.teamundefined.com" target="_blank" rel="noopener noreferrer" class="relative group px-3 lg:px-4 py-2 text-white/80 hover:text-white transition-colors duration-300 font-rajdhani font-semibold tracking-wide uppercase whitespace-nowrap">Defined</a>
             <NavbarButton href="/team/apply" path={url.pathname}>Apply</NavbarButton>
             <NavbarButton href="/team/sponsors" path={url.pathname}>Sponsors</NavbarButton>
             <NavbarButton href="/donate" path={url.pathname}>Donate</NavbarButton>
-            <div class="w-px h-8 mx-4 bg-primary-green/30"></div>
+            <div class="w-px h-8 mx-2 lg:mx-4 bg-primary-green/30"></div>
             <NavbarButton href="/contact" path={url.pathname}>Contact</NavbarButton>
         </div>
 
@@ -70,7 +70,7 @@ function closeMenu() {
     <!-- Mobile menu dropdown -->
     {#if mobileMenuOpen}
     <div class="md:hidden absolute top-[calc(100%+0.5rem)] left-0 w-full bg-[rgba(10,10,10,0.75)] backdrop-blur-[24px] border border-[rgba(255,255,255,0.10)] shadow-[0_24px_80px_rgba(0,0,0,0.5)] rounded-2xl animate-fade-in-up overflow-hidden">
-        <div class="flex flex-col py-4" on:click={closeMenu}>
+        <div class="flex flex-col py-4" on:click={closeMenu} on:keydown={(e) => { if (e.key === 'Escape') closeMenu(); }} role="presentation">
             <NavbarButton href="/" path={url.pathname}>Home</NavbarButton>
             <NavbarButton href="/team" path={url.pathname}>About Us</NavbarButton>
             <NavbarButton href="/robots" path={url.pathname}>Robots</NavbarButton>

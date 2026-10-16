@@ -97,6 +97,13 @@
                 }
             ],
             eventsUrl: "https://ftc-events.firstinspires.org/2025/team/19112"
+        },
+        2026: {
+            seasonLabel: "2026 Season BIOBUZZ",
+            intro: "The 2026-2027 BIOBUZZ season presented by RTX is currently underway! Stay tuned as we design, build, and program our new robot for the upcoming competitions.",
+            competitions: [],
+            awards: [],
+            eventsUrl: "https://ftc-events.firstinspires.org/2026/team/19112"
         }
     };
 
@@ -104,7 +111,11 @@
         .map(Number)
         .sort((a, b) => a - b);
 
-    let year: number = 2026;
+    const memberYears = Object.keys(members)
+        .map(Number)
+        .sort((a, b) => a - b);
+
+    let year: number = memberYears[memberYears.length - 1] || 2026;
     let achievementYear: number = 2025;
     let selectedAchievements: AchievementSeason | undefined;
     let selectedAward: AchievementAward | null = null;
@@ -145,6 +156,20 @@
         const currentIndex = achievementYears.indexOf(achievementYear);
         if (currentIndex < achievementYears.length - 1) {
             achievementYear = achievementYears[currentIndex + 1];
+        }
+    }
+
+    function previousMemberYear() {
+        const currentIndex = memberYears.indexOf(year);
+        if (currentIndex > 0) {
+            year = memberYears[currentIndex - 1];
+        }
+    }
+
+    function nextMemberYear() {
+        const currentIndex = memberYears.indexOf(year);
+        if (currentIndex < memberYears.length - 1) {
+            year = memberYears[currentIndex + 1];
         }
     }
 </script>
@@ -377,9 +402,9 @@
     <Title secondary>Meet Our Team</Title>
     <div class="flex justify-center items-center gap-2">
         <b>Year:</b>&nbsp;
-        <Button small on:click={() => {if(year>2018) year--; if(year==2019) year--;if(year==2022) year--;}}>-</Button>
+        <Button small on:click={previousMemberYear}>-</Button>
         <p>{year}</p>
-        <Button small on:click={() => {if(year<2026) year++; if(year==2019) year++;if(year==2022) year++;}}>+</Button>
+        <Button small on:click={nextMemberYear}>+</Button>
     </div>
 </Content>
 
@@ -421,7 +446,7 @@
                 {/if}
             </div>
             <div class="award-modal-copy">
-                <p class="award-modal-kicker">2025 DECODE Award</p>
+                <p class="award-modal-kicker">{selectedAchievements ? selectedAchievements.seasonLabel : `${achievementYear} Season`} Award</p>
                 <h3 id="award-modal-title">{selectedAward.name}</h3>
                 <p class="award-modal-event">{selectedAward.event}</p>
                 {#if selectedAward.result}

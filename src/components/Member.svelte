@@ -17,7 +17,7 @@
         if(arg[sel]=="Programming" || arg[sel]=="Software") return "orange";
         if(arg[sel]=="Engineering Notebook") return "red";
         if(arg[sel]=="Marketing") return "purple";
-        if(arg[sel]=="Team Leader" || arg[sel]=="Team Leader - Software" || arg[sel]=="Team Leader - Hardware") return "blue";
+        if(arg[sel]=="Team Leader" || arg[sel]=="Team Leader - Software" || arg[sel]=="Team Leader - Hardware" || arg[sel]=="Team Leader - Marketing") return "blue";
     }
 
     let accentColor = function (department:string) {
@@ -29,7 +29,7 @@
         if(arg[sel]=="Programming" || arg[sel]=="Software") return "rgba(247, 144, 30, 0.3)";
         if(arg[sel]=="Engineering Notebook") return "rgba(220, 76, 76, 0.3)";
         if(arg[sel]=="Marketing") return "rgba(138, 86, 172, 0.3)";
-        if(arg[sel]=="Team Leader" || arg[sel]=="Team Leader - Software" || arg[sel]=="Team Leader - Hardware") return "rgba(100, 149, 237, 0.3)";
+        if(arg[sel]=="Team Leader" || arg[sel]=="Team Leader - Software" || arg[sel]=="Team Leader - Hardware" || arg[sel]=="Team Leader - Marketing") return "rgba(100, 149, 237, 0.3)";
     }
 </script>
 

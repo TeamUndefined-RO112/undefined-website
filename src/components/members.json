@@ -1,4 +1,84 @@
 {
+    "2027": [
+        {
+            "src": "/img/members/Ilincaa.jpeg",
+            "name": "Alexandru Ilinca",
+            "department": "Team Leader - Marketing",
+            "desc": "I’m organized and sociable, passionate about bringing people together and supporting the team."
+        },
+        {
+            "src": "/img/members/Dumitru.jpg",
+            "name": "Tiseanu Dumitru",
+            "department": "Team Leader - Hardware",
+            "desc": "I’m ambitious and creative, passionate about mechanics and designing innovative solutions."
+        },
+        {
+            "src": "/img/members/Mihnea.jpg",
+            "name": "Cristache Mihnea",
+            "department": "Hardware",
+            "desc": "I’m energetic and curious, passionate about understanding how things work and building them."
+        },
+        {
+            "src": "/img/members/Alfonso.jpeg",
+            "name": "Stoica Alfonso",
+            "department": "Hardware",
+            "desc": "I’m practical and determined, always focused on building and improving things efficiently."
+        },
+        {
+            "src": "/img/members/Mitroi.jpeg",
+            "name": "Mitroi Stefan",
+            "department": "Hardware",
+            "desc": "I’m calm and determined, focused on building efficient solutions and constantly improving my skills."
+        },
+        {
+            "src": "/img/members/Augustin.jpeg",
+            "name": "Bunea Augustin-Stefan",
+            "department": "Software",
+            "desc": "I’m determined and analytical, passionate about solving problems through programming."
+        },
+        {
+            "src": "/img/members/David.jpeg",
+            "name": "Mădan David",
+            "department": "Software",
+            "desc": "I’m dedicated and curious, constantly learning and growing in the world of programming."
+        },
+        {
+            "src": "/img/members/Lucian.jpeg",
+            "name": "Picioarea Lucian",
+            "department": "Software",
+            "desc": "I’m curious and responsible, motivated to create meaningful solutions through technology."
+        },
+        {
+            "src": "/img/members/Rebeca.jpeg",
+            "name": "Moraru Rebeca",
+            "department": "Software",
+            "desc": "I’m enthusiastic and driven, fascinated by how code can bring ideas to life."
+        },
+        {
+            "src": "/img/members/Teodora.jpeg",
+            "name": "Brebeanu Teodora",
+            "department": "Marketing",
+            "desc": "I’m organized and detail-oriented, focused on structure and keeping everything on track."
+        },
+        {
+            "src": "/img/members/Evelina.jpg",
+            "name": "Predoiu Evelina",
+            "department": "Volunteer - Marketing",
+            "desc": "I’m curious and adaptable, always open to learning and new experiences."
+        },
+        {
+            "src": "/img/members/Daria.jpeg",
+            "name": "Toboc Daria",
+            "department": "Volunteer - Marketing",
+            "desc": "I’m creative and resilient, driven by challenges and the desire to grow."
+        },
+        {
+            "src": "/img/members/Cristina.jpeg",
+            "name": "Călărașu Cristina",
+            "department": "Volunteer - Software",
+            "desc": "I’m ambitious and energetic, passionate about programming and teamwork."
+        }
+    ],
     "2026": [
         {
             "src": "/img/members/Stefan .jpeg",
